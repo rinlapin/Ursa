@@ -7,15 +7,12 @@ public class Interactable : MonoBehaviour
     
     public void TryInteract()
     {
-        Debug.Log("Interacting with " + gameObject.name);
-        CanvasManager.instance.ActiveGroup = CanvasGroupType.Puzzle;
+        CanvasManager.instance.ActiveGroupType = CanvasGroupType.Puzzle;
         PuzzleManager.instance.activeInteractable = this;
     }
 
     public void Solve()
     {
-        Debug.Log("Solving " + gameObject.name);
-        
         if (solvedObject)
         {
             var newSolvedObject = Instantiate(solvedObject);

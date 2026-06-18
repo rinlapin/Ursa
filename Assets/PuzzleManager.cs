@@ -14,7 +14,7 @@ public class PuzzleManager : MonoBehaviour
     public void Exit()
     {
         activeInteractable = null;
-        CanvasManager.instance.ActiveGroup = CanvasGroupType.None;
+        CanvasManager.instance.ActiveGroupType = CanvasGroupType.None;
         Player.state = PlayerState.Idle;
     }
 

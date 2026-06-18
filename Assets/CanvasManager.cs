@@ -1,36 +1,47 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CanvasManager : MonoBehaviour
 {
     public static CanvasManager instance;
+    
+    Dictionary<CanvasGroupType, GameObject> _groups = new Dictionary<CanvasGroupType, GameObject>();
+    
     private void Awake()
     {
         if (instance == null) instance = this;
         else if (instance != this) Destroy(gameObject);
-        
-        ActiveGroup = CanvasGroupType.None;
+    }
+
+    [SerializeField] private CanvasGroup puzzleGroup;
+
+    private void Start()
+    {
+        Setup();
+    }
+
+    private void Setup()
+    {
+        foreach (UIGroup group in GetComponentsInChildren<UIGroup>(true))
+        {
+            _groups.Add(group.type, group.gameObject);
+        }
+
+        ActiveGroupType = CanvasGroupType.None;
     }
     
-    [SerializeField] private CanvasGroup puzzleGroup;
-    
-    private CanvasGroupType _activeGroup;
-    public CanvasGroupType ActiveGroup
+    private CanvasGroupType _activeGroupType;
+    public CanvasGroupType ActiveGroupType
     {
-        get => _activeGroup;
+        get => _activeGroupType;
         set
         {
-            _activeGroup = value;
+            _activeGroupType = value;
 
-            puzzleGroup.gameObject.SetActive(false);
-            
-            switch (value)
+            foreach (var type in _groups.Keys)
             {
-                case CanvasGroupType.None:
-                    break;
-                case CanvasGroupType.Puzzle:
-                    puzzleGroup.gameObject.SetActive(true);
-                    break;
+                _groups[type].SetActive(_activeGroupType == type);
             }
         }
     }
@@ -39,5 +50,6 @@ public class CanvasManager : MonoBehaviour
 public enum CanvasGroupType
 {
     Puzzle,
+    Star,
     None
 }

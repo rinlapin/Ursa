@@ -1,9 +1,12 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerInteraction : MonoBehaviour
 {
     public Interactable closestInteractable;
+
+    private NorthStar _northStar;
     
     public static PlayerInteraction instance;
     private void Awake()
@@ -11,7 +14,12 @@ public class PlayerInteraction : MonoBehaviour
         if (instance == null) instance = this;
         else if (instance != this) Destroy(gameObject);
     }
-    
+
+    private void Start()
+    {
+        _northStar = FindAnyObjectByType<NorthStar>();
+    }
+
     public void OnInteract(InputAction.CallbackContext context)
     {
         if (!context.started) return;
@@ -23,6 +31,17 @@ public class PlayerInteraction : MonoBehaviour
             Player.state = PlayerState.Interacting;
             closestInteractable.TryInteract();
         }
+    }
+
+    public void OnObserve(InputAction.CallbackContext context)
+    {
+        if (!context.started) return;
+        if (Player.state != PlayerState.Idle) return;
+
+        CanvasManager.instance.ActiveGroupType = CanvasGroupType.Star;
+        _northStar.Reorient();
+        
+        Debug.Log("Observing star");
     }
 
     private void OnTriggerEnter(Collider collider)
