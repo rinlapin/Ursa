@@ -8,9 +8,9 @@ public class PuzzleManager : MonoBehaviour
         if (instance == null) instance = this;
         else if (instance != this) Destroy(gameObject);
     }
-    
+
     public Interactable activeInteractable;
-    
+
     public void Exit()
     {
         activeInteractable = null;
