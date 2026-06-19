@@ -7,8 +7,7 @@ public class Interactable : MonoBehaviour
     
     public void TryInteract()
     {
-        CanvasManager.instance.ActiveGroupType = CanvasGroupType.Puzzle;
-        PuzzleManager.instance.activeInteractable = this;
+        PuzzleManager.instance.Setup(this);
     }
 
     public void Solve()

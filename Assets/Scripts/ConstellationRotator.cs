@@ -5,16 +5,11 @@ public class ConstellationRotator : MonoBehaviour
     [SerializeField] private float rotationSpeed = 0.2f;
     [SerializeField] private float damping = 3f;
 
-    private bool dragging;
+    private bool isDragging;
     private Vector3 previousMousePosition;
     private Vector2 rotationVelocity;
     
-    private Camera mainCamera;
-
-    private void Start()
-    {
-        mainCamera = Camera.main;
-    }
+    [SerializeField] private Camera puzzleCamera;
 
     private void Update()
     {
@@ -23,16 +18,16 @@ public class ConstellationRotator : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            dragging = true;
+            isDragging = true;
             previousMousePosition = Input.mousePosition;
         }
 
         if (Input.GetMouseButtonUp(0))
         {
-            dragging = false;
+            isDragging = false;
         }
 
-        if (!dragging) return;
+        if (!isDragging) return;
 
         Vector3 delta = Input.mousePosition - previousMousePosition;
 
@@ -44,12 +39,12 @@ public class ConstellationRotator : MonoBehaviour
         Quaternion yaw =
             Quaternion.AngleAxis(
                 -delta.x * rotationSpeed,
-                mainCamera.transform.up);
+                puzzleCamera.transform.up);
 
         Quaternion pitch =
             Quaternion.AngleAxis(
                 delta.y * rotationSpeed,
-                mainCamera.transform.right);
+                puzzleCamera.transform.right);
 
         transform.rotation =
             pitch *
