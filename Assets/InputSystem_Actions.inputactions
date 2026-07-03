@@ -58,6 +58,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ClickX",
+                    "type": "Value",
+                    "id": "825445d6-a35f-4acd-9232-88035a1f4121",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "ClickY",
+                    "type": "Value",
+                    "id": "cd53c6ea-3c96-40f9-9dbb-bf249dd5e63a",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -311,6 +329,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Observe",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "36a73dad-6df7-411e-836f-07ff21193a34",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ClickX",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "edf4f945-5f1f-4a45-bf02-a54e406524ac",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ClickY",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

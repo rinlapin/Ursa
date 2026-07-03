@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
 
 public class ConstellationFramework : MonoBehaviour
@@ -9,11 +10,12 @@ public class ConstellationFramework : MonoBehaviour
     [SerializeField] private float rotationSpeed = 0.2f;
     [SerializeField] private float damping = 3f;
 
-    private bool _isDragging;
+    private bool _isDraggingX, _isDraggingY;
     private bool _isOpen;
     private bool _isCloseToGoal;
     private Vector3 _previousMousePosition;
     private Vector2 _rotationVelocity;
+    private Vector2 _input;
 
     public Vector2 difference;
 
@@ -61,26 +63,49 @@ public class ConstellationFramework : MonoBehaviour
         _puzzleCamera = GetComponentInChildren<Camera>(true);
     }
 
+    public void OnClickX(InputAction.CallbackContext context)
+    {
+        if (Player.state != PlayerState.Interacting) return;
+        
+        if (context.started)
+        {
+            _previousMousePosition.x = Input.mousePosition.x;
+            _isDraggingX = true;
+        }
+
+        if (context.canceled)
+        {
+            _isDraggingX = false;
+            _previousMousePosition.x = Input.mousePosition.x;
+        }
+    }
+
+    public void OnClickY(InputAction.CallbackContext context)
+    {
+        if (Player.state != PlayerState.Interacting) return;
+        if (context.started)
+        {
+            _previousMousePosition.y = Input.mousePosition.y;
+            _isDraggingY = true;
+        }
+        
+        if (context.canceled)
+        {
+            _isDraggingY = false;
+            _previousMousePosition.y = Input.mousePosition.y;
+        }
+    }
+
     private void Update()
     {
         if (!_isOpen) return;
         if (Player.state != PlayerState.Interacting)
             return;
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            _isDragging = true;
-            _previousMousePosition = Input.mousePosition;
-        }
-
-        if (Input.GetMouseButtonUp(0))
-        {
-            _isDragging = false;
-        }
-
-        if (!_isDragging) return;
-
-        Vector3 delta = Input.mousePosition - _previousMousePosition;
+        Vector3 delta = Vector3.zero;
+        
+        delta.x = _isDraggingX ? Input.mousePosition.x - _previousMousePosition.x : 0;
+        delta.y = _isDraggingY ? Input.mousePosition.y - _previousMousePosition.y : 0;
 
         _rotationVelocity = new Vector2(
             delta.x * rotationSpeed,

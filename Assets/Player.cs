@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
         if (instance == null) instance = this;
         else if (instance != this) Destroy(gameObject);
     }
-
+    
     public static PlayerState state = PlayerState.Idle;
 }
 
