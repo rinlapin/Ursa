@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -69,4 +70,14 @@ public class PuzzleManager : MonoBehaviour
         PlayerInteraction.instance.closestInteractable = null;
         Exit();
     }
+
+    #if UNITY_EDITOR
+    public void OnSolve(InputAction.CallbackContext context)
+    {
+        if (!context.started || Player.state != PlayerState.Interacting)
+        {
+            Solve();
+        }
+    }
+    #endif
 }

@@ -29,15 +29,18 @@ public class ConstellationFramework : MonoBehaviour
         {
             if (_constellation == value) return;
             _constellation = value;
-            _endRotation = value.localRotation;
             
             _isOpen = value;
             foreach (Transform child in transform)
             {
                 child.gameObject.SetActive(value);
             }
-            
-            SetRandomRotation(value);
+
+            if (value)
+            {
+                _endRotation = value.localRotation;
+                SetRandomRotation(value);
+            }
         }
 
     }

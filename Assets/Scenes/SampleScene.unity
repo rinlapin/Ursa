@@ -588,6 +588,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: cd53c6ea-3c96-40f9-9dbb-bf249dd5e63a
     m_ActionName: 'Player/ClickY[/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1693162848}
+        m_TargetAssemblyTypeName: PuzzleManager, Assembly-CSharp
+        m_MethodName: OnSolve
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: dbf2e369-c846-4661-a059-a8697ccafcdd
+    m_ActionName: 'Player/Solve[/Keyboard/space]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
