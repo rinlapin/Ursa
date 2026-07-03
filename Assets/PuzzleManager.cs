@@ -2,8 +2,29 @@ using UnityEngine;
 
 public class PuzzleManager : MonoBehaviour
 {
-    [SerializeField] GameObject puzzleGroup;
     private Camera _mainCamera;
+    private GameObject _activeConstellation;
+    public GameObject ActiveConstellation
+    {
+        get => _activeConstellation;
+        set
+        {
+            if (_activeConstellation)
+            {
+                Destroy(_activeConstellation);
+                _activeConstellation = null;
+            }
+
+            if (!value)
+            {
+                ConstellationFramework.instance.Constellation = null;
+                return;
+            }
+            
+            _activeConstellation = Instantiate(value, ConstellationFramework.instance.transform);
+            ConstellationFramework.instance.Constellation = _activeConstellation.transform;
+        }
+    }
 
     public static PuzzleManager instance;
     private void Awake()
@@ -23,13 +44,17 @@ public class PuzzleManager : MonoBehaviour
         _activeInteractable = newInteractable;
         CanvasManager.instance.ActiveGroupType = CanvasGroupType.Puzzle;
         _mainCamera.gameObject.SetActive(false);
-        puzzleGroup.SetActive(true);
+        ConstellationFramework.instance.gameObject.SetActive(true);
+        
+        ActiveConstellation = newInteractable.Constellation;
     }
 
     public void Exit()
     {
+        ActiveConstellation = null;
+        
         _mainCamera.gameObject.SetActive(true);
-        puzzleGroup.SetActive(false);
+        ConstellationFramework.instance.gameObject.SetActive(false);
 
         _activeInteractable = null;
         CanvasManager.instance.ActiveGroupType = CanvasGroupType.None;
