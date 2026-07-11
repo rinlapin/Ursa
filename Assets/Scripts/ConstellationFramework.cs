@@ -17,11 +17,15 @@ public class ConstellationFramework : MonoBehaviour
     private Vector2 _rotationVelocity;
     private Vector2 _input;
 
+    public Canvas canvas;
+    
     public Vector2 difference;
 
     private Quaternion _endRotation;
 
     private Transform _constellation;
+
+    private ConstellationHint _hint;
 
     public Transform Constellation
     {
@@ -39,6 +43,7 @@ public class ConstellationFramework : MonoBehaviour
             if (value)
             {
                 _endRotation = value.localRotation;
+                _hint.Setup(value);
                 SetRandomRotation(value);
             }
         }
@@ -59,25 +64,34 @@ public class ConstellationFramework : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(false);
+        }
     }
 
     private void Start()
     {
         _puzzleCamera = GetComponentInChildren<Camera>(true);
+        _hint = GetComponentInChildren<ConstellationHint>(true);
     }
 
     public void OnClickX(InputAction.CallbackContext context)
     {
         if (Player.state != PlayerState.Interacting) return;
+        if (PuzzleManager.state == PuzzleState.Hinting) return;
         
         if (context.started)
         {
+            PuzzleManager.state = PuzzleState.Rotating;
             _previousMousePosition.x = Input.mousePosition.x;
             _isDraggingX = true;
         }
 
         if (context.canceled)
         {
+            PuzzleManager.state = PuzzleState.Idle;
             _isDraggingX = false;
             _previousMousePosition.x = Input.mousePosition.x;
         }
@@ -86,16 +100,31 @@ public class ConstellationFramework : MonoBehaviour
     public void OnClickY(InputAction.CallbackContext context)
     {
         if (Player.state != PlayerState.Interacting) return;
+        if (PuzzleManager.state == PuzzleState.Hinting) return;
+        
         if (context.started)
         {
+            PuzzleManager.state = PuzzleState.Rotating;
             _previousMousePosition.y = Input.mousePosition.y;
             _isDraggingY = true;
         }
         
         if (context.canceled)
         {
+            PuzzleManager.state = PuzzleState.Idle;
             _isDraggingY = false;
             _previousMousePosition.y = Input.mousePosition.y;
+        }
+    }
+
+    public void OnHint(InputAction.CallbackContext context)
+    {
+        if (Player.state != PlayerState.Interacting) return;
+        if (PuzzleManager.state != PuzzleState.Idle) return;
+
+        if (context.started)
+        {
+            _hint.Activate();
         }
     }
 
