@@ -681,6 +681,54 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: cd9d1127-f485-4f4a-9639-0c10d04e1ce7
     m_ActionName: 'Player/Hint[/Keyboard/r]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 457294755}
+        m_TargetAssemblyTypeName: ConstellationFramework, Assembly-CSharp
+        m_MethodName: OnRotateX
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 71f4c305-fdb8-49db-bf39-d31d64c015e3
+    m_ActionName: 'Player/RotateX[/Keyboard/a,/Keyboard/d]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 457294755}
+        m_TargetAssemblyTypeName: ConstellationFramework, Assembly-CSharp
+        m_MethodName: OnRotateY
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 38e12ad1-feea-4359-88b4-3ffa0d87fee8
+    m_ActionName: 'Player/RotateY[/Keyboard/s,/Keyboard/w]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 457294755}
+        m_TargetAssemblyTypeName: ConstellationFramework, Assembly-CSharp
+        m_MethodName: OnRotateZ
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 024fca2d-50fa-43f4-9a4a-b6145c5404c7
+    m_ActionName: 'Player/RotateZ[/Keyboard/q,/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -958,7 +1006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 103ca80b3ad192d4fb10426b01af5b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 0.2
+  rotationSpeed: 1
   damping: 3
   canvas: {fileID: 1843770956}
   difference: {x: 0, y: 0}
