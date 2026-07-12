@@ -15,6 +15,8 @@ public class ConstellationFramework : MonoBehaviour
     private Vector3 _previousMousePosition;
     private Vector2 _rotationVelocity;
 
+    public float graceWindow = 2f;
+
     public Canvas canvas;
     
     public Vector2 difference;
@@ -39,6 +41,8 @@ public class ConstellationFramework : MonoBehaviour
     
     public Transform Constellation
     {
+        private get => _constellation;
+        
         set
         {
             if (_constellation == value) return;
@@ -108,6 +112,7 @@ public class ConstellationFramework : MonoBehaviour
     public void Update()
     {
         if (Input == Vector3.zero) return;
+        if (!Constellation) return;
         
         Quaternion yaw =
             Quaternion.AngleAxis(
@@ -177,10 +182,9 @@ public class ConstellationFramework : MonoBehaviour
         if (Player.state != PlayerState.Interacting) return;
         if (PuzzleManager.state != PuzzleState.Idle) return;
 
-        if (context.started)
-        {
-            _hint.Activate();
-        }
+        if (!context.started) return;
+
+        _hint.Check();
     }
 
     /*private void Update()
