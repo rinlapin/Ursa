@@ -1,7 +1,10 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PuzzleManager : MonoBehaviour
 {
+    public static PuzzleState state = PuzzleState.Idle;
     private Camera _mainCamera;
     private GameObject _activeConstellation;
     public GameObject ActiveConstellation
@@ -21,7 +24,7 @@ public class PuzzleManager : MonoBehaviour
                 return;
             }
             
-            _activeConstellation = Instantiate(value, ConstellationFramework.instance.transform);
+            _activeConstellation = Instantiate(value, ConstellationFramework.instance.canvas.transform);
             ConstellationFramework.instance.Constellation = _activeConstellation.transform;
         }
     }
@@ -68,4 +71,21 @@ public class PuzzleManager : MonoBehaviour
         PlayerInteraction.instance.closestInteractable = null;
         Exit();
     }
+
+    #if UNITY_EDITOR
+    public void OnSolve(InputAction.CallbackContext context)
+    {
+        if (!context.started || Player.state != PlayerState.Interacting)
+        {
+            Solve();
+        }
+    }
+    #endif
+}
+
+public enum PuzzleState
+{
+    Idle,
+    Rotating,
+    Hinting
 }

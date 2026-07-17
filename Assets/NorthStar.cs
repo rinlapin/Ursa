@@ -5,17 +5,12 @@ using UnityEngine.UI;
 
 public class NorthStar : MonoBehaviour
 {
-    private RectTransform _rectTransform;
     private Interactable[] _interactables;
-
-    private void Start()
-    {
-        _rectTransform = GetComponent<RectTransform>();
-    }
-
+    private Interactable _closestInteractable;
+    private Camera _mainCamera;
+    
     private Interactable GetClosestInteractable()
     {
-        _interactables = FindObjectsByType<Interactable>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
         if (_interactables == null || _interactables.Length == 0)
         {
             return null;
@@ -35,11 +30,21 @@ public class NorthStar : MonoBehaviour
         }
         return closestInteractable;
     }
-    
-    public void Reorient()
+
+    private void Awake()
     {
-        //Camera.main.ScreenToWorldPoint(GetClosestInteractable().transform.position);
-        var screenPoint = Camera.main.WorldToScreenPoint(GetClosestInteractable().transform.position);
-        Debug.Log($"pointing at {screenPoint}");
+        _mainCamera = Camera.main;
+        _interactables = FindObjectsByType<Interactable>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+    }
+
+    private void Update()
+    {
+        Reorient();
+    }
+
+    private void Reorient()
+    {
+        _closestInteractable = GetClosestInteractable();
+        transform.rotation = Quaternion.LookRotation(_closestInteractable.transform.position - transform.position, Vector3.up);
     }
 }
