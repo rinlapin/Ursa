@@ -5,17 +5,14 @@ using UnityEngine.UI;
 
 public class NorthStar : MonoBehaviour
 {
-    private RectTransform _rectTransform;
+    [SerializeField] private RectTransform rectTransform;
     private Interactable[] _interactables;
-
-    private void Start()
-    {
-        _rectTransform = GetComponent<RectTransform>();
-    }
-
+    private Interactable _closestInteractable;
+    private Camera _mainCamera;
+    
     private Interactable GetClosestInteractable()
     {
-        _interactables = FindObjectsByType<Interactable>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+        return _interactables[0];
         if (_interactables == null || _interactables.Length == 0)
         {
             return null;
@@ -35,11 +32,31 @@ public class NorthStar : MonoBehaviour
         }
         return closestInteractable;
     }
-    
-    public void Reorient()
+
+    private void Awake()
     {
+        _mainCamera = Camera.main;
+        _interactables = FindObjectsByType<Interactable>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+    }
+
+    private void Update()
+    {
+        Reorient();
+    }
+
+    private void Reorient()
+    {
+        var closest = _interactables[0];
         //Camera.main.ScreenToWorldPoint(GetClosestInteractable().transform.position);
-        var screenPoint = Camera.main.WorldToScreenPoint(GetClosestInteractable().transform.position);
-        Debug.Log($"pointing at {screenPoint}");
+        var screenPoint = new Vector2(
+            _mainCamera.WorldToScreenPoint(closest.transform.position).x,
+            _mainCamera.WorldToScreenPoint(closest.transform.position).y);
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, screenPoint, _mainCamera, out var localPoint);
+        
+        
+        
+        var rotationAngle = Mathf.Abs(localPoint.x) < Screen.width * 2 ? 45f / Screen.width * localPoint.x : 90 / Mathf.Sign(localPoint.x);
+
+        transform.eulerAngles = new Vector3(0, 0, rotationAngle);
     }
 }

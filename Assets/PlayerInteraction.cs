@@ -39,7 +39,7 @@ public class PlayerInteraction : MonoBehaviour
         if (Player.state != PlayerState.Idle) return;
 
         CanvasManager.instance.ActiveGroupType = CanvasGroupType.Star;
-        _northStar.Reorient();
+        //_northStar.Reorient();
         
         Debug.Log("Observing star");
     }
