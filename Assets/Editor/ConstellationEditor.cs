@@ -20,6 +20,7 @@ public class ConstellationEditor : EditorWindow
     private Button _removeButton;
 
     private Box _listBox;
+    private VisualElement _buttonBox;
     
     private ConstellationData _selection;
     private SerializedObject _so;
@@ -47,7 +48,13 @@ public class ConstellationEditor : EditorWindow
         var splitView = new TwoPaneSplitView(0, 150, TwoPaneSplitViewOrientation.Horizontal);
         _root.Add(splitView);
 
-        var leftPane = new ListView();
+        var leftPane = new ListView()
+        {
+            fixedItemHeight =  40,
+            style = {
+                flexGrow = 1,
+            }
+        };
         splitView.Add(leftPane);
         
         leftPane.makeItem = () => new Label();
@@ -66,9 +73,28 @@ public class ConstellationEditor : EditorWindow
         using var enumerator = selectedItems.GetEnumerator();
         if (!enumerator.MoveNext()) return;
 
+        _selection = enumerator.Current as ConstellationData;
+        if (!_selection) return;
+        
+        var nameLabel = new Label()
+        {
+            style =
+            {
+                fontSize = 16,
+                unityFontStyleAndWeight = FontStyle.Bold,
+                marginTop = 5,
+                marginBottom = 5,
+                marginLeft = 5
+            },
+            text = _selection.name
+        };
+        
+        _rightPane.Add(nameLabel);
+        
         VisualElement fromUxml = m_VisualTreeAsset.Instantiate();
         _rightPane.Add(fromUxml);
-        var buttonBox = _rightPane.Q<VisualElement>("buttons");
+        
+        _buttonBox = _rightPane.Q<VisualElement>("buttons");
         
         var addButton = new Button()
         {
@@ -82,60 +108,13 @@ public class ConstellationEditor : EditorWindow
         };
         _removeButton.clicked += OnRemoveClicked;
         
-        buttonBox.Add(addButton);
-        buttonBox.Add(_removeButton);
+        _buttonBox.Add(addButton);
+        _buttonBox.Add(_removeButton);
         
-        _selection = enumerator.Current as ConstellationData;
-        if (!_selection) return;
-                
         _so = new SerializedObject(_selection);
         _positionProperty = _so.FindProperty("positions");
 
         UpdateList(_selection);
-
-        /*for (int i = 0; i < selection.positions.Count; i++)
-                {
-                    Box itemBox = new Box();
-
-                    var label = new Label()
-                    {
-                        name = $"Star {i}"
-                    };
-                    Vector3 item = selection.positions[i];
-
-                    var xyPosition = new Vector2Field();
-                    xyPosition.SetValueWithoutNotify(new Vector2(item.x, item.y));
-                    var zPosition = new FloatField()
-                    {
-                        value = item.z,
-                        name = "Z"
-                    };
-
-                    itemBox.Add(label);
-                    itemBox.Add(xyPosition);
-                    itemBox.Add(zPosition);
-
-                    _rightPane.Add(itemBox);
-
-                    var newStar = new VisualElement()
-                    {
-                        name = $"Star {i}",
-                        style =
-                        {
-                            backgroundColor = Color.white,
-                            width = 20,
-                            height = 20
-                        }
-                    };
-                    Debug.Log("star");
-                    var constBox = _rightPane.Q<VisualElement>("constBox");
-                    constBox.Add(newStar);
-                    newStar.transform.position =
-                        new Vector2(200,
-                            50 * i); /*new Vector2(constBox.resolvedStyle.height / 2, constBox.resolvedStyle.width / 2)#1#
-                    ;
-                    DragAndDropManipulator manipulator = new(newStar);
-                }*/
     }
 
     private void UpdateList(ConstellationData selection)
@@ -143,6 +122,10 @@ public class ConstellationEditor : EditorWindow
         _removeButton.enabledSelf = selection.positions.Count > 0;
         
         _listBox?.Clear();
+        if (_rightPane.Contains(_listBox))
+        {
+            _rightPane.Remove(_listBox);
+        }
         _listBox = new Box();
         
         for (int i = 0; i < selection.positions.Count; i++)
