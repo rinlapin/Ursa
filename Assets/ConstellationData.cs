@@ -1,8 +1,9 @@
+using System;
 using UnityEngine;
 using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "ConstellationData", menuName = "Scriptable Objects/ConstellationData")]
 public class ConstellationData : ScriptableObject
 {
-    public List<Vector3> positions = new List<Vector3>();
+    public List<Vector3> positions;
 }
