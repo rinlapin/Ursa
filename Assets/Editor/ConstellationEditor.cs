@@ -208,7 +208,7 @@ public class ConstellationEditor : EditorWindow
         
         var centerPoint = new Vector2(_constBox.contentRect.width / 2, _constBox.contentRect.height / 2);
         
-        var newStar = new StarBox(source);
+        var newStar = new StarBox(source, 21.3158f - 0.03947f * starPosition.z);
         _stars.Add(newStar);
         _constBox.Add(newStar);
         
@@ -216,7 +216,7 @@ public class ConstellationEditor : EditorWindow
             new Vector2(
                 starPosition.x * (_constBox.contentRect.width / 2) / ConvertedLimitX, 
                 -starPosition.y * (_constBox.contentRect.height / 2) / ConvertedLimitY);
-
+        
         var manipulator = new Draggable(newStar);
         newStar.RegisterCallback<PointerUpEvent>(SetValuesOnReleasePointer);
     }
@@ -253,19 +253,21 @@ public class ConstellationEditor : EditorWindow
 public class StarBox : VisualElement
 {
     public VisualElement OwningElement { get; private set; }
+    public VisualElement Star { get; private set; }
     
-    public StarBox(VisualElement owningElement)
+    public StarBox(VisualElement owningElement, float size)
     {
         OwningElement = owningElement;
         
-        var newStar = new VisualElement()
+        Star = new VisualElement()
         {
             style =
             {
-                width = 20,
-                height = 20,
+                width = size,
+                height = size,
                 backgroundColor = Color.yellow,
-                position = Position.Absolute
+                position = Position.Absolute,
+                alignContent = Align.Center
             }
         };
 
@@ -279,9 +281,9 @@ public class StarBox : VisualElement
             }
         };
         
-        newStar.Add(text);
+        Star.Add(text);
         
-        this.Add(newStar);
+        this.Add(Star);
     }
 }
 
