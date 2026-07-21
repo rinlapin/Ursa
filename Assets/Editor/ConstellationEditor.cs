@@ -4,16 +4,22 @@ using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
+using Button = UnityEngine.UIElements.Button;
 
 public class ConstellationEditor : EditorWindow
 {
+    private const float ConvertedLimitX = 600;
+    private const float ConvertedLimitY = 300;
+    
     [SerializeField] private VisualTreeAsset m_VisualTreeAsset = default;
     private StyleSheet _styleSheet;
 
     private VisualElement _root;
-    
-    private VisualElement _rightPane;
+
+    private VisualElement _rightPane, _constBox;
+    private Dictionary<VisualElement, VisualElement> _stars;
     
     private Vector2Field _xy;
 
@@ -66,14 +72,44 @@ public class ConstellationEditor : EditorWindow
         splitView.Add(_rightPane);
     }
 
+    private VisualElement Star(string index)
+    {
+        var newStar = new VisualElement()
+        {
+            style =
+            {
+                width = 20,
+                height = 20,
+                backgroundColor = Color.yellow,
+                position = Position.Absolute
+            }
+        };
+
+        var text = new Label()
+        {
+            text = index,
+            style =
+            {
+                unityFontStyleAndWeight = FontStyle.Bold,
+                color = Color.black
+            }
+        };
+        
+        newStar.Add(text);
+
+        return newStar;
+    }
+
     private void OnConstellationSelectionChanged(IEnumerable<object> selectedItems)
     {
+        
         _rightPane.Clear();
 
         using var enumerator = selectedItems.GetEnumerator();
         if (!enumerator.MoveNext()) return;
 
         _selection = enumerator.Current as ConstellationData;
+        
         if (!_selection) return;
         
         var nameLabel = new Label()
@@ -93,6 +129,7 @@ public class ConstellationEditor : EditorWindow
         
         VisualElement fromUxml = m_VisualTreeAsset.Instantiate();
         _rightPane.Add(fromUxml);
+        _constBox = _rightPane.Q<VisualElement>("constBox");
         
         _buttonBox = _rightPane.Q<VisualElement>("buttons");
         
@@ -128,14 +165,18 @@ public class ConstellationEditor : EditorWindow
         }
         _listBox = new Box();
         
+        _constBox.Clear();
+        _stars = new Dictionary<VisualElement, VisualElement>();
+        
         for (int i = 0; i < selection.positions.Count; i++)
         {
             var subBox = new Box()
             {
                 style = {  }
             };
-            var xyz = new Vector3Field($"Star {i}") { name = "xyz" };
+            var xyz = new Vector3Field($"Star {i}") { name = $"{i}" };
             xyz.BindProperty(_positionProperty.GetArrayElementAtIndex(i));
+            xyz.RegisterValueChangedCallback(OnVector3ValueChanged);
 
             subBox.Add(xyz);
             _listBox.Add(subBox);
@@ -143,11 +184,34 @@ public class ConstellationEditor : EditorWindow
         }
     }
 
+    private void OnVector3ValueChanged(ChangeEvent<Vector3> evt)
+    {
+        DrawStar(evt.currentTarget as VisualElement, evt.newValue);
+    }
+
+    private void DrawStar(VisualElement source, Vector3 starPosition)
+    {
+        var centerPoint = new Vector2(_constBox.contentRect.width / 2, _constBox.contentRect.height / 2);
+        
+        var newStar = Star(source.name);
+        _constBox.Add(newStar);
+        if (_stars.ContainsKey(source))
+        {
+            _stars[source].RemoveFromHierarchy();
+        }
+        _stars[source] = newStar;
+        newStar.transform.position = centerPoint +
+            new Vector2(
+                starPosition.x * (_constBox.contentRect.width / 2) / ConvertedLimitX, 
+                -starPosition.y * (_constBox.contentRect.height / 2) / ConvertedLimitY);
+    }
+
     private void OnAddClicked()
     {
         _positionProperty.InsertArrayElementAtIndex(_positionProperty.arraySize);
         _so.ApplyModifiedProperties();
         UpdateList(_selection);
+        _selection.positions[^1] = Vector3.zero;
     }
 
     private void OnRemoveClicked()

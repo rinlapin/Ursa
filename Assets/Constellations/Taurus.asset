@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adc01c4a1da6ccc4fbe5d977ab6d2b73, type: 3}
   m_Name: Taurus
   m_EditorClassIdentifier: 
-  positions: []
+  positions:
+  - {x: -562, y: -125, z: -85}
+  - {x: -137.99998, y: 65.99999, z: -186.99995}
+  - {x: 125.000015, y: 119.99999, z: -229.99995}
+  - {x: 363.00003, y: -163, z: 284.00003}

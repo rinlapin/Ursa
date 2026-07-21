@@ -12,7 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adc01c4a1da6ccc4fbe5d977ab6d2b73, type: 3}
   m_Name: Virgo
   m_EditorClassIdentifier: 
-  positions:
-  - {x: 0.75, y: 0, z: 0}
-  - {x: 0.75, y: 0, z: 0}
-  - {x: 0.75, y: 0, z: 0}
+  positions: []
