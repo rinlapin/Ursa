@@ -7,7 +7,7 @@ public class Draggable : PointerManipulator
     public Draggable(VisualElement target)
     {
         this.target = target;
-        //root = target.parent;
+        root = target.parent;
     }
 
     protected override void RegisterCallbacksOnTarget()

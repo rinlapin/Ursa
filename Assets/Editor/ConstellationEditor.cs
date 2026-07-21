@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
@@ -19,7 +20,8 @@ public class ConstellationEditor : EditorWindow
     private VisualElement _root;
 
     private VisualElement _rightPane, _constBox;
-    private Dictionary<VisualElement, VisualElement> _stars;
+    private List<StarBox> _stars;
+    private List<CoordField> _coordinates;
     
     private Vector2Field _xy;
 
@@ -72,7 +74,7 @@ public class ConstellationEditor : EditorWindow
         splitView.Add(_rightPane);
     }
 
-    private VisualElement Star(string index)
+    /*private VisualElement Star(string index)
     {
         var newStar = new VisualElement()
         {
@@ -98,7 +100,7 @@ public class ConstellationEditor : EditorWindow
         newStar.Add(text);
 
         return newStar;
-    }
+    }*/
 
     private void OnConstellationSelectionChanged(IEnumerable<object> selectedItems)
     {
@@ -166,7 +168,8 @@ public class ConstellationEditor : EditorWindow
         _listBox = new Box();
         
         _constBox.Clear();
-        _stars = new Dictionary<VisualElement, VisualElement>();
+        _stars = new List<StarBox>();
+        _coordinates = new List<CoordField>();
         
         for (int i = 0; i < selection.positions.Count; i++)
         {
@@ -174,9 +177,12 @@ public class ConstellationEditor : EditorWindow
             {
                 style = {  }
             };
-            var xyz = new Vector3Field($"Star {i}") { name = $"{i}" };
-            xyz.BindProperty(_positionProperty.GetArrayElementAtIndex(i));
-            xyz.RegisterValueChangedCallback(OnVector3ValueChanged);
+
+            var xyz = new CoordField(i, _positionProperty.GetArrayElementAtIndex(i), OnVector3ValueChanged);
+            
+            xyz.Field.BindProperty(_positionProperty.GetArrayElementAtIndex(i));
+            xyz.Field.RegisterValueChangedCallback(OnVector3ValueChanged);
+            _coordinates.Add(xyz);
 
             subBox.Add(xyz);
             _listBox.Add(subBox);
@@ -186,24 +192,46 @@ public class ConstellationEditor : EditorWindow
 
     private void OnVector3ValueChanged(ChangeEvent<Vector3> evt)
     {
-        DrawStar(evt.currentTarget as VisualElement, evt.newValue);
+        var source = evt.target as VisualElement;
+        DrawStar(source, evt.newValue);
     }
 
     private void DrawStar(VisualElement source, Vector3 starPosition)
     {
+        foreach (var star in _stars)
+        {
+            if (star.OwningElement == source)
+            {
+                star.RemoveFromHierarchy();
+            }
+        }
+        
         var centerPoint = new Vector2(_constBox.contentRect.width / 2, _constBox.contentRect.height / 2);
         
-        var newStar = Star(source.name);
+        var newStar = new StarBox(source);
+        _stars.Add(newStar);
         _constBox.Add(newStar);
-        if (_stars.ContainsKey(source))
-        {
-            _stars[source].RemoveFromHierarchy();
-        }
-        _stars[source] = newStar;
+        
         newStar.transform.position = centerPoint +
             new Vector2(
                 starPosition.x * (_constBox.contentRect.width / 2) / ConvertedLimitX, 
                 -starPosition.y * (_constBox.contentRect.height / 2) / ConvertedLimitY);
+
+        var manipulator = new Draggable(newStar);
+        newStar.RegisterCallback<PointerUpEvent>(SetValuesOnReleasePointer);
+    }
+
+    private void SetValuesOnReleasePointer(PointerUpEvent evt)
+    {
+        var visual = evt.currentTarget as StarBox;
+        var vectorField = visual.OwningElement as Vector3Field;
+        var convertedPosition = new Vector3(
+            visual.transform.position.x * ConvertedLimitX / (_constBox.contentRect.width / 2) - ConvertedLimitX,
+            -visual.transform.position.y * ConvertedLimitY / (_constBox.contentRect.height / 2) + ConvertedLimitY,
+            vectorField.value.z
+        );
+        
+        vectorField.value = convertedPosition;
     }
 
     private void OnAddClicked()
@@ -221,3 +249,59 @@ public class ConstellationEditor : EditorWindow
         UpdateList(_selection);
     }
 }
+
+public class StarBox : VisualElement
+{
+    public VisualElement OwningElement { get; private set; }
+    
+    public StarBox(VisualElement owningElement)
+    {
+        OwningElement = owningElement;
+        
+        var newStar = new VisualElement()
+        {
+            style =
+            {
+                width = 20,
+                height = 20,
+                backgroundColor = Color.yellow,
+                position = Position.Absolute
+            }
+        };
+
+        var text = new Label()
+        {
+            text = owningElement.name,
+            style =
+            {
+                unityFontStyleAndWeight = FontStyle.Bold,
+                color = Color.black
+            }
+        };
+        
+        newStar.Add(text);
+        
+        this.Add(newStar);
+    }
+}
+
+public class CoordField : VisualElement
+{
+    public int Index { get; private set; }
+    public SerializedProperty PositionProperty { get; private set; }
+    public EventCallback<ChangeEvent<Vector3>> OnValueChanged { get; private set; }
+    
+    public Vector3Field Field { get; private set; }
+    
+    public CoordField(int index, SerializedProperty positionProperty, EventCallback<ChangeEvent<Vector3>> onValueChanged)
+    {
+        Index = index;
+        PositionProperty = positionProperty;
+        OnValueChanged = onValueChanged;
+        
+        Field = new Vector3Field($"Star {Index}") { name = $"{Index}" };
+        
+        this.Add(Field);
+    }
+}
+
