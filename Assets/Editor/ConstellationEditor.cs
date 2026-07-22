@@ -19,13 +19,14 @@ public class ConstellationEditor : EditorWindow
 
     private VisualElement _root;
 
-    private VisualElement _rightPane, _constBox;
+    private VisualElement _rightPane, _leftPane, _constBox;
     private List<StarBox> _stars;
     private List<CoordField> _coordinates;
+    private ListView _listView;
     
     private Vector2Field _xy;
 
-    private Button _removeButton;
+    private Button _removeButton, _addConstellationButton, _removeConstellationButton;
 
     private Box _listBox;
     private VisualElement _buttonBox;
@@ -44,34 +45,71 @@ public class ConstellationEditor : EditorWindow
     public void CreateGUI()
     {
         _root = rootVisualElement;
+        var splitView = new TwoPaneSplitView(0, 150, TwoPaneSplitViewOrientation.Horizontal);
+        _root.Add(splitView);
 
+        _addConstellationButton = new Button()
+        {
+            text = "+",
+            style =
+            {
+                marginBottom = 10,
+                marginLeft = 5,
+                marginRight = 5
+            }
+        };
+        _addConstellationButton.clicked += OnNewConstellationClicked;
+        
+        /*_removeConstellationButton = new Button()
+        {
+            text = "-",
+            style =
+            {
+                marginBottom = 10,
+                marginLeft = 5,
+                marginRight = 5
+            }
+        };
+        _removeConstellationButton.clicked += OnRemoveConstellationClicked;*/
+        
+        _leftPane = new VisualElement();
+        
+        _listView = CreateListView();
+        _leftPane.Add(_listView);
+        splitView.Add(_leftPane);
+        
+        PopulateListView(RefreshList());
+        
+        _rightPane = new VisualElement();
+        splitView.Add(_rightPane);
+    }
+
+    private void OnNewConstellationClicked()
+    {
+        var newConstData = ScriptableObject.CreateInstance<ConstellationData>();
+        newConstData.positions = new List<Vector3>();
+        AssetDatabase.CreateAsset(newConstData, AssetDatabase.GenerateUniqueAssetPath("Assets/Constellations/New Constellation.asset"));
+        PopulateListView(RefreshList());
+    }
+
+    /*private void OnRemoveConstellationClicked()
+    {
+        if (_so?.targetObject?.GetType() != typeof(ConstellationData)) return;
+        AssetDatabase.DeleteAsset(AssetDatabase.GetAssetPath(_so.targetObject as ConstellationData));
+        PopulateListView(RefreshList());
+    }*/
+
+    private static List<ConstellationData> RefreshList()
+    {
         var allConstellationGuids = AssetDatabase.FindAssets("t:ConstellationData");
         var allConstellations = new List<ConstellationData>();
         foreach (var guid in allConstellationGuids)
         {
-            allConstellations.Add(
-                AssetDatabase.LoadAssetAtPath<ConstellationData>(AssetDatabase.GUIDToAssetPath(guid)));
+            var newEntry = AssetDatabase.LoadAssetAtPath<ConstellationData>(AssetDatabase.GUIDToAssetPath(guid));
+            allConstellations.Add(newEntry);
         }
 
-        var splitView = new TwoPaneSplitView(0, 150, TwoPaneSplitViewOrientation.Horizontal);
-        _root.Add(splitView);
-
-        var leftPane = new ListView()
-        {
-            fixedItemHeight =  40,
-            style = {
-                flexGrow = 1,
-            }
-        };
-        splitView.Add(leftPane);
-        
-        leftPane.makeItem = () => new Label();
-        leftPane.bindItem = (item, index) => { (item as Label).text = allConstellations[index].name; };
-        leftPane.itemsSource = allConstellations;
-        leftPane.selectionChanged += OnConstellationSelectionChanged;
-
-        _rightPane = new VisualElement();
-        splitView.Add(_rightPane);
+        return allConstellations;
     }
 
     /*private VisualElement Star(string index)
@@ -114,7 +152,10 @@ public class ConstellationEditor : EditorWindow
         
         if (!_selection) return;
         
-        var nameLabel = new Label()
+        _so = new SerializedObject(_selection);
+        _positionProperty = _so.FindProperty("positions");
+
+        var nameLabel = new TextField()
         {
             style =
             {
@@ -123,16 +164,18 @@ public class ConstellationEditor : EditorWindow
                 marginTop = 5,
                 marginBottom = 5,
                 marginLeft = 5
-            },
-            text = _selection.name
+            }
         };
+        
+        var nameProperty = _so.FindProperty("m_Name");
+        nameLabel.BindProperty(nameProperty);
+        nameLabel.TrackPropertyValue(nameProperty, CheckName);
         
         _rightPane.Add(nameLabel);
         
         VisualElement fromUxml = m_VisualTreeAsset.Instantiate();
         _rightPane.Add(fromUxml);
         _constBox = _rightPane.Q<VisualElement>("constBox");
-        
         _buttonBox = _rightPane.Q<VisualElement>("buttons");
         
         var addButton = new Button()
@@ -149,16 +192,58 @@ public class ConstellationEditor : EditorWindow
         
         _buttonBox.Add(addButton);
         _buttonBox.Add(_removeButton);
-        
-        _so = new SerializedObject(_selection);
-        _positionProperty = _so.FindProperty("positions");
 
         UpdateList(_selection);
+    }
+    
+    private void CheckName(SerializedProperty property)
+    {
+        var newValue = property.stringValue;
+        var path = AssetDatabase.GetAssetPath(property.serializedObject.targetObject);
+        AssetDatabase.RenameAsset(path, newValue); // will throw a bunch of warnings, do not fret.
+                                                            // we're fucking around with unsafe methods,
+                                                            // and pragma can only suppress warnings thrown by compiler :(
+
+        PopulateListView(RefreshList());
+    }
+    
+    private void PopulateListView(List<ConstellationData> allConstellations)
+    {
+        if (_leftPane.Contains(_addConstellationButton))
+        {
+            _leftPane.Remove(_addConstellationButton);
+        }
+
+        if (_leftPane.Contains(_removeConstellationButton))
+        {
+            _leftPane.Remove(_removeConstellationButton);
+        }
+        
+        _listView.Clear();
+        _listView.Unbind();
+        _listView.makeItem = () => new Label();
+        _listView.bindItem = (item, index) => { (item as Label).text = allConstellations[index].name; };
+        _listView.itemsSource = allConstellations;
+        _listView.selectionChanged += OnConstellationSelectionChanged;
+        
+        _leftPane.Add(_addConstellationButton);
+        _leftPane.Add(_removeConstellationButton);
+    }
+
+    private ListView CreateListView()
+    {
+        return new ListView()
+        {
+            fixedItemHeight =  40,
+            style = {
+                flexGrow = 1,
+            }
+        };
     }
 
     private void UpdateList(ConstellationData selection)
     {
-        _removeButton.enabledSelf = selection.positions.Count > 0;
+        _removeButton.enabledSelf = selection?.positions.Count > 0;
         
         _listBox?.Clear();
         if (_rightPane.Contains(_listBox))
