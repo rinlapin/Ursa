@@ -25,12 +25,8 @@ public class PlayerInteraction : MonoBehaviour
         if (!context.started) return;
         if (closestInteractable == null) return;
         if (Player.state != PlayerState.Idle) return;
-
-        if (!PuzzleManager.instance.ActiveInteractable)
-        {
-            Player.state = PlayerState.Interacting;
-            closestInteractable.TryInteract();
-        }
+        
+        closestInteractable.TryInteract();
     }
 
     public void OnObserve(InputAction.CallbackContext context)
