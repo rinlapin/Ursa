@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adc01c4a1da6ccc4fbe5d977ab6d2b73, type: 3}
   m_Name: Aries
   m_EditorClassIdentifier: 
-  positions: []
+  positions:
+  - {x: -342.74713, y: -15.050191, z: -130.88}
+  - {x: -196.40564, y: 171.57188, z: 80.74}
+  - {x: 30.03851, y: 227.75917, z: -30.21}
+  - {x: 179.46088, y: 65.21736, z: 92.04}

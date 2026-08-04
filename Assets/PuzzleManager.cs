@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,6 +7,21 @@ public class PuzzleManager : MonoBehaviour
 {
     public static PuzzleState state = PuzzleState.Idle;
     private Camera _mainCamera;
+
+    private ConstellationData _activeData;
+
+    public ConstellationData ActiveData
+    {
+        get => _activeData;
+        set
+        {
+            _activeData = value;
+            Player.state = _activeData ? PlayerState.Interacting : PlayerState.Idle;
+            ConstellationFramework.instance.Setup(_activeData);
+        }
+    }
+
+    #region obsolete
     private GameObject _activeConstellation;
     public GameObject ActiveConstellation
     {
@@ -20,14 +36,15 @@ public class PuzzleManager : MonoBehaviour
 
             if (!value)
             {
-                ConstellationFramework.instance.Constellation = null;
+                //ConstellationFramework.instance.Constellation = null;
                 return;
             }
             
             _activeConstellation = Instantiate(value, ConstellationFramework.instance.canvas.transform);
-            ConstellationFramework.instance.Constellation = _activeConstellation.transform;
+            //ConstellationFramework.instance.Constellation = _activeConstellation.transform;
         }
     }
+    #endregion
 
     public static PuzzleManager instance;
     private void Awake()
@@ -42,19 +59,9 @@ public class PuzzleManager : MonoBehaviour
 
     private Interactable _activeInteractable;
 
-    public void Setup(Interactable newInteractable)
-    {
-        _activeInteractable = newInteractable;
-        CanvasManager.instance.ActiveGroupType = CanvasGroupType.Puzzle;
-        _mainCamera.gameObject.SetActive(false);
-        ConstellationFramework.instance.gameObject.SetActive(true);
-        
-        ActiveConstellation = newInteractable.Constellation;
-    }
-
     public void Exit()
     {
-        ActiveConstellation = null;
+        ActiveData = null;
         
         _mainCamera.gameObject.SetActive(true);
         ConstellationFramework.instance.gameObject.SetActive(false);

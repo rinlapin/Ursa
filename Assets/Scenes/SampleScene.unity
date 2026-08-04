@@ -230,6 +230,41 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!1 &70389594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 70389595}
+  m_Layer: 3
+  m_Name: Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &70389595
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70389594}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1843770953}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &323085111
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,35 +653,11 @@ MonoBehaviour:
     m_ActionId: 7d4e98d9-ab84-42bb-8646-2456c9d153a9
     m_ActionName: 'Player/Observe[/Keyboard/f]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 457294755}
-        m_TargetAssemblyTypeName: ConstellationFramework, Assembly-CSharp
-        m_MethodName: OnClickX
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 825445d6-a35f-4acd-9232-88035a1f4121
     m_ActionName: 'Player/Click[/Mouse/leftButton]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 457294755}
-        m_TargetAssemblyTypeName: ConstellationFramework, Assembly-CSharp
-        m_MethodName: OnClickY
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: cd53c6ea-3c96-40f9-9dbb-bf249dd5e63a
     m_ActionName: 'Player/ClickY[/Mouse/rightButton]'
   - m_PersistentCalls:
@@ -1007,9 +1018,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 1
-  damping: 3
+  pivot: {fileID: 70389594}
+  starPrefab: {fileID: 4927347733955771024, guid: a4a8aff5880416b41b5d96aa6c2f3a95, type: 3}
+  graceWindow: 2
   canvas: {fileID: 1843770956}
-  difference: {x: 0, y: 0}
 --- !u!120 &457294756
 LineRenderer:
   serializedVersion: 2
@@ -1981,7 +1993,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 110.3
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -2099,6 +2111,7 @@ RectTransform:
   m_Children:
   - {fileID: 323085112}
   - {fileID: 36420018}
+  - {fileID: 70389595}
   m_Father: {fileID: 1003431060}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2327,6 +2340,10 @@ PrefabInstance:
       propertyPath: constellation
       value: 
       objectReference: {fileID: 4011202897894796377, guid: 03289963787148d4ab0cfbf7fb3ed578, type: 3}
+    - target: {fileID: 2876784273437204776, guid: 179320745619d3244a379c3a55f4daf9, type: 3}
+      propertyPath: constellationData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2e6a4a1e53d26f847b8f5733749e47d1, type: 2}
     - target: {fileID: 4338276287439593648, guid: 179320745619d3244a379c3a55f4daf9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.11
