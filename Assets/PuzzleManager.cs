@@ -17,6 +17,7 @@ public class PuzzleManager : MonoBehaviour
         {
             _activeData = value;
             Player.state = _activeData ? PlayerState.Interacting : PlayerState.Idle;
+            if (!value) return;
             ConstellationFramework.instance.Setup(_activeData);
         }
     }
@@ -55,39 +56,35 @@ public class PuzzleManager : MonoBehaviour
         _mainCamera = Camera.main;
     }
 
-    public Interactable ActiveInteractable => _activeInteractable;
-
     private Interactable _activeInteractable;
+
+    public Interactable ActiveInteractable
+    {
+        get =>  _activeInteractable;
+        set
+        {
+            _activeInteractable = value;
+            ActiveData = value ? value.Data : null;
+        }
+    }
 
     public void Exit()
     {
-        ActiveData = null;
+        ActiveInteractable = null;
         
         _mainCamera.gameObject.SetActive(true);
         ConstellationFramework.instance.gameObject.SetActive(false);
 
-        _activeInteractable = null;
         CanvasManager.instance.ActiveGroupType = CanvasGroupType.None;
         Player.state = PlayerState.Idle;
     }
 
     public void Solve()
     {
-        if (!_activeInteractable) return;
-        _activeInteractable.Solve();
+        ActiveInteractable.Solve();
         PlayerInteraction.instance.closestInteractable = null;
         Exit();
     }
-
-    #if UNITY_EDITOR
-    public void OnSolve(InputAction.CallbackContext context)
-    {
-        if (!context.started || Player.state != PlayerState.Interacting)
-        {
-            Solve();
-        }
-    }
-    #endif
 }
 
 public enum PuzzleState

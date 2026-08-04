@@ -1020,7 +1020,7 @@ MonoBehaviour:
   rotationSpeed: 1
   pivot: {fileID: 70389594}
   starPrefab: {fileID: 4927347733955771024, guid: a4a8aff5880416b41b5d96aa6c2f3a95, type: 3}
-  graceWindow: 2
+  graceWindow: 5
   canvas: {fileID: 1843770956}
 --- !u!120 &457294756
 LineRenderer:
@@ -2332,6 +2332,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2876784273437204776, guid: 179320745619d3244a379c3a55f4daf9, type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 11400000, guid: 2e6a4a1e53d26f847b8f5733749e47d1, type: 2}
     - target: {fileID: 2876784273437204776, guid: 179320745619d3244a379c3a55f4daf9, type: 3}
       propertyPath: solvedObject
       value: 

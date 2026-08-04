@@ -65,12 +65,12 @@ public class ConstellationHint : MonoBehaviour
         {
             var star = pair.Key;
             var clone = pair.Value;
+            Debug.Log(pair);
             
             if (Mathf.Abs(star.transform.position.x - clone.GameObject.transform.position.x) < ConstellationFramework.instance.graceWindow &&  
                 Mathf.Abs(star.transform.position.y - clone.GameObject.transform.position.y) < ConstellationFramework.instance.graceWindow)
             {
                 clone.IsMatched = true;
-                Debug.Log($"Star {star.gameObject.name} matched");
             }
             else
             {
@@ -85,7 +85,6 @@ public class ConstellationHint : MonoBehaviour
                 return false;
             }
         }
-
         return true;
     }
 }

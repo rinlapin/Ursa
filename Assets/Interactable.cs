@@ -9,16 +9,17 @@ public class Interactable : MonoBehaviour
     #region obsolete
 
     [Header("Constellation prefab to 'feed' into PuzzleGroup")]
-    [SerializeField] private GameObject constellation;
+    [HideInInspector] [SerializeField] private GameObject constellation;
     public GameObject Constellation => constellation;
 
     #endregion
     
-    [SerializeField] private ConstellationData constellationData;
+    [SerializeField] private ConstellationData data;
+    public ConstellationData Data => data;
     
     public void TryInteract()
     {
-        PuzzleManager.instance.ActiveData = constellationData;
+        PuzzleManager.instance.ActiveInteractable = this;
     }
 
     public void Solve()
