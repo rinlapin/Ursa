@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adc01c4a1da6ccc4fbe5d977ab6d2b73, type: 3}
+  m_Name: Lepus
+  m_EditorClassIdentifier: 
+  positions:
+  - {x: -209.13705, y: -238.19095, z: -50}
+  - {x: -125.2, y: -353.3, z: -100}
+  - {x: -54.822334, y: -61.961052, z: 130}
+  - {x: 42.639595, y: -280.402, z: 0}
+  - {x: 288.32486, y: -310.55276, z: 30}
+  - {x: 184.77158, y: 48.241207, z: 50}
+  - {x: 54.822334, y: 300, z: 150}
+  - {x: 223.35025, y: 260.80402, z: 100}
