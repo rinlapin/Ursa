@@ -240,8 +240,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bendType: 10
   bendID: 1
-  bendPivotPoint: {fileID: 0}
-  bendPivotPointPosition: {x: 0, y: 0, z: 0}
+  bendPivotPoint: {fileID: 639134363}
+  bendPivotPointPosition: {x: -189.6, y: 0, z: 37.5}
   bendRotationCenter: {fileID: 0}
   bendRotationCenterPosition: {x: 0, y: 0, z: 0}
   bendRotationAxis: {x: 0, y: 0, z: 0}
@@ -2900,6 +2900,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Aquila
       objectReference: {fileID: 0}
+    - target: {fileID: 8390382119948819909, guid: 6cee053430ef02246a279761bb34c845, type: 3}
+      propertyPath: m_Constraints
+      value: 122
+      objectReference: {fileID: 0}
     - target: {fileID: 9008094514312404237, guid: 6cee053430ef02246a279761bb34c845, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.6
@@ -2953,6 +2957,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -547305661279406522, guid: eecf1e5161bddfd4392fbd5768660ab1, type: 3}
+      propertyPath: m_Constraints
+      value: 122
+      objectReference: {fileID: 0}
     - target: {fileID: 1394739029503056955, guid: eecf1e5161bddfd4392fbd5768660ab1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -81.2
@@ -3022,6 +3030,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1045228982068804525, guid: 6e55e5cd5868c7c478cf0df72cfc5533, type: 3}
+      propertyPath: m_Constraints
+      value: 122
+      objectReference: {fileID: 0}
     - target: {fileID: 545442605671975098, guid: 6e55e5cd5868c7c478cf0df72cfc5533, type: 3}
       propertyPath: solvedObject
       value: 
@@ -3087,6 +3099,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4045497801925578729, guid: be79a78aad0380242a07ef2f1e79d890, type: 3}
+      propertyPath: m_Constraints
+      value: 122
+      objectReference: {fileID: 0}
     - target: {fileID: 1594730688145924721, guid: be79a78aad0380242a07ef2f1e79d890, type: 3}
       propertyPath: m_LocalPosition.x
       value: 108.2
@@ -3152,6 +3168,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2993556251726615854, guid: 09e58b2c5f21d104c852587fc004d765, type: 3}
+      propertyPath: m_Constraints
+      value: 122
+      objectReference: {fileID: 0}
     - target: {fileID: 4153214444841842354, guid: 09e58b2c5f21d104c852587fc004d765, type: 3}
       propertyPath: m_Name
       value: Canis
@@ -3213,6 +3233,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3360526057132809953, guid: 688e7a2a0558f1c4a90f168c8a8fac82, type: 3}
+      propertyPath: m_Constraints
+      value: 122
+      objectReference: {fileID: 0}
     - target: {fileID: 7376015350469269714, guid: 688e7a2a0558f1c4a90f168c8a8fac82, type: 3}
       propertyPath: m_LocalPosition.x
       value: -95
