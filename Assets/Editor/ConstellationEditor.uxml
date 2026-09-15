@@ -1,7 +1,0 @@
-<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/Editor/ConstellationEditor.uss?fileID=7433441132597879392&amp;guid=e7c7d04d6d4fcba42b30a44ee88e0e14&amp;type=3#ConstellationEditor" />
-    <engine:GroupBox name="constBox" style="height: 199px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;">
-        <engine:VisualElement name="object" style="flex-grow: 1; height: 15px; width: 15px; background-size: 101px 100px; align-items: auto; position: absolute; top: 88px; left: 116px; background-color: rgb(0, 0, 0);" />
-    </engine:GroupBox>
-    <engine:GroupBox name="buttons" class="section-container" />
-</engine:UXML>
