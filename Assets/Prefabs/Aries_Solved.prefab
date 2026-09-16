@@ -73,6 +73,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcbd0eb1ca0544afae15512f5aa9a4b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <DialogueLines>k__BackingField:
+  - 'Aries: Whoa! I''m back!'
+  - 'Little Ursa: Hello.'
+  - 'Aries: Did you... Help me?'
+  - 'Little Ursa: Mm-hmm.'
+  - 'Aries: But you''re so small... and tiny?'
+  - 'Little Ursa: ...'
 --- !u!1 &8374222708473708971
 GameObject:
   m_ObjectHideFlags: 0
