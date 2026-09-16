@@ -1,4 +1,4 @@
-using System;
+/*using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
@@ -59,7 +59,7 @@ public class ConstellationFramework : MonoBehaviour
             }
         }
 
-    }*/
+    }#1#
     
     private Camera _puzzleCamera;
     
@@ -176,4 +176,4 @@ public class ConstellationFramework : MonoBehaviour
         _hint.Setup(pivot.transform);
         SetRandomRotation(pivot.transform);
     }
-}
+}*/

@@ -118,8 +118,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7376015350469269714}
-  - component: {fileID: 2222143535885143709}
   - component: {fileID: 3360526057132809953}
+  - component: {fileID: 4695918195865627254}
   m_Layer: 0
   m_Name: Lepus
   m_TagString: Untagged
@@ -143,21 +143,6 @@ Transform:
   - {fileID: 2998608332037470316}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2222143535885143709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7803213182034277177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e607ba54051a16c418442eb3bc29d780, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  solvedObject: {fileID: 1089132409479277198, guid: ed5304eaf5f08264c9ec3662b0206141, type: 3}
-  constellation: {fileID: 0}
-  data: {fileID: 11400000, guid: 43f2eca0ea2925247922c6713a99d265, type: 2}
 --- !u!54 &3360526057132809953
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -185,3 +170,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!114 &4695918195865627254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803213182034277177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5b78913b9534c30adb641efba1bbcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solvedInteractable: {fileID: -3537390479251422524, guid: ed5304eaf5f08264c9ec3662b0206141, type: 3}
+  <Data>k__BackingField: {fileID: 11400000, guid: 43f2eca0ea2925247922c6713a99d265, type: 2}

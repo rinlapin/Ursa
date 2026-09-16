@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6645037494130675531}
-  - component: {fileID: 8986982760417419319}
   - component: {fileID: 2993556251726615854}
+  - component: {fileID: 508353947144393926}
   m_Layer: 0
   m_Name: Canis
   m_TagString: Untagged
@@ -34,21 +34,6 @@ Transform:
   - {fileID: 7152832322441121694}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8986982760417419319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4153214444841842354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e607ba54051a16c418442eb3bc29d780, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  solvedObject: {fileID: 0}
-  constellation: {fileID: 0}
-  data: {fileID: 11400000, guid: 83aceafa4f717e942a4634825f684873, type: 2}
 --- !u!54 &2993556251726615854
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -76,6 +61,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!114 &508353947144393926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4153214444841842354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5b78913b9534c30adb641efba1bbcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solvedInteractable: {fileID: 458779470440179344, guid: 6a8a0b542cb29624b8062b21accecee9, type: 3}
+  <Data>k__BackingField: {fileID: 11400000, guid: 83aceafa4f717e942a4634825f684873, type: 2}
 --- !u!1 &9095825657366028389
 GameObject:
   m_ObjectHideFlags: 0

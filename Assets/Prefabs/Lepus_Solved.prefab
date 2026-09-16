@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7457389636372781230}
   - component: {fileID: -3281806599311110333}
+  - component: {fileID: -3537390479251422524}
   m_Layer: 0
   m_Name: Lepus_Solved
   m_TagString: Untagged
@@ -60,6 +61,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!114 &-3537390479251422524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089132409479277198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbd0eb1ca0544afae15512f5aa9a4b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7482058586517437962
 GameObject:
   m_ObjectHideFlags: 0

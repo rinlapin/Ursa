@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9008094514312404237}
-  - component: {fileID: 452931518935517263}
   - component: {fileID: 8390382119948819909}
+  - component: {fileID: 6024724509577135474}
   m_Layer: 0
   m_Name: Aquila
   m_TagString: Untagged
@@ -34,21 +34,6 @@ Transform:
   - {fileID: 60479443531830622}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &452931518935517263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6951107015472243293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e607ba54051a16c418442eb3bc29d780, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  solvedObject: {fileID: 0}
-  constellation: {fileID: 0}
-  data: {fileID: 0}
 --- !u!54 &8390382119948819909
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -76,6 +61,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!114 &6024724509577135474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6951107015472243293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5b78913b9534c30adb641efba1bbcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solvedInteractable: {fileID: 791059888414060757, guid: 0ab492a421a4a2d4e80ee6cd40f57dce, type: 3}
+  <Data>k__BackingField: {fileID: 11400000, guid: bd1d528dfa25d254da28ae2dffed57de, type: 2}
 --- !u!1 &8191007813158707512
 GameObject:
   m_ObjectHideFlags: 0

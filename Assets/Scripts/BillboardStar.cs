@@ -1,3 +1,4 @@
+/*
 using System;
 using UnityEngine;
 
@@ -18,3 +19,4 @@ public class BillboardStar : MonoBehaviour
         transform.LookAt(transform.position + _targetCamera.transform.rotation * Vector3.forward, _targetCamera.transform.rotation * Vector3.up);
     }
 }
+*/

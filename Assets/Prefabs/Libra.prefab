@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1594730688145924721}
-  - component: {fileID: 3124669553136589322}
   - component: {fileID: -4045497801925578729}
+  - component: {fileID: 3475643160013589073}
   m_Layer: 0
   m_Name: Libra
   m_TagString: Untagged
@@ -34,21 +34,6 @@ Transform:
   - {fileID: 6379920375036049878}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3124669553136589322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4301045380860093261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e607ba54051a16c418442eb3bc29d780, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  solvedObject: {fileID: 0}
-  constellation: {fileID: 0}
-  data: {fileID: 0}
 --- !u!54 &-4045497801925578729
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -76,6 +61,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!114 &3475643160013589073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4301045380860093261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5b78913b9534c30adb641efba1bbcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solvedInteractable: {fileID: 0}
+  <Data>k__BackingField: {fileID: 11400000, guid: 03a25a1ac6d3b8844b0ff1dd3c36d796, type: 2}
 --- !u!1 &6443793501844344058
 GameObject:
   m_ObjectHideFlags: 0

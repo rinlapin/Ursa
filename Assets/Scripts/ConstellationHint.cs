@@ -1,3 +1,4 @@
+/*
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -88,3 +89,4 @@ public class ConstellationHint : MonoBehaviour
         return true;
     }
 }
+*/

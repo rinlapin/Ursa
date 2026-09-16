@@ -1,95 +1,69 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Random = UnityEngine.Random;
 
 public class PuzzleManager : MonoBehaviour
 {
-    public static PuzzleState state = PuzzleState.Idle;
-    private Camera _mainCamera;
+    [SerializeField] private GameObject puzzleVisuals;
+    [field: SerializeField] public Transform Pivot { get; protected set; }
+    [field: SerializeField] public CanvasGroup Hint { get; protected set; }
+    [field: SerializeField] public CanvasGroup WinBackground { get; protected set; }
+    [SerializeField] private GameObject starPrefab;
+    [SerializeField] private Camera puzzleCamera;
+    
+    private List<ForgottenInteractable> _forgottenInteractables = new List<ForgottenInteractable>();
 
-    private ConstellationData _activeData;
-
-    public ConstellationData ActiveData
-    {
-        get => _activeData;
-        set
-        {
-            _activeData = value;
-            Player.state = _activeData ? PlayerState.Interacting : PlayerState.Idle;
-            if (!value) return;
-            ConstellationFramework.instance.Setup(_activeData);
-        }
-    }
-
-    #region obsolete
-    private GameObject _activeConstellation;
-    public GameObject ActiveConstellation
-    {
-        get => _activeConstellation;
-        set
-        {
-            if (_activeConstellation)
-            {
-                Destroy(_activeConstellation);
-                _activeConstellation = null;
-            }
-
-            if (!value)
-            {
-                //ConstellationFramework.instance.Constellation = null;
-                return;
-            }
-            
-            _activeConstellation = Instantiate(value, ConstellationFramework.instance.canvas.transform);
-            //ConstellationFramework.instance.Constellation = _activeConstellation.transform;
-        }
-    }
-    #endregion
-
-    public static PuzzleManager instance;
     private void Awake()
     {
-        if (instance == null) instance = this;
-        else if (instance != this) Destroy(gameObject);
-
-        _mainCamera = Camera.main;
-    }
-
-    private Interactable _activeInteractable;
-
-    public Interactable ActiveInteractable
-    {
-        get =>  _activeInteractable;
-        set
+        _forgottenInteractables = FindObjectsByType<ForgottenInteractable>(FindObjectsInactive.Exclude, FindObjectsSortMode.None).ToList();
+        foreach (var interactable in _forgottenInteractables)
         {
-            _activeInteractable = value;
-            ActiveData = value ? value.Data : null;
+            interactable.OnSolve += Remove;
         }
-    }
-
-    public void Exit()
-    {
-        ActiveInteractable = null;
         
-        _mainCamera.gameObject.SetActive(true);
-        ConstellationFramework.instance.gameObject.SetActive(false);
-
-        CanvasManager.instance.ActiveGroupType = CanvasGroupType.None;
-        Player.state = PlayerState.Idle;
+        puzzleVisuals.SetActive(false);
+        Hint.alpha = 0;
+        WinBackground.alpha = 0;
     }
 
-    public void Solve()
+    private void Remove(ForgottenInteractable interactable)
     {
-        ActiveInteractable.Solve();
-        PlayerInteraction.instance.closestInteractable = null;
-        Exit();
+        _forgottenInteractables.Remove(interactable);
     }
-}
 
-public enum PuzzleState
-{
-    Idle,
-    Rotating,
-    Hinting
+    public void SetupPuzzle(ForgottenInteractable newInteractable)
+    {
+        foreach (Star star in Pivot.GetComponentsInChildren<Star>())
+        {
+            Destroy(star.gameObject);
+        }
+
+        foreach (Star star in Hint.GetComponentsInChildren<Star>())
+        {
+            Destroy(star.gameObject);
+        }
+
+        foreach (Vector3 position in newInteractable.Data.positions)
+        {
+            var newStar = Instantiate(starPrefab, Pivot);
+            newStar.GetComponent<Star>().targetCamera = puzzleCamera;
+            newStar.GetComponent<RectTransform>().anchoredPosition3D = position;
+            
+            var hintStar = Instantiate(starPrefab, Hint.transform);
+            hintStar.GetComponent<RectTransform>().anchoredPosition3D = position;
+        }
+        
+        Pivot.rotation = Quaternion.Euler(Random.Range(-24, 24) * 15, Random.Range(-24, 24) * 15, Random.Range(-24, 24) * 15);
+        
+        puzzleVisuals.SetActive(true);
+    }
+
+    public void Close()
+    {
+        puzzleVisuals.SetActive(false);
+    }
 }

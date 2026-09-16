@@ -4,17 +4,12 @@ public class Star : MonoBehaviour
 {
     public Vector3 StartingPosition => GetComponent<RectTransform>().anchoredPosition;
     
-    private Camera _targetCamera;
-
-    private void Awake()
-    {
-        _targetCamera = ConstellationFramework.instance.PuzzleCamera;
-    }
+    public Camera targetCamera;
 
     private void LateUpdate()
     {
-        if (!_targetCamera) return;
+        if (!targetCamera) return;
 
-        transform.LookAt(transform.position + _targetCamera.transform.rotation * Vector3.forward, _targetCamera.transform.rotation * Vector3.up);
+        transform.LookAt(transform.position + targetCamera.transform.rotation * Vector3.forward, targetCamera.transform.rotation * Vector3.up);
     }
 }

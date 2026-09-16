@@ -1,34 +1,26 @@
 using System;
 using UnityEngine;
 
-public class Interactable : MonoBehaviour
+public abstract class Interactable : MonoBehaviour
 {
-    [Header("Prefab to spawn in place of the original object")]
-    [SerializeField] private GameObject solvedObject;
-
-    #region obsolete
-
-    [Header("Constellation prefab to 'feed' into PuzzleGroup")]
-    [HideInInspector] [SerializeField] private GameObject constellation;
-    public GameObject Constellation => constellation;
-
-    #endregion
-    
-    [SerializeField] private ConstellationData data;
-    public ConstellationData Data => data;
-    
-    public void TryInteract()
+    public virtual void Unfocus()
     {
-        PuzzleManager.instance.ActiveInteractable = this;
+        
+    }
+    
+    public virtual void Focus()
+    {
+        
     }
 
-    public void Solve()
+    public virtual void Interact()
     {
-        if (solvedObject)
-        {
-            var newSolvedObject = Instantiate(solvedObject);
-            newSolvedObject.transform.position = gameObject.transform.position;
-        }
-        Destroy(gameObject);
+        
     }
+}
+
+public enum InteractableState
+{
+    Forgotten,
+    Restored
 }

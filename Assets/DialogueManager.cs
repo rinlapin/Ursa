@@ -1,0 +1,72 @@
+using System;
+using System.Collections.Generic;
+using DG.Tweening;
+using TMPro;
+using UnityEngine;
+
+public class DialogueManager : MonoBehaviour
+{
+    [SerializeField] private GameObject dialogueGroup;
+    [SerializeField] private TextMeshProUGUI dialogue;
+    [SerializeField] private float timeBetweenLetters = 0.1f;
+    private List<string> _currentDialogueLines = new();
+
+    public bool reachedEnd;
+    public Action OnLineComplete;
+
+    private Sequence _typeWord;
+
+    private int _lineIndex;
+
+    private void Awake()
+    {
+        dialogueGroup.SetActive(false);
+        reachedEnd = false;
+    }
+    
+    public void Close() => SetDialogue(null);
+
+    public void SetDialogue(List<string> lines)
+    {
+        dialogue.text = "";
+        _lineIndex = 0;
+        _currentDialogueLines = lines ?? new List<string>();
+        dialogueGroup.SetActive(lines != null);
+    }
+    
+    public void NextLine()
+    {
+        WriteLine(_currentDialogueLines[_lineIndex]);
+    }
+
+    private void WriteLine(string line)
+    {
+        dialogue.text = "";
+        
+        _typeWord = DOTween.Sequence();
+        for (int i = 0; i < line.Length; i++)
+        {
+            var letter = line[i];
+            _typeWord
+                .AppendCallback(() => dialogue.text += letter)
+                .AppendInterval(timeBetweenLetters);
+        }
+
+        _typeWord.OnComplete(() =>
+        {
+            OnLineComplete?.Invoke();
+            _lineIndex++;
+            reachedEnd = _lineIndex >= _currentDialogueLines.Count;
+        });
+        _typeWord.Play();
+    }
+
+    public void SkipAnimation()
+    {
+        _typeWord.Kill();
+        dialogue.text = _currentDialogueLines[_lineIndex];
+        OnLineComplete?.Invoke();
+        _lineIndex++;
+        reachedEnd = _lineIndex >= _currentDialogueLines.Count;
+    }
+}

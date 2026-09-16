@@ -18,8 +18,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        ConvertInput();
         ProcessMovement();
-        // implement gravity
     }
 
     private void ProcessMovement()
@@ -27,14 +27,9 @@ public class PlayerMovement : MonoBehaviour
         _rigidbody.linearVelocity = _move * playerSpeed;
     }
 
-    public void OnMove(InputAction.CallbackContext context)
+    public void ConvertInput()
     {
-        Debug.Log(context.ReadValue<Vector2>());
-        
-        if (Player.state is not PlayerState.Moving and not PlayerState.Idle) return;
-        var inputDirection = context.ReadValue<Vector2>();
-        
-        Player.state = inputDirection != Vector2.zero ? PlayerState.Moving : PlayerState.Idle;
+        var inputDirection = GameManager.Instance.walkInput;
         
         GetCameraInputOffset(out var cameraForward, out var cameraRight);
 
