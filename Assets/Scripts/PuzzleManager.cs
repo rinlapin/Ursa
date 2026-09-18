@@ -27,7 +27,7 @@ public class PuzzleManager : MonoBehaviour
         
         puzzleVisuals.SetActive(false);
         Hint.alpha = 0;
-        WinBackground.alpha = 0;
+        
     }
 
     private void Remove(ForgottenInteractable interactable)
@@ -37,6 +37,8 @@ public class PuzzleManager : MonoBehaviour
 
     public void SetupPuzzle(ForgottenInteractable newInteractable)
     {
+        WinBackground.alpha = 0;
+
         foreach (Star star in Pivot.GetComponentsInChildren<Star>())
         {
             Destroy(star.gameObject);

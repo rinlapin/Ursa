@@ -40,6 +40,7 @@ public class PlayerStepState : FiniteStateMachine, PlayerInputActions.IPlayerAct
         {
                 GameManager.Instance.walkInput = Vector2.zero;
                 _actions.Player.RemoveCallbacks(this);
+                _actions.Player.Disable();
         }
 }
 
