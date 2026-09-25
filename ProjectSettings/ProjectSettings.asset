@@ -829,7 +829,7 @@ PlayerSettings:
     ReservedCFE: DOTWEEN
     Standalone: DOTWEEN;USE_INPUT_SYSTEM;__MICROSPLAT__;__MICROSPLAT_ALPHAHOLE__
     VisionOS: DOTWEEN
-    WebGL: DOTWEEN
+    WebGL: DOTWEEN;__MICROSPLAT__;__MICROSPLAT_ALPHAHOLE__
     Windows Store Apps: DOTWEEN
     XboxOne: DOTWEEN
     iPhone: DOTWEEN
