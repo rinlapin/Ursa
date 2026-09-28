@@ -59,7 +59,7 @@ Shader "Earth"
 				output.uv = input.uv;
 
 				float3 localLightDir = normalize(ObjSpaceLightDir(input.pos));
-				output.diffuse = saturate(dot(localLightDir, input.normal) * 1.2);
+				output.diffuse = saturate(dot(localLightDir, input.normal) * -0.1);
 				output.night = 1 - saturate(output.diffuse * 2);
 
 				half3 viewDir = normalize(ObjSpaceViewDir(input.pos));
