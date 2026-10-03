@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 940057edf4c35af4683207a65e676610
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 401308
+  packageName: SbFadeToSkyboxFog
+  packageVersion: 1.0
+  assetPath: Assets/Soachbox/SbFadeToSkyboxFog/Demo/FadeToSkyboxDemoURPAsset_Renderer_DozingGreen.asset
+  uploadId: 977648

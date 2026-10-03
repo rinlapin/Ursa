@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8b84072a0493d984a9316fb847145f01
+timeCreated: 1499046291
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 91853
+  packageName: Dynamic Starry Sky
+  packageVersion: 1.6
+  assetPath: Assets/DynamicStarrySky/Materials/StarrySkyOuterSpace.mat
+  uploadId: 516535

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c5d359ab3a1b68b4ca38258577d7596d
+timeCreated: 1497371078
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 91853
+  packageName: Dynamic Starry Sky
+  packageVersion: 1.6
+  assetPath: Assets/DynamicStarrySky/README.txt
+  uploadId: 516535

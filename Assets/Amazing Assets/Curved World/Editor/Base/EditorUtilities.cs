@@ -288,7 +288,7 @@ namespace AmazingAssets.CurvedWorld.Editor
 
 
 
-            string shaderFilePath = AssetDatabase.GetAssetPath(shader.GetInstanceID());
+            string shaderFilePath = AssetDatabase.GetAssetPath(shader.GetEntityId());
             if (string.IsNullOrEmpty(shaderFilePath))
                 return false;
 
@@ -1111,7 +1111,7 @@ namespace AmazingAssets.CurvedWorld.Editor
             if (material == null)
                 return true;
 
-            return IsMaterialBuiltInResource(AssetDatabase.GetAssetPath(material.GetInstanceID()));
+            return IsMaterialBuiltInResource(AssetDatabase.GetAssetPath(material.GetEntityId()));
         }
         static public bool IsMaterialBuiltInResource(string materialPath)
         {
@@ -1127,7 +1127,7 @@ namespace AmazingAssets.CurvedWorld.Editor
                 return true;
 
 
-            return IsShaderBuiltInResource(AssetDatabase.GetAssetPath(shader.GetInstanceID()));
+            return IsShaderBuiltInResource(AssetDatabase.GetAssetPath(shader.GetEntityId()));
         }
         static public bool IsShaderBuiltInResource(string shaderPath)
         {
@@ -1392,7 +1392,7 @@ namespace AmazingAssets.CurvedWorld.Editor
                 return;
 
 
-            string shaderPath = AssetDatabase.GetAssetPath(shader.GetInstanceID());
+            string shaderPath = AssetDatabase.GetAssetPath(shader.GetEntityId());
             if (EditorUtilities.IsShaderBuiltInResource(shaderPath) == false)
             {
                 AssetDatabase.ImportAsset(shaderPath);
@@ -1800,7 +1800,7 @@ namespace AmazingAssets.CurvedWorld.Editor
 
 
                     //Check multi_compile
-                    string shaderFilePath = AssetDatabase.GetAssetPath(shader.GetInstanceID());
+                    string shaderFilePath = AssetDatabase.GetAssetPath(shader.GetEntityId());
 
                     string[] allLines = File.ReadAllLines(shaderFilePath);
                     for (int i = 0; i < allLines.Length; i++)

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c81c2bfe79de6c84f86ae84c99dd8c5c
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 401308
+  packageName: SbFadeToSkyboxFog
+  packageVersion: 1.0
+  assetPath: Assets/Soachbox/SbFadeToSkyboxFog/Demo/DemoScene.unity
+  uploadId: 977648

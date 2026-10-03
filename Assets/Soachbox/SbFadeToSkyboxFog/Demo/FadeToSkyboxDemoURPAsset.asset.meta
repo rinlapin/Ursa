@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ef3b037bc7056a545b3d0a625f9418b9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 401308
+  packageName: SbFadeToSkyboxFog
+  packageVersion: 1.0
+  assetPath: Assets/Soachbox/SbFadeToSkyboxFog/Demo/FadeToSkyboxDemoURPAsset.asset
+  uploadId: 977648

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c858ff2b8e408bd4eb9c271f1bfb6846
+timeCreated: 1499046291
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 91853
+  packageName: Dynamic Starry Sky
+  packageVersion: 1.6
+  assetPath: Assets/DynamicStarrySky/Materials/StarrySkyGradient.mat
+  uploadId: 516535

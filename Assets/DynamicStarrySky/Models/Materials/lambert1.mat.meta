@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: bf8d768d8c1a2cc47a5a5d68b5d1f7e8
+timeCreated: 1496374266
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 91853
+  packageName: Dynamic Starry Sky
+  packageVersion: 1.6
+  assetPath: Assets/DynamicStarrySky/Models/Materials/lambert1.mat
+  uploadId: 516535

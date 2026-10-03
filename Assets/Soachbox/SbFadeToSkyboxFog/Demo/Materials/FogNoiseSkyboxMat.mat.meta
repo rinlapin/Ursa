@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ba50e260f3828ab4c8340beb7eb89c3d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 401308
+  packageName: SbFadeToSkyboxFog
+  packageVersion: 1.0
+  assetPath: Assets/Soachbox/SbFadeToSkyboxFog/Demo/Materials/FogNoiseSkyboxMat.mat
+  uploadId: 977648

@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: de4603820eec2f640a39f95daabd1470
+AssetOrigin:
+  serializedVersion: 1
+  productId: 401308
+  packageName: SbFadeToSkyboxFog
+  packageVersion: 1.0
+  assetPath: Assets/Soachbox/SbFadeToSkyboxFog/Scripts/SbFadeToSkyboxFogEditor.cs
+  uploadId: 977648

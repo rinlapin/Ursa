@@ -14,7 +14,7 @@ namespace AmazingAssets.CurvedWorld.Editor
         #region GUI
         public class GUIEnabled : IDisposable
         {
-            [SerializeField]
+            [field: SerializeField]
             private bool PreviousState
             {
                 get;
@@ -38,7 +38,7 @@ namespace AmazingAssets.CurvedWorld.Editor
 
         public class GUIColor : IDisposable
         {
-            [SerializeField]
+            [field: SerializeField]
             private Color PreviousColor
             {
                 get;
@@ -59,7 +59,7 @@ namespace AmazingAssets.CurvedWorld.Editor
 
         public class GUIBackgroundColor : IDisposable
         {
-            [SerializeField]
+            [field: SerializeField]
             private Color PreviousColor
             {
                 get;
@@ -80,7 +80,7 @@ namespace AmazingAssets.CurvedWorld.Editor
 
         public class GUISkinLabelFontStyle : IDisposable
         {
-            [SerializeField]
+            [field: SerializeField]
             private FontStyle PreviousStyle
             {
                 set;
@@ -101,7 +101,7 @@ namespace AmazingAssets.CurvedWorld.Editor
 
         public class GUISkinLabelNormalTextColor : IDisposable
         {
-            [SerializeField]
+            [field: SerializeField]
             private Color PreviousTextColor
             {
                 set;
@@ -184,7 +184,7 @@ namespace AmazingAssets.CurvedWorld.Editor
         #region Editor GUI
         public class EditorGUIIndentLevel : IDisposable
         {
-            [SerializeField]
+            [field: SerializeField]
             private int PreviousIndent
             {
                 get;
@@ -205,7 +205,7 @@ namespace AmazingAssets.CurvedWorld.Editor
 
         public class EditorGUIUtilityLabelWidth : IDisposable
         {
-            [SerializeField]
+            [field: SerializeField]
             private float PreviousWidth
             {
                 get;
@@ -226,7 +226,7 @@ namespace AmazingAssets.CurvedWorld.Editor
 
         public class EditorGUIUtilityFieldWidth : IDisposable
         {
-            [SerializeField]
+            [field: SerializeField]
             private float PreviousWidth
             {
                 get;

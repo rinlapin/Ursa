@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 274541675e6514140807034ecef69715
+timeCreated: 1494959381
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 91853
+  packageName: Dynamic Starry Sky
+  packageVersion: 1.6
+  assetPath: Assets/DynamicStarrySky/Shaders/StarrySky.shader
+  uploadId: 516535

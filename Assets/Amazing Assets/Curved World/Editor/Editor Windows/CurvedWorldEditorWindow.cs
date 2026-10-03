@@ -851,7 +851,7 @@ namespace AmazingAssets.CurvedWorld.Editor
                                     {
                                         Transform saveCurrentTransform = Selection.activeTransform;
 
-                                        Selection.instanceIDs = new int[] { gRenderersOverviewList[i].materialsInfo[m].material.GetInstanceID() };
+                                        Selection.entityIds = new EntityId[] { gRenderersOverviewList[i].materialsInfo[m].material.GetEntityId() };
                                         EditorApplication.ExecuteMenuItem("Assets/Find References In Scene");
 
                                         Selection.activeTransform = saveCurrentTransform;
@@ -1642,7 +1642,7 @@ namespace AmazingAssets.CurvedWorld.Editor
                 string savePath = string.Empty;
                 if (string.IsNullOrEmpty(subFolderName))    //Same folder as material
                 {
-                    savePath = AssetDatabase.GetAssetPath(originalMaterials[m].GetInstanceID());
+                    savePath = AssetDatabase.GetAssetPath(originalMaterials[m].GetEntityId());
                     if (savePath == "Library/unity default resources" || savePath == "Resources/unity_builtin_extra")
                         savePath = "Assets/unity default resources";
                     else
@@ -1656,7 +1656,7 @@ namespace AmazingAssets.CurvedWorld.Editor
                 }
                 else    //SubFolder
                 {
-                    savePath = AssetDatabase.GetAssetPath(originalMaterials[m].GetInstanceID());
+                    savePath = AssetDatabase.GetAssetPath(originalMaterials[m].GetEntityId());
                     if (savePath == "Library/unity default resources" || savePath == "Resources/unity_builtin_extra")
                         savePath = "Assets/unity default resources";
                     else
@@ -1673,7 +1673,7 @@ namespace AmazingAssets.CurvedWorld.Editor
 
                 savePath = Path.Combine(savePath, prefix + originalMaterials[m].name + suffix + ".mat");
 
-                string originalMaterialPath = AssetDatabase.GetAssetPath(originalMaterials[m].GetInstanceID());
+                string originalMaterialPath = AssetDatabase.GetAssetPath(originalMaterials[m].GetEntityId());
                 if (EditorUtilities.IsMaterialBuiltInResource(originalMaterialPath))
                 {
                     File.Copy(originalMaterialPath, savePath);

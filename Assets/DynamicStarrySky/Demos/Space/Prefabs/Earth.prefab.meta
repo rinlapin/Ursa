@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f932c551fbff19941a484bae77b23b67
+timeCreated: 1499119717
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 91853
+  packageName: Dynamic Starry Sky
+  packageVersion: 1.6
+  assetPath: Assets/DynamicStarrySky/Demos/Space/Prefabs/Earth.prefab
+  uploadId: 516535
