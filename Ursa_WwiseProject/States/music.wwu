@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5AA124CD-3D1B-48F7-AA5F-48192D0BDF38}" SchemaVersion="133">
+	<States>
+		<WorkUnit Name="music" ID="{5AA124CD-3D1B-48F7-AA5F-48192D0BDF38}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="main_menu" ID="{B8ECD915-9F1C-46F3-B33A-4819119B4F93}">
+					<ChildrenList>
+						<State Name="None" ID="{BAC5ADDF-74F3-4E50-90FD-B5381D1DEF8D}"/>
+						<State Name="menu_open" ID="{7DEF98D8-B8D9-4A2D-8D90-A8186EDBD617}"/>
+						<State Name="menu_exit" ID="{137177C3-C100-4641-8D23-B699BCDFAA1B}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

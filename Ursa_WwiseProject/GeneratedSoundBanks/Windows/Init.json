@@ -1,0 +1,77 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1355168291",
+    "Type": "User",
+    "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
+    "Language": "SFX",
+    "Hash": "{216D6F87-5E00-4A34-58C3-CF7330CD70BD}",
+    "ObjectPath": "Init",
+    "ShortName": "Init",
+    "Path": "Init.bnk",
+    "Plugins": {
+     "AudioDevices": [
+      {
+       "Id": "2317455096",
+       "Name": "No_Output",
+       "ObjectPath": "\\Devices\\Default Work Unit\\No_Output",
+       "GUID": "{F82A7F74-B1EB-4B46-973F-FCF4D3F60A57}",
+       "LibName": "No Output",
+       "LibId": "11862023"
+      },
+      {
+       "Id": "3859886410",
+       "Name": "System",
+       "ObjectPath": "\\Devices\\Default Work Unit\\System",
+       "GUID": "{14FE57D6-6118-4995-A925-5D6F7BF7F5D1}",
+       "LibName": "System",
+       "LibId": "11403271"
+      }
+     ]
+    },
+    "Busses": [
+     {
+      "Id": "2246998526",
+      "Name": "Main Audio Bus",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "2005704188",
+      "Name": "main_menu",
+      "ObjectPath": "\\States\\music\\main_menu",
+      "GUID": "{B8ECD915-9F1C-46F3-B33A-4819119B4F93}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\music\\main_menu\\None",
+        "GUID": "{BAC5ADDF-74F3-4E50-90FD-B5381D1DEF8D}"
+       },
+       {
+        "Id": "1287511387",
+        "Name": "menu_open",
+        "ObjectPath": "\\States\\music\\main_menu\\menu_open",
+        "GUID": "{7DEF98D8-B8D9-4A2D-8D90-A8186EDBD617}"
+       },
+       {
+        "Id": "3663878895",
+        "Name": "menu_exit",
+        "ObjectPath": "\\States\\music\\main_menu\\menu_exit",
+        "GUID": "{137177C3-C100-4641-8D23-B699BCDFAA1B}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{BAFF63B0-C002-7E46-FFEE-2BB3C1B5BCB0}"
+ }
+}

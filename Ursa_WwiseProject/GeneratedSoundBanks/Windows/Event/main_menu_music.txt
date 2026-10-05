@@ -1,0 +1,11 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3399698792	main_menu_music			\music\main_menu_music	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	2005704188	main_menu			\music\main_menu	
+
+State	ID	Name	State Group			Notes
+	748895195	None	main_menu			
+	1287511387	menu_open	main_menu			
+	3663878895	menu_exit	main_menu			
+

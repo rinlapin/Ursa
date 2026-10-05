@@ -1,0 +1,1215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{AEFAED15-4246-4229-8C3C-15776455E8AC}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="music" ID="{AEFAED15-4246-4229-8C3C-15776455E8AC}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicSwitchContainer Name="main_menu_music" ID="{7EC6E172-7DDC-4E37-B249-7ACFB99A2D59}" ShortID="1042325039">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+						</Reference>
+						<Reference Name="TransitionRoot">
+							<Custom>
+								<MusicTransition Name="Root" ID="{F52CD740-326C-4BB4-ABF9-3E2C82C33DFB}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{57072938-FD3B-40FF-9071-13A0ACAEB36F}">
+											<PropertyList>
+												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+												<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
+												<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
+											</PropertyList>
+											<TransitionInfo>
+												<SourceFadeOut>
+													<MusicFade Name="Source Fade-out" ID="{8ADCAF77-AB6F-492A-9E2A-FD98D2D72611}">
+														<PropertyList>
+															<Property Name="FadeCurve" Type="int16" Value="7"/>
+															<Property Name="FadeOffset" Type="Real64" Value="0.3"/>
+															<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+															<Property Name="FadeType" Type="int16" Value="1"/>
+														</PropertyList>
+													</MusicFade>
+												</SourceFadeOut>
+											</TransitionInfo>
+										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{FDCDB0DA-8833-4BA9-888C-2AEB39DA7F02}">
+											<PropertyList>
+												<Property Name="DestinationContextType" Type="int16" Value="2"/>
+												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+												<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
+												<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="DestinationContextObject">
+													<ObjectRef Name="main_menu_exit" ID="{1E6CA819-A185-4B26-BE65-E473BB61B903}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
+												</Reference>
+											</ReferenceList>
+											<TransitionInfo>
+												<SourceFadeOut>
+													<MusicFade Name="Source Fade-out" ID="{B1915020-C23B-4832-BEF8-5CC7406446AE}">
+														<PropertyList>
+															<Property Name="FadeCurve" Type="int16" Value="7"/>
+															<Property Name="FadeOffset" Type="Real64" Value="0.3"/>
+															<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+															<Property Name="FadeType" Type="int16" Value="1"/>
+														</PropertyList>
+													</MusicFade>
+												</SourceFadeOut>
+											</TransitionInfo>
+										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{D4E9EFF2-C708-44A9-B082-E82E5F48C229}">
+											<PropertyList>
+												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+												<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
+												<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
+												<Property Name="SourceContextType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="SourceContextObject">
+													<ObjectRef Name="main_menu_open" ID="{B1FB645B-58C3-4550-B198-01C492D3FF10}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
+												</Reference>
+											</ReferenceList>
+											<TransitionInfo>
+												<SourceFadeOut>
+													<MusicFade Name="Source Fade-out" ID="{3BC8ECF7-E5C1-4F28-B560-8548C702CF5F}">
+														<PropertyList>
+															<Property Name="FadeCurve" Type="int16" Value="7"/>
+															<Property Name="FadeOffset" Type="Real64" Value="0.3"/>
+															<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+															<Property Name="FadeType" Type="int16" Value="1"/>
+														</PropertyList>
+													</MusicFade>
+												</SourceFadeOut>
+											</TransitionInfo>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</Custom>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicPlaylistContainer Name="main_menu_open" ID="{B1FB645B-58C3-4550-B198-01C492D3FF10}" ShortID="43205986">
+							<PropertyList>
+								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+								<Property Name="Tempo" Type="Real64" Value="90"/>
+								<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+								</Reference>
+								<Reference Name="PlaylistRoot">
+									<Custom>
+										<MusicPlaylistItem Name="" ID="{F8DE309A-E56A-4806-ABAB-94A156F1732D}" ShortID="585218536">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{C5B5E9D2-8BBC-4B67-8BE3-EBBC37B45D83}" ShortID="627949270">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Segment">
+															<ObjectRef Name="menu" ID="{93E02033-E4BA-4C14-8D96-35DF20F319C4}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+									</Custom>
+								</Reference>
+								<Reference Name="TransitionRoot">
+									<Custom>
+										<MusicTransition Name="Root" ID="{ACA7F931-86AE-4FC8-9DB0-6B5B950E7D32}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{06CD6035-CC12-4428-88AD-F882295C553C}">
+													<PropertyList>
+														<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="menu" ID="{93E02033-E4BA-4C14-8D96-35DF20F319C4}" ShortID="448173049">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="67333.3333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="URSA_MUS_FrontEnd_Menu_dulcimer" ID="{21EBBC5B-1BC9-43C8-B71D-3D417A0A123D}" ShortID="449868815">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{F1CE5B37-26E7-411F-8A31-23B11DDD325E}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_FrontEnd_Menu_dulcimer" ID="{A1E7C0B1-1B4D-4F00-BD56-90EC8B4DA0FA}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_FrontEnd_Menu_dulcimer.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="950700530"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{0CF99F8B-9F87-4A8B-BDB3-624673000F0A}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_FrontEnd_Menu_dulcimer" ID="{294E2EC1-959A-4C66-8A5E-B3583B30435D}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="64000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_FrontEnd_Menu_dulcimer" ID="{A1E7C0B1-1B4D-4F00-BD56-90EC8B4DA0FA}"/>
+																</MusicClip>
+																<MusicClip Name="URSA_MUS_FrontEnd_Menu_dulcimer" ID="{9F215F4D-5886-463D-9FBA-BC636C0D4F36}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="64000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_FrontEnd_Menu_dulcimer" ID="{A1E7C0B1-1B4D-4F00-BD56-90EC8B4DA0FA}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_FrontEnd_Menu_harp" ID="{E7B9536E-C2DB-47F5-905B-60EE9D0B300E}" ShortID="348773590">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{70F16484-57BB-4934-9952-EAEC6D4C2EE7}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_FrontEnd_Menu_harp" ID="{E920DDA8-0E85-4317-AC70-146037CAF90C}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_FrontEnd_Menu_harp.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="522922801"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{820D16DA-02EF-4038-A383-2A8981E4C73E}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_FrontEnd_Menu_harp" ID="{0B63E934-6E97-4ABE-8D2E-A5B453D4FB66}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="64000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_FrontEnd_Menu_harp" ID="{E920DDA8-0E85-4317-AC70-146037CAF90C}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_FrontEnd_Menu_MX" ID="{1911A946-A3FB-4912-A614-DF57E850C3D0}" ShortID="425883116">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{B9649D5B-41EF-4D55-9AF0-EAF6A5A25906}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_FrontEnd_Menu_MX" ID="{A0C086B1-C43D-4A0C-8B6C-A841E98A39A0}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_FrontEnd_Menu_MX.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="309472469"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{EDF070A8-701A-4889-AA54-7E9ED6576756}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_FrontEnd_Menu_MX" ID="{0739FCE1-D5E8-4CC5-B0B4-D4BE63E72C7E}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="64000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_FrontEnd_Menu_MX" ID="{A0C086B1-C43D-4A0C-8B6C-A841E98A39A0}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_FrontEnd_Menu_perc_FX" ID="{5EBCEC3F-B9BD-4CD4-AB6C-C5000A04F0D4}" ShortID="566713645">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{411D117E-B680-4683-813D-AC0EAC655EAB}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_FrontEnd_Menu_perc_FX" ID="{8601ACDA-C7DD-4F3A-BAE0-4559111D6FFB}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_FrontEnd_Menu_perc_FX.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="779202084"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{42FF1534-C28F-48B5-97C2-74666D305F1C}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_FrontEnd_Menu_perc_FX" ID="{E59A7D28-9569-4C0A-8745-C7404E28E445}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="64000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_FrontEnd_Menu_perc_FX" ID="{8601ACDA-C7DD-4F3A-BAE0-4559111D6FFB}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_FrontEnd_Menu_piano_chords" ID="{FC7258FA-DB5E-41B6-87F9-952E1F20FF3F}" ShortID="409172106">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{E36253E1-0C9E-4E89-83A4-D33C1D00EFD1}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_FrontEnd_Menu_piano_chords" ID="{20B8FDB4-FA6A-4F7F-A4BD-E36A7C39D632}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_FrontEnd_Menu_piano_chords.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="854071397"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{3C16B21B-54FC-44C5-8A6A-67C9A50C9D1C}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_FrontEnd_Menu_piano_chords" ID="{B595BF60-D01E-4F3D-90B2-788182169057}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="64000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_FrontEnd_Menu_piano_chords" ID="{20B8FDB4-FA6A-4F7F-A4BD-E36A7C39D632}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_FrontEnd_Menu_piano_ostinatio" ID="{1B5C6E6D-315B-4D1D-8383-6AB216AFC3E3}" ShortID="650575244">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{1A49234F-E0C9-421D-9C82-6A3A74312180}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_FrontEnd_Menu_piano_ostinatio" ID="{42863FD9-0C43-4838-AE3C-681CA10316C0}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_FrontEnd_Menu_piano_ostinatio.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="615666896"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{1D13B795-0B84-4B94-AF37-790B9FD67F4C}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_FrontEnd_Menu_piano_ostinatio" ID="{33E619A4-D8D3-4DB6-86E5-242B5BC16045}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="64000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_FrontEnd_Menu_piano_ostinatio" ID="{42863FD9-0C43-4838-AE3C-681CA10316C0}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_FrontEnd_Menu_strings" ID="{F3AB7176-318D-4DCE-8F6B-C3CCBF17DE2E}" ShortID="339615328">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{B12618A3-E710-421F-B6CE-87D9A3502171}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_FrontEnd_Menu_strings" ID="{F21E4771-B9F6-4AFA-8E5E-B4B04EBF6141}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_FrontEnd_Menu_strings.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="640641957"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{BB8AFD2B-89E7-48D0-AF39-C3C81F263E90}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_FrontEnd_Menu_strings" ID="{214EC008-243F-40CA-AE30-37B053E64879}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="64000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_FrontEnd_Menu_strings" ID="{F21E4771-B9F6-4AFA-8E5E-B4B04EBF6141}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_FrontEnd_Menu_synths" ID="{5E74720C-770F-4E4A-9E2F-D98944B16E37}" ShortID="885397101">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{B6C3CA83-56F8-4F2B-ACFC-73ECB48A54F0}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_FrontEnd_Menu_synths" ID="{033EF386-C18D-427F-853A-CB1D43DEAAEB}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_FrontEnd_Menu_synths.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="55060428"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{763EB3F8-E0D4-48CA-BE51-F62CC50A2DE5}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_FrontEnd_Menu_synths" ID="{D7925FED-684C-4D30-9ACA-A6F5E4859CCA}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="64000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_FrontEnd_Menu_synths" ID="{033EF386-C18D-427F-853A-CB1D43DEAAEB}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_FrontEnd_Menu_tuned_perc" ID="{98AF54C9-E2E5-4896-B900-AEDC5FB5618A}" ShortID="668454845">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{ADDF6C3E-917B-4B92-AB72-0B6947B35F4E}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_FrontEnd_Menu_tuned_perc" ID="{A9C27777-4B33-4F13-A3FC-15C6D95DC9DE}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_FrontEnd_Menu_tuned_perc.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="912947228"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{9F843CA6-BC16-4689-B858-8F0600246CB6}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_FrontEnd_Menu_tuned_perc" ID="{93CA5CEF-7742-406B-8A2D-0DC1B79B4DBA}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="64000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_FrontEnd_Menu_tuned_perc" ID="{A9C27777-4B33-4F13-A3FC-15C6D95DC9DE}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_FrontEnd_Menu_untuned_perc" ID="{84757619-88CB-4BE9-9667-5D28C10A98DD}" ShortID="886463905">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{C27D5F54-0253-4383-B988-B3E81190E908}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_FrontEnd_Menu_untuned_perc" ID="{975BAF6B-BD15-45AA-B146-5A07ECC90065}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_FrontEnd_Menu_untuned_perc.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="767318830"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{E8C28C98-8FBD-4F8D-AE28-BB17480F0E49}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_FrontEnd_Menu_untuned_perc" ID="{A599FA11-DF7E-4DAA-994C-90C82888B17D}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="64000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_FrontEnd_Menu_untuned_perc" ID="{975BAF6B-BD15-45AA-B146-5A07ECC90065}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_FrontEnd_Menu_vox" ID="{E2351B15-F1EE-4F83-9E81-2A4B21D76431}" ShortID="696946182">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{D83B7533-97B2-4808-8141-3B8E2FFB7A6A}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_FrontEnd_Menu_vox" ID="{DD88C964-8D26-4035-91A8-04B2CBBA0470}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_FrontEnd_Menu_vox.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="149408049"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{2AE8944D-547B-4D26-9D05-EA15432CCCD8}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_FrontEnd_Menu_vox" ID="{3688A85F-4D04-41EC-9603-10AF8152E678}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="64000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_FrontEnd_Menu_vox" ID="{DD88C964-8D26-4035-91A8-04B2CBBA0470}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_FrontEnd_Menu_woodwinds" ID="{942B3C2A-08D5-4F03-BCC8-E68C22D98406}" ShortID="1008882354">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{663DD2FB-8ABF-4BB2-891A-9BCB8C7DD236}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_FrontEnd_Menu_woodwinds" ID="{733D9B00-1C6B-47DF-8CA6-14AD87B7954F}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_FrontEnd_Menu_woodwinds.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="676086582"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{0B18FB78-2A42-4C86-896C-FF3EF820D377}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_FrontEnd_Menu_woodwinds" ID="{4B869E79-2042-4045-8C88-0C8C75A1E406}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="64000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_FrontEnd_Menu_woodwinds" ID="{733D9B00-1C6B-47DF-8CA6-14AD87B7954F}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<MusicCue Name="Entry Cue" ID="{0699E2B6-7040-4C6A-AEC1-F543C665A71D}">
+												<PropertyList>
+													<Property Name="TimeMs" Type="Real64" Value="4000"/>
+												</PropertyList>
+											</MusicCue>
+											<MusicCue Name="Exit Cue" ID="{FB9949D2-209F-4A80-8752-440274F325AB}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="52000"/>
+												</PropertyList>
+											</MusicCue>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="main_menu_exit" ID="{1E6CA819-A185-4B26-BE65-E473BB61B903}" ShortID="793291039">
+							<PropertyList>
+								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+								<Property Name="Tempo" Type="Real64" Value="90"/>
+								<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+								</Reference>
+								<Reference Name="PlaylistRoot">
+									<Custom>
+										<MusicPlaylistItem Name="" ID="{34654A63-6024-4502-BD0A-3C9AEA3FDCB9}" ShortID="1056349101">
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{8BAC9C77-4E85-41B2-AACC-BCDE5F3A4B9C}" ShortID="219761894">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Segment">
+															<ObjectRef Name="menu_exit" ID="{FEC90FD1-2856-41D1-8AAF-2FA83C1689AD}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+									</Custom>
+								</Reference>
+								<Reference Name="TransitionRoot">
+									<Custom>
+										<MusicTransition Name="Root" ID="{16969B8C-64BA-45B1-A6CD-7EF5A0201AA6}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{96CA347D-6824-4293-A3ED-91F950F088C4}">
+													<PropertyList>
+														<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="menu_exit" ID="{FEC90FD1-2856-41D1-8AAF-2FA83C1689AD}" ShortID="878786117">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="24283.2618025751"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="URSA_MUS_FrontEnd_Menu_Exit_dulcimer" ID="{108D8BA2-5E81-434D-A2AD-B206CADAA76B}" ShortID="621512766">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{ED14E8B6-2333-4047-8E3A-FD2D10C80837}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_FrontEnd_Menu_Exit_dulcimer" ID="{4C917EA2-ED7B-495E-B2F6-A011BC086527}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_FrontEnd_Menu_Exit_dulcimer.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="820731757"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{6084FC88-8955-4FC5-9F7B-598B9C2B05AA}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_FrontEnd_Menu_Exit_dulcimer" ID="{097993C0-EB24-4FEE-878B-85831AA96FE8}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="24000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_FrontEnd_Menu_Exit_dulcimer" ID="{4C917EA2-ED7B-495E-B2F6-A011BC086527}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_FrontEnd_Menu_Exit_harp" ID="{F0569C47-6683-418F-B3E7-67AF4FFDDB6F}" ShortID="989191006">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{86F261F7-2718-401B-9D48-7E8EC73AE8A5}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_FrontEnd_Menu_Exit_harp" ID="{47D50522-B389-449C-9EF0-986F93F8839A}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_FrontEnd_Menu_Exit_harp.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="32207014"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{B9E4718E-9A49-48FB-92CF-8F121C66467B}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_FrontEnd_Menu_Exit_harp" ID="{60279E82-A388-4AF7-AEF7-1AF9F02B46F4}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="24000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_FrontEnd_Menu_Exit_harp" ID="{47D50522-B389-449C-9EF0-986F93F8839A}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_FrontEnd_Menu_Exit_MX" ID="{9C32B348-83DB-42E5-B165-2D5A21FB69E7}" ShortID="843694884">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{F07888A0-C068-4488-BDC6-0A72466DEB84}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_FrontEnd_Menu_Exit_MX" ID="{83666A5E-AED0-42A4-AF41-839A0EA53107}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_FrontEnd_Menu_Exit_MX.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1055050479"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{23A1A535-DBC5-4571-B58F-809931247DE9}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_FrontEnd_Menu_Exit_MX" ID="{70475FF7-AAF7-46F2-ADF0-369016932E55}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="24000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_FrontEnd_Menu_Exit_MX" ID="{83666A5E-AED0-42A4-AF41-839A0EA53107}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_FrontEnd_Menu_Exit_perc_FX" ID="{7272776A-5E05-4CB8-B513-1BB3D9EB5101}" ShortID="1015036808">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{33A94DC9-471A-4A4E-BC65-F0FEF4FDF6B7}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_FrontEnd_Menu_Exit_perc_FX" ID="{D6C63D34-3ACF-427F-BD16-9CB9632DC451}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_FrontEnd_Menu_Exit_perc_FX.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1072041781"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{47B82ECF-441C-4E01-B1F7-F6EE3B38E896}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_FrontEnd_Menu_Exit_perc_FX" ID="{62CB6AD0-45B7-4C7A-B9F6-FAB103C701A1}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="24000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_FrontEnd_Menu_Exit_perc_FX" ID="{D6C63D34-3ACF-427F-BD16-9CB9632DC451}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_FrontEnd_Menu_Exit_piano" ID="{2806A7D2-B54E-4CC7-853A-9D28446B058C}" ShortID="900111978">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{7A105C67-7109-4A80-BAEF-DDFDB2571277}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_FrontEnd_Menu_Exit_piano" ID="{CAD57B69-9B3F-41E2-9CE4-96F30644A06F}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_FrontEnd_Menu_Exit_piano.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="626912300"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{D42D5542-79D7-4346-8DB2-D9381A46C69E}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_FrontEnd_Menu_Exit_piano" ID="{CBBF6DB8-8C3C-4558-8DBB-7D853986B9D3}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="24000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_FrontEnd_Menu_Exit_piano" ID="{CAD57B69-9B3F-41E2-9CE4-96F30644A06F}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_FrontEnd_Menu_Exit_synths" ID="{5012DC6C-C38D-41D8-A16C-A11E913FC053}" ShortID="332312068">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{E248DB23-B9F4-400B-A7DC-513EDDFA464F}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_FrontEnd_Menu_Exit_synths" ID="{B457DCD1-FCDD-4A3A-A05D-9C5871B2E1E8}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_FrontEnd_Menu_Exit_synths.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1018647656"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{FE37BE3B-06F4-4B12-9C76-9200E46E5C93}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_FrontEnd_Menu_Exit_synths" ID="{0F796660-F5F3-4098-BB35-F5710CC6DD91}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="24000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_FrontEnd_Menu_Exit_synths" ID="{B457DCD1-FCDD-4A3A-A05D-9C5871B2E1E8}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_FrontEnd_Menu_Exit_tuned_perc" ID="{EC1D88B5-C36F-4755-81FD-41206AB8E761}" ShortID="750584917">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{9311CB31-D7C9-45DA-BF85-D43670B60B74}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_FrontEnd_Menu_Exit_tuned_perc" ID="{13DCE4B1-BCA1-40E2-9E78-52C56F61286A}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_FrontEnd_Menu_Exit_tuned_perc.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="926607512"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{7CA62941-77E5-4FD8-894B-6424A63C08D5}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_FrontEnd_Menu_Exit_tuned_perc" ID="{3A5C1718-3443-433F-88AF-E7BF230AB1AD}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="24000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_FrontEnd_Menu_Exit_tuned_perc" ID="{13DCE4B1-BCA1-40E2-9E78-52C56F61286A}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<MusicCue Name="Entry Cue" ID="{BD3AE24D-8B79-4380-A6D9-8EFFEF63BA6D}">
+												<PropertyList>
+													<Property Name="TimeMs" Type="Real64" Value="4000"/>
+												</PropertyList>
+											</MusicCue>
+											<MusicCue Name="Exit Cue" ID="{CA51B20C-D641-4121-90F0-7C28AB481BC3}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="8000"/>
+												</PropertyList>
+											</MusicCue>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+						</MusicPlaylistContainer>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="main_menu" ID="{B8ECD915-9F1C-46F3-B33A-4819119B4F93}"/>
+								<StateGroupInfo Name="" ID="{D9C79A00-50B4-48C0-97D0-5BADAA61610B}" ShortID="651668939"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="menu_exit" ID="{137177C3-C100-4641-8D23-B699BCDFAA1B}"/>
+								<CustomState Name="" ID="{BC0FB5A5-B3F4-4FE0-B430-C088D0AD4F43}" ShortID="604345311"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="menu_open" ID="{7DEF98D8-B8D9-4A2D-8D90-A8186EDBD617}"/>
+								<CustomState Name="" ID="{ABFDC038-EF6E-4EBD-B510-CF050E8DC5BC}" ShortID="503920448"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="None" ID="{BAC5ADDF-74F3-4E50-90FD-B5381D1DEF8D}"/>
+								<CustomState Name="" ID="{F8F9A97C-78C6-4D1B-A3D4-A26C09762172}" ShortID="709496239"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<ObjectLists>
+						<ObjectList Name="Arguments">
+							<PluginInnerObject Name="" ID="{4ED52267-47B3-42D4-91BB-55E72E2407CA}" PluginName="MusicArgumentsSlot" CompanyID="0" PluginID="89">
+								<ReferenceList>
+									<Reference Name="Argument">
+										<ObjectRef Name="main_menu" ID="{B8ECD915-9F1C-46F3-B33A-4819119B4F93}" WorkUnitID="{5AA124CD-3D1B-48F7-AA5F-48192D0BDF38}"/>
+									</Reference>
+								</ReferenceList>
+							</PluginInnerObject>
+						</ObjectList>
+						<ObjectList Name="Entries">
+							<MultiSwitchEntry Name="" ID="{05789BB5-7231-458D-B661-3072DB9EA8B8}">
+								<ReferenceList>
+									<Reference Name="AudioNode">
+										<ObjectRef Name="main_menu_exit" ID="{1E6CA819-A185-4B26-BE65-E473BB61B903}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
+									</Reference>
+								</ReferenceList>
+								<ObjectLists>
+									<ObjectList Name="EntryPath">
+										<PluginInnerObject Name="" ID="{6A0DD3AE-67BD-4CB7-BC82-881B1056BE76}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
+											<ReferenceList>
+												<Reference Name="EntryPathObject">
+													<ObjectRef Name="menu_exit" ID="{137177C3-C100-4641-8D23-B699BCDFAA1B}" WorkUnitID="{5AA124CD-3D1B-48F7-AA5F-48192D0BDF38}"/>
+												</Reference>
+											</ReferenceList>
+										</PluginInnerObject>
+									</ObjectList>
+								</ObjectLists>
+							</MultiSwitchEntry>
+							<MultiSwitchEntry Name="" ID="{10E0173D-F7CA-4698-816C-2BC25C4F5B4A}">
+								<ReferenceList>
+									<Reference Name="AudioNode">
+										<ObjectRef Name="main_menu_open" ID="{B1FB645B-58C3-4550-B198-01C492D3FF10}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
+									</Reference>
+								</ReferenceList>
+								<ObjectLists>
+									<ObjectList Name="EntryPath">
+										<PluginInnerObject Name="" ID="{B974B91D-7D6C-4487-9494-6562BC0339F5}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
+											<ReferenceList>
+												<Reference Name="EntryPathObject">
+													<ObjectRef Name="menu_open" ID="{7DEF98D8-B8D9-4A2D-8D90-A8186EDBD617}" WorkUnitID="{5AA124CD-3D1B-48F7-AA5F-48192D0BDF38}"/>
+												</Reference>
+											</ReferenceList>
+										</PluginInnerObject>
+									</ObjectList>
+								</ObjectLists>
+							</MultiSwitchEntry>
+						</ObjectList>
+					</ObjectLists>
+				</MusicSwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>
