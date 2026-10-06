@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{FEE3D908-8A32-84C3-D40C-D38D3B36283A}",
+    "Hash": "{16AF0D62-CAEA-A579-9A00-52C5FF1879C1}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -44,6 +44,38 @@
     ],
     "StateGroups": [
      {
+      "Id": "89505537",
+      "Name": "gameplay",
+      "ObjectPath": "\\States\\music\\gameplay",
+      "GUID": "{B818D92D-CC48-41C3-8258-08577700AB63}",
+      "States": [
+       {
+        "Id": "342806866",
+        "Name": "wandering",
+        "ObjectPath": "\\States\\music\\gameplay\\wandering",
+        "GUID": "{82E594DD-3C3E-4B15-8495-FF258B38D421}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\music\\gameplay\\None",
+        "GUID": "{CFD418D9-4BF7-457F-9736-52532C489F8F}"
+       },
+       {
+        "Id": "3258781332",
+        "Name": "puzzle_solving",
+        "ObjectPath": "\\States\\music\\gameplay\\puzzle_solving",
+        "GUID": "{015DF498-5318-4539-9B94-A3007374CA63}"
+       },
+       {
+        "Id": "4227414720",
+        "Name": "talking_to_Aries",
+        "ObjectPath": "\\States\\music\\gameplay\\talking_to_Aries",
+        "GUID": "{63E1297B-5148-49E7-BFFC-ADA062542575}"
+       }
+      ]
+     },
+     {
       "Id": "2005704188",
       "Name": "main_menu",
       "ObjectPath": "\\States\\music\\main_menu",
@@ -69,9 +101,31 @@
        }
       ]
      }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3238956108",
+      "Name": "player_location",
+      "ObjectPath": "\\Switches\\music\\player_location",
+      "GUID": "{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}",
+      "Switches": [
+       {
+        "Id": "438105790",
+        "Name": "outside",
+        "ObjectPath": "\\Switches\\music\\player_location\\outside",
+        "GUID": "{34E56A1E-27C1-470B-A93D-C990AD5785A2}"
+       },
+       {
+        "Id": "1403589664",
+        "Name": "in_the_cave",
+        "ObjectPath": "\\Switches\\music\\player_location\\in_the_cave",
+        "GUID": "{F036E22E-DEB4-45F3-B167-9AFAEF80443F}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{14AE66AC-BD27-1C7E-F5B3-1C4ED0084020}"
+  "FileHash": "{7041F5A2-0740-B1D9-7785-DCEE23E1E449}"
  }
 }

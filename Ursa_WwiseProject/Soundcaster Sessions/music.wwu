@@ -9,6 +9,10 @@
 							<ObjectRef Name="main_menu_music" ID="{F24463BF-07A2-4CB9-B0AA-7771C231CB01}" WorkUnitID="{6B06E175-C183-4D2A-972E-62AE52EC9172}"/>
 							<Position X="0" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="gameplay" ID="{77FAC69D-5F4A-4B81-98EB-F6F78010CCC9}" WorkUnitID="{6B06E175-C183-4D2A-972E-62AE52EC9172}"/>
+							<Position X="1" Y="0"/>
+						</Module>
 					</ModuleList>
 				</SoundcasterSession>
 			</ChildrenList>

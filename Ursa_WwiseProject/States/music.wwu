@@ -10,6 +10,14 @@
 						<State Name="menu_exit" ID="{137177C3-C100-4641-8D23-B699BCDFAA1B}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="gameplay" ID="{B818D92D-CC48-41C3-8258-08577700AB63}">
+					<ChildrenList>
+						<State Name="None" ID="{CFD418D9-4BF7-457F-9736-52532C489F8F}"/>
+						<State Name="wandering" ID="{82E594DD-3C3E-4B15-8495-FF258B38D421}"/>
+						<State Name="puzzle_solving" ID="{015DF498-5318-4539-9B94-A3007374CA63}"/>
+						<State Name="talking_to_Aries" ID="{63E1297B-5148-49E7-BFFC-ADA062542575}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>
