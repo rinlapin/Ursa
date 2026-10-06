@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Radishmouse;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
@@ -48,7 +49,7 @@ public class PuzzleManager : MonoBehaviour
         {
             Destroy(star.gameObject);
         }
-
+        
         foreach (Vector3 position in newInteractable.Data.positions)
         {
             var newStar = Instantiate(starPrefab, Pivot);
@@ -58,6 +59,25 @@ public class PuzzleManager : MonoBehaviour
             var hintStar = Instantiate(hintStarPrefab, Hint.transform);
             hintStar.GetComponent<RectTransform>().anchoredPosition3D = position;
         }
+        
+        var connections = new List<Vector3>();
+        
+        for (int i = 0; i < newInteractable.Data.connections.Count; i++)
+        {
+            var pair = newInteractable.Data.connections[i];
+            var start = newInteractable.Data.positions[pair.x];
+            var end = newInteractable.Data.positions[pair.y];
+            
+            if (connections.Count == 0 || connections[^1] != start)
+            {
+                connections.Add(start);
+            }
+            connections.Add(end);
+        }
+        
+        var lineRenderer = Pivot.gameObject.GetComponent<UILineRenderer>();
+        lineRenderer.SetAllDirty();
+        lineRenderer.points = connections.ToArray();
         
         Pivot.rotation = Quaternion.Euler(Random.Range(-24, 24) * 15, Random.Range(-24, 24) * 15, Random.Range(-24, 24) * 15);
         

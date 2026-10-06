@@ -38,7 +38,6 @@ public class PlayerMovement : MonoBehaviour
         
         ConvertInput();
         ProcessMovement();
-        Debug.Log(_rigidbody.linearVelocity);
     }
 
     private void ProcessMovement()
