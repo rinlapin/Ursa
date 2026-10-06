@@ -33,7 +33,7 @@ public class PlayerStepState : FiniteStateMachine, PlayerInputActions.IPlayerAct
         public void OnJump(InputAction.CallbackContext context)
         {
                 if (!context.started) return;
-                Debug.Log("jump");
+                PlayerMovement.Instance.Jump();
         }
         
         public override void Exit()

@@ -18,3 +18,14 @@ MonoBehaviour:
   - {x: -93.5, y: 300, z: 0}
   - {x: 170.6, y: 108.54272, z: -100}
   - {x: 161.3, y: -150.75377, z: 100}
+  stars:
+  - position: {x: -329.4, y: -286.43216, z: -50}
+    connections: 
+  - position: {x: -292.6, y: 78.39196, z: 150}
+    connections: 
+  - position: {x: -93.5, y: 300, z: 0}
+    connections: 
+  - position: {x: 170.6, y: 108.54272, z: -100}
+    connections: 
+  - position: {x: 161.3, y: -150.75377, z: 100}
+    connections: 

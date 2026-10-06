@@ -5,26 +5,46 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float playerSpeed = 5f;
+    [SerializeField] private float movementSpeed;
+    [SerializeField] private float jumpForce;
+    [SerializeField] private float groundDrag, airDrag;
+    [SerializeField] private bool isGrounded = false;
+    
+    private LayerMask _groundLayer;
     private Vector3 _move = Vector3.zero;
     private Rigidbody _rigidbody;
     private Camera _camera;
+    private CapsuleCollider _collider;
+
+    public static PlayerMovement Instance { get; private set; }
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
+        _groundLayer = LayerMask.GetMask("Terrain");
         _rigidbody = GetComponent<Rigidbody>();
+        _collider = GetComponent<CapsuleCollider>();
         _camera = Camera.main;
     }
 
     private void Update()
     {
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, _collider.height * 0.5f + 0.2f, _groundLayer);
+        _rigidbody.linearDamping = isGrounded ? groundDrag : airDrag;
+        
         ConvertInput();
         ProcessMovement();
+        Debug.Log(_rigidbody.linearVelocity);
     }
 
     private void ProcessMovement()
     {
-        _rigidbody.linearVelocity = _move * playerSpeed;
+        var movement = _move * movementSpeed;
+        _rigidbody.AddForce(movement.normalized * 10f, ForceMode.Force);
     }
 
     public void ConvertInput()
@@ -37,6 +57,12 @@ public class PlayerMovement : MonoBehaviour
         cameraRight *= inputDirection.x;
 
         _move = cameraForward + cameraRight;
+    }
+
+    public void Jump()
+    {
+        if (!isGrounded) return;
+        _rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
     
     private void GetCameraInputOffset(out Vector3 forward, out Vector3 right)

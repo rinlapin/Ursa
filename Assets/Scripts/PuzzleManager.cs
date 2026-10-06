@@ -12,7 +12,7 @@ public class PuzzleManager : MonoBehaviour
     [field: SerializeField] public Transform Pivot { get; protected set; }
     [field: SerializeField] public CanvasGroup Hint { get; protected set; }
     [field: SerializeField] public CanvasGroup WinBackground { get; protected set; }
-    [SerializeField] private GameObject starPrefab;
+    [SerializeField] private GameObject starPrefab, hintStarPrefab;
     [SerializeField] private Camera puzzleCamera;
     
     private List<ForgottenInteractable> _forgottenInteractables = new List<ForgottenInteractable>();
@@ -55,7 +55,7 @@ public class PuzzleManager : MonoBehaviour
             newStar.GetComponent<Star>().targetCamera = puzzleCamera;
             newStar.GetComponent<RectTransform>().anchoredPosition3D = position;
             
-            var hintStar = Instantiate(starPrefab, Hint.transform);
+            var hintStar = Instantiate(hintStarPrefab, Hint.transform);
             hintStar.GetComponent<RectTransform>().anchoredPosition3D = position;
         }
         
