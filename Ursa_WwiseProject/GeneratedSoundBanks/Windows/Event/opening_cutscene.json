@@ -1,0 +1,32 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1917576450",
+    "Type": "Event",
+    "GUID": "{A72A845D-D954-49F6-8A77-6B089BB5282B}",
+    "Language": "SFX",
+    "Hash": "{86DA91E6-41ED-4799-A7DE-874D99A8630C}",
+    "ObjectPath": "opening_cutscene",
+    "ShortName": "opening_cutscene",
+    "Path": "Event/opening_cutscene.bnk",
+    "Events": [
+     {
+      "Id": "1917576450",
+      "Name": "opening_cutscene",
+      "ObjectPath": "\\Events\\music\\opening_cutscene",
+      "GUID": "{A72A845D-D954-49F6-8A77-6B089BB5282B}",
+      "DurationType": "OneShot",
+      "DurationMin": "1",
+      "DurationMax": "1"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{DFCFB97D-F975-A5BB-8528-1CAC46F8B995}"
+ }
+}
