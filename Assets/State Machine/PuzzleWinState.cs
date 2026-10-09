@@ -10,6 +10,7 @@ public class PuzzleWinState : GameState
 
         public override void Enter()
         {
+                SoundManager.instance.PlayWin();
                 _manager.Close();
                 Interactable.Solve();
                 Complete();

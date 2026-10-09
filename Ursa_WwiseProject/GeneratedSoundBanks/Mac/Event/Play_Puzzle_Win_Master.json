@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "206505562",
+    "Type": "Event",
+    "GUID": "{7C0E1E03-DEE2-403D-9BB7-13FEAC3B6C47}",
+    "Language": "SFX",
+    "Hash": "{EC3612E1-6A28-C455-EC56-1D09D44A1572}",
+    "ObjectPath": "Play_Puzzle_Win_Master",
+    "ShortName": "Play_Puzzle_Win_Master",
+    "Path": "Event/Play_Puzzle_Win_Master.bnk",
+    "Media": [
+     {
+      "Id": "78469696",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Puzzle Win Master.wav",
+      "Path": "Media/78469696.wem",
+      "CachePath": "71/{71CBC0E9-83A3-69C6-43BD-A750C3DD10B5}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "206505562",
+      "Name": "Play_Puzzle_Win_Master",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Puzzle_Win_Master",
+      "GUID": "{7C0E1E03-DEE2-403D-9BB7-13FEAC3B6C47}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.7272916",
+      "DurationMax": "4.7272916",
+      "MediaRefs": [
+       {
+        "Id": "78469696"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{8590FA93-E471-597F-DF70-EC3C51DA593C}"
+ }
+}

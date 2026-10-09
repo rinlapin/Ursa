@@ -16,6 +16,8 @@ namespace AK
         static const AkUniqueID GAMEPLAY = 89505537U;
         static const AkUniqueID MAIN_MENU_MUSIC = 3399698792U;
         static const AkUniqueID OPENING_CUTSCENE = 1917576450U;
+        static const AkUniqueID PLAY_PUZZLE_HINT_MASTER = 3416524667U;
+        static const AkUniqueID PLAY_PUZZLE_WIN_MASTER = 206505562U;
     } // namespace EVENTS
 
     namespace STATES

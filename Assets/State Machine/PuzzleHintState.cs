@@ -27,6 +27,7 @@ public class PuzzleHintState : GameState
                         _showHint.Join(_winBackground.DOFade(1, 0.5f));
                 }
                 
+                SoundManager.instance.PlayHint();
                 _showHint
                         .AppendInterval(1f)
                         .Append(_hint.DOFade(0, 0.5f))

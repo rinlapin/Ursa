@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3416524667",
+    "Type": "Event",
+    "GUID": "{0244BB85-AE87-4E11-818E-F93B4C165096}",
+    "Language": "SFX",
+    "Hash": "{951FBEFE-28D9-9B60-931D-1F0E24096DDF}",
+    "ObjectPath": "Play_Puzzle_Hint_Master",
+    "ShortName": "Play_Puzzle_Hint_Master",
+    "Path": "Event/Play_Puzzle_Hint_Master.bnk",
+    "Media": [
+     {
+      "Id": "549038407",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Puzzle Hint Master.wav",
+      "Path": "Media/549038407.wem",
+      "CachePath": "99/{99936BED-4FB5-EAF6-8CBD-18013813DD83}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3416524667",
+      "Name": "Play_Puzzle_Hint_Master",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Puzzle_Hint_Master",
+      "GUID": "{0244BB85-AE87-4E11-818E-F93B4C165096}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.7272916",
+      "DurationMax": "4.7272916",
+      "MediaRefs": [
+       {
+        "Id": "549038407"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F3E1F6A0-7C4A-FE40-E767-75E57205BA6B}"
+ }
+}

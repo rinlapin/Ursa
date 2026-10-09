@@ -3,7 +3,7 @@
   "Project": {
    "Name": "Ursa_WwiseProject",
    "GUID": "{9B6A47E5-ACCB-4060-B9CA-688659BC7B8C}",
-   "Generator": "2025.1.11.9262"
+   "Generator": "2025.1.5.9095"
   },
   "CacheRoot": "../.cache",
   "Platforms": [
@@ -31,6 +31,6 @@
     "UseAsStandIn": "true"
    }
   ],
-  "FileHash": "{1F1DC1E7-D443-C1CA-0180-54B9E07B19AA}"
+  "FileHash": "{24820834-7A31-A5CA-85EA-68CDB98D990A}"
  }
 }

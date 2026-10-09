@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{77FAC69D-5F4A-4B81-98EB-F6F78010CCC9}",
     "Language": "SFX",
-    "Hash": "{42039421-1067-6F4F-A1E7-4692C21E806D}",
+    "Hash": "{0CA44F4B-7272-35A5-0038-272DA26FE682}",
     "ObjectPath": "gameplay",
     "ShortName": "gameplay",
     "Path": "Event/gameplay.bnk",
@@ -287,6 +287,6 @@
     ]
    }
   ],
-  "FileHash": "{7C4CEF05-71FC-85D9-3755-B17F4EDD6AF0}"
+  "FileHash": "{D49EA1B4-BCC2-9252-1AB7-5B3342771DD1}"
  }
 }
