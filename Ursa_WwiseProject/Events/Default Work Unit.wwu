@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{88E5D46D-6BDC-4FF0-AFD4-ACB31ABDB825}" SchemaVersion="133">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{88E5D46D-6BDC-4FF0-AFD4-ACB31ABDB825}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{88E5D46D-6BDC-4FF0-AFD4-ACB31ABDB825}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Puzzle_Hint_Master" ID="{0244BB85-AE87-4E11-818E-F93B4C165096}">
+					<ChildrenList>
+						<Action Name="" ID="{DEED3554-A563-4A57-80D1-0D1F5AEA67C6}" ShortID="494951307">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Puzzle Hint Master" ID="{5D64E3A6-692F-4D29-AF33-64C162EC0D52}" WorkUnitID="{30773368-91FF-4688-90AB-227BEC77C32F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Puzzle_Win_Master" ID="{7C0E1E03-DEE2-403D-9BB7-13FEAC3B6C47}">
+					<ChildrenList>
+						<Action Name="" ID="{54DD6AA8-BE00-4418-8A96-BEA82EB1416A}" ShortID="351858580">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Puzzle Win Master" ID="{CD4B7218-0B7A-4BC9-8DDA-3AB3C4974B2C}" WorkUnitID="{30773368-91FF-4688-90AB-227BEC77C32F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

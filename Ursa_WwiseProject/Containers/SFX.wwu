@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{30773368-91FF-4688-90AB-227BEC77C32F}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="SFX" ID="{30773368-91FF-4688-90AB-227BEC77C32F}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Wind amb" ID="{16220FAE-91BB-47E7-8CB1-30170301D3BE}" ShortID="693224393">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Wind amb" ID="{81C18401-1C24-44FF-B0F6-E288C97B1C21}">
+							<Language>SFX</Language>
+							<AudioFile>Wind amb.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="19711327"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Wind amb" ID="{81C18401-1C24-44FF-B0F6-E288C97B1C21}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Puzzle Win Master" ID="{CD4B7218-0B7A-4BC9-8DDA-3AB3C4974B2C}" ShortID="640732188">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Puzzle Win Master" ID="{8CDD7444-D7F8-4AD2-9C95-0969756248A6}">
+							<Language>SFX</Language>
+							<AudioFile>Puzzle Win Master.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="78469696"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Puzzle Win Master" ID="{8CDD7444-D7F8-4AD2-9C95-0969756248A6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Star moving SFX" ID="{600E6FBE-EF8F-4127-A6B4-B87E3621EC5C}" ShortID="1051386548">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Star moving SFX" ID="{C0F88551-EE0B-4E47-8B77-05AFB6FAF71B}">
+							<Language>SFX</Language>
+							<AudioFile>Star moving SFX.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="817417640"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Star moving SFX" ID="{C0F88551-EE0B-4E47-8B77-05AFB6FAF71B}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Start game Button Master" ID="{8C39AFAF-812E-4BBD-A857-DC3FAF395039}" ShortID="272774602">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Start game Button Master" ID="{5786F21C-C5EF-4001-B169-983EB46C0D0E}">
+							<Language>SFX</Language>
+							<AudioFile>Start game Button Master.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="626874925"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Start game Button Master" ID="{5786F21C-C5EF-4001-B169-983EB46C0D0E}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Menu Hover" ID="{EDCAB1DF-821E-49B0-97F6-238943F05F85}" ShortID="740443475">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Menu Hover" ID="{0C5A40AA-EDB4-4D1F-8413-443C686B3BDB}">
+							<Language>SFX</Language>
+							<AudioFile>Menu Hover.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="773728791"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Menu Hover" ID="{0C5A40AA-EDB4-4D1F-8413-443C686B3BDB}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Nav Star drone" ID="{15D15DA5-A3DE-4DEC-9209-8651E1510A96}" ShortID="849385890">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Nav Star drone" ID="{226E86BA-C62D-4322-894F-C5C239F11AA8}">
+							<Language>SFX</Language>
+							<AudioFile>Nav Star drone.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="341337809"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Nav Star drone" ID="{226E86BA-C62D-4322-894F-C5C239F11AA8}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Footsteps" ID="{53894254-C70F-47A7-991F-6A9E7B1995E6}" ShortID="636009681">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Footsteps" ID="{FBE93D4F-3A11-4337-8FD5-EEF50D3A9E3F}">
+							<Language>SFX</Language>
+							<AudioFile>Footsteps.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="33044487"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Footsteps" ID="{FBE93D4F-3A11-4337-8FD5-EEF50D3A9E3F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ice smash" ID="{C09323D0-4864-44FC-BFDF-CD0F2ABC5814}" ShortID="724290173">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ice smash" ID="{387C5DE0-A9EC-4E84-BDCE-F155A9629C80}">
+							<Language>SFX</Language>
+							<AudioFile>Ice smash.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="388988909"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ice smash" ID="{387C5DE0-A9EC-4E84-BDCE-F155A9629C80}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Puzzle Hint Master" ID="{5D64E3A6-692F-4D29-AF33-64C162EC0D52}" ShortID="4685642">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Puzzle Hint Master" ID="{18CEF8C7-FE27-4394-90A3-68FEB815EFCF}">
+							<Language>SFX</Language>
+							<AudioFile>Puzzle Hint Master.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="549038407"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Puzzle Hint Master" ID="{18CEF8C7-FE27-4394-90A3-68FEB815EFCF}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Aquila" ID="{6B6CB3D5-99CC-451E-ADDD-168576876D8B}" ShortID="427728925">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Aquila" ID="{01713325-728F-40D2-9C17-BD2D3768FA3F}">
+							<Language>SFX</Language>
+							<AudioFile>Aquila.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="75977483"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Aquila" ID="{01713325-728F-40D2-9C17-BD2D3768FA3F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Const move 1" ID="{9E4EB394-6EEF-4F21-875A-C4381706C1FF}" ShortID="399137084">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Const move 1" ID="{9F41060E-5BB4-4482-B639-C212BF953F12}">
+							<Language>SFX</Language>
+							<AudioFile>Const move 1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="216008086"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Const move 1" ID="{9F41060E-5BB4-4482-B639-C212BF953F12}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Const move 2" ID="{4509209D-1000-4D5C-B381-17B1AD9DA04A}" ShortID="214706757">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Const move 2" ID="{DF7AB710-210F-496D-9EF2-925B9DCA787E}">
+							<Language>SFX</Language>
+							<AudioFile>Const move 2.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="620218889"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Const move 2" ID="{DF7AB710-210F-496D-9EF2-925B9DCA787E}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Const move 3" ID="{5474D01F-8FBF-4C3D-9F42-0A4B88D25B2E}" ShortID="910173498">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Const move 3" ID="{990C30B0-ACC2-4DF7-B746-E267EAFA3553}">
+							<Language>SFX</Language>
+							<AudioFile>Const move 3.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="924104373"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Const move 3" ID="{990C30B0-ACC2-4DF7-B746-E267EAFA3553}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Back Button Master" ID="{4508851A-24C7-4125-93A3-7C1065FE88EA}" ShortID="731290089">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Back Button Master" ID="{36985BE2-AEB4-4284-B982-8266A15172C8}">
+							<Language>SFX</Language>
+							<AudioFile>Back Button Master.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="209106566"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Back Button Master" ID="{36985BE2-AEB4-4284-B982-8266A15172C8}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Button press Master" ID="{6B791539-823E-420A-8D0D-53FA48FE5C09}" ShortID="742774130">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Button press Master" ID="{374FAFA8-2E54-4522-8487-44273C7693F1}">
+							<Language>SFX</Language>
+							<AudioFile>Button press Master.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="487373162"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Button press Master" ID="{374FAFA8-2E54-4522-8487-44273C7693F1}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="const move 4" ID="{66EE2A61-F6BC-4877-B60E-729A6240AFEC}" ShortID="873995789">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="const move 4" ID="{61FAB6F7-81B4-4DD8-BC29-C18DC554E0D7}">
+							<Language>SFX</Language>
+							<AudioFile>const move 4.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="385257930"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="const move 4" ID="{61FAB6F7-81B4-4DD8-BC29-C18DC554E0D7}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Const rebirth" ID="{9601CF96-F47E-479C-AB2E-1F26820C123A}" ShortID="704570966">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Const rebirth" ID="{F09B0971-386E-4CA3-B3F3-E7D25889C3E3}">
+							<Language>SFX</Language>
+							<AudioFile>Const rebirth.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="602888898"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Const rebirth" ID="{F09B0971-386E-4CA3-B3F3-E7D25889C3E3}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

@@ -1,32 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="133">
-	<ValidationCacheItem File="C:\Users\Admin\AppData\Roaming\Audiokinetic\MediaPool\2\MediaPoolQuery.wsettings" DateLow="1791204136" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1791205080" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Attenuations\Factory Attenuations.wwu" DateLow="1790686265" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Busses\Default Work Unit.wwu" DateLow="1791205080" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Containers\Default Work Unit.wwu" DateLow="1791205080" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="1791205080" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="1791205080" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1790686265" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Devices\Default Work Unit.wwu" DateLow="1791205080" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1791205080" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Effects\Default Work Unit.wwu" DateLow="1791205080" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Effects\Factory Effects.wwu" DateLow="1790686265" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Events\Default Work Unit.wwu" DateLow="1791205080" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1791205080" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Metadata\Default Work Unit.wwu" DateLow="1791205080" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="1791205080" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="1791205080" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Presets\Default Work Unit.wwu" DateLow="1791205080" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Presets\Factory Spatial Audio.wwu" DateLow="1790686265" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Queries\Default Work Unit.wwu" DateLow="1791205080" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Queries\Factory Queries.wwu" DateLow="1790686265" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Sidechain Mixes\Default Work Unit.wwu" DateLow="1791205080" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1791205080" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1791205080" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\States\Default Work Unit.wwu" DateLow="1791205080" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1791205080" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="1791205080" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Ursa_WwiseProject.wproj" DateLow="1791205080" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="1791205080" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\AppData\Roaming\Audiokinetic\MediaPool\2\MediaPoolQuery.wsettings" DateLow="1791289777" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1791503626" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Attenuations\Factory Attenuations.wwu" DateLow="1791503626" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Busses\Default Work Unit.wwu" DateLow="1791503626" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Containers\Default Work Unit.wwu" DateLow="1791503626" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Containers\music.wwu" DateLow="1791503626" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="1791503626" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="1791503626" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1791503626" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Devices\Default Work Unit.wwu" DateLow="1791503626" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1791503626" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Effects\Default Work Unit.wwu" DateLow="1791503626" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Effects\Factory Effects.wwu" DateLow="1791503626" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Events\Default Work Unit.wwu" DateLow="1791503626" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Events\music.wwu" DateLow="1791503626" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1791503626" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Metadata\Default Work Unit.wwu" DateLow="1791503630" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="1791503630" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="1791503630" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Presets\Default Work Unit.wwu" DateLow="1791503635" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Presets\Factory Spatial Audio.wwu" DateLow="1791503635" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Queries\Default Work Unit.wwu" DateLow="1791503635" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Queries\Factory Queries.wwu" DateLow="1791503635" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Sidechain Mixes\Default Work Unit.wwu" DateLow="1791503635" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1791503635" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1791503635" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Soundcaster Sessions\music.wwu" DateLow="1791503635" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\States\Default Work Unit.wwu" DateLow="1791503635" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\States\music.wwu" DateLow="1791503635" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1791503635" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Switches\music.wwu" DateLow="1791503635" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="1791503635" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Ursa_WwiseProject.wproj" DateLow="1791503635" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Admin\Documents\Unity Games\Ursa\Ursa_WwiseProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="1791503635" DateHigh="0"/>
 </ValidationCache>
