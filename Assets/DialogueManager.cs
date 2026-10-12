@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialogueGroup;
     [SerializeField] private TextMeshProUGUI dialogue;
     [SerializeField] private float timeBetweenLetters = 0.1f;
-    private List<string> _currentDialogueLines = new();
+    private List<DialogueLine> _currentDialogueLines = new();
 
     public bool reachedEnd;
     public Action OnLineComplete;
@@ -26,17 +26,17 @@ public class DialogueManager : MonoBehaviour
     
     public void Close() => SetDialogue(null);
 
-    public void SetDialogue(List<string> lines)
+    public void SetDialogue(List<DialogueLine> lines)
     {
         dialogue.text = "";
         _lineIndex = 0;
-        _currentDialogueLines = lines ?? new List<string>();
+        _currentDialogueLines = lines ?? new List<DialogueLine>();
         dialogueGroup.SetActive(lines != null);
     }
     
     public void NextLine()
     {
-        WriteLine(_currentDialogueLines[_lineIndex]);
+        WriteLine(_currentDialogueLines[_lineIndex].text);
     }
 
     private void WriteLine(string line)
@@ -64,7 +64,7 @@ public class DialogueManager : MonoBehaviour
     public void SkipAnimation()
     {
         _typeWord.Kill();
-        dialogue.text = _currentDialogueLines[_lineIndex];
+        dialogue.text = _currentDialogueLines[_lineIndex].text;
         OnLineComplete?.Invoke();
         _lineIndex++;
         reachedEnd = _lineIndex >= _currentDialogueLines.Count;

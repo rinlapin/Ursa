@@ -23,7 +23,7 @@ public class PuzzleManager : MonoBehaviour
         _forgottenInteractables = FindObjectsByType<ForgottenInteractable>(FindObjectsInactive.Exclude, FindObjectsSortMode.None).ToList();
         foreach (var interactable in _forgottenInteractables)
         {
-            interactable.OnSolve += Remove;
+            interactable.OnSolve.AddListener(Remove);
         }
         
         puzzleVisuals.SetActive(false);
