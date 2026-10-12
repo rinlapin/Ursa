@@ -41,7 +41,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AtmosphereMultiply: 1
+    - _AtmosphereMultiply: 3
     - _AtmospherePow: 1.5
     - _SunsetIntensity: 0.7464286
     m_Colors:
