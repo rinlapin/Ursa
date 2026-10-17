@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6B06E175-C183-4D2A-972E-62AE52EC9172}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="music" ID="{6B06E175-C183-4D2A-972E-62AE52EC9172}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="main_menu_music" ID="{F24463BF-07A2-4CB9-B0AA-7771C231CB01}">
+					<ChildrenList>
+						<Action Name="" ID="{3BD595FA-2059-4AC4-8AE3-651A9D4F58AF}" ShortID="931435422">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{A4D0CF11-FD02-4BE9-B3E3-5ECC3B2416B9}" ShortID="413069230">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Main_Menu" ID="{7EC6E172-7DDC-4E37-B249-7ACFB99A2D59}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="opening_cutscene" ID="{A72A845D-D954-49F6-8A77-6B089BB5282B}">
+					<ChildrenList>
+						<Action Name="" ID="{EEEEBBF0-47E0-4468-BDC7-8704B8DF1B07}" ShortID="153182266">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{4BFF83CF-FBB5-4B3B-940A-9D280D87EED1}" ShortID="160887345">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="opening_cutscene" ID="{33C1C80C-1680-46E5-B973-345EB5ED2A1F}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="gameplay" ID="{77FAC69D-5F4A-4B81-98EB-F6F78010CCC9}">
+					<ChildrenList>
+						<Action Name="" ID="{D622D24F-F23B-4C76-A23A-CB480733C3B1}" ShortID="573527003">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{3C68E747-50B3-4747-8B0F-1066CFB66F95}" ShortID="317326821">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gameplay" ID="{163921B0-D88B-4CE6-A106-DDD94770B78E}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
