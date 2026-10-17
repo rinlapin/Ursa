@@ -1,0 +1,12 @@
+Event	ID	Name			Wwise Object Path	Notes
+	89505537	gameplay			\Music_01\gameplay	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	89505537	gameplay			\music\gameplay	
+
+State	ID	Name	State Group			Notes
+	342806866	wandering	gameplay			
+	748895195	None	gameplay			
+	3258781332	puzzle_solving	gameplay			
+	4227414720	talking_to_Aries	gameplay			
+
