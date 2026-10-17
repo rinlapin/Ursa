@@ -1,0 +1,15 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2850134090	Play_Ice_Smash			\SFX\Play_Ice_Smash	
+	2963349357	Stop_Footsteps			\SFX\Stop_Footsteps	
+	3854155799	Play_Footsteps			\SFX\Play_Footsteps	
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	1023732748	Silence	Wwise Silence		\Containers\SFX\FootstepsLogic\New Silence\Silence	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	173210552	Footstep 4	.cache\3E\{3ED65CDE-4552-9FA5-C6FC-B88B70A5FB59}.wem		\Containers\SFX\FootstepsLogic\Footsteps\Footstep 4		28656
+	233166039	Footstep 3	.cache\3B\{3BB7F757-63E7-5E65-41B8-CD103BE049D9}.wem		\Containers\SFX\FootstepsLogic\Footsteps\Footstep 3		21732
+	533878737	Footstep 1	.cache\FF\{FF399011-18A8-A878-FD34-B44966090487}.wem		\Containers\SFX\FootstepsLogic\Footsteps\Footstep 1		23060
+	1025660783	Footstep 2	.cache\C4\{C441EA9D-6DC2-44DD-4697-4E2E6B78CDFB}.wem		\Containers\SFX\FootstepsLogic\Footsteps\Footstep 2		28484
+	1062011690	Ice smash 2	.cache\C4\{C4282AF4-42E8-F966-AA47-814E64BADA14}.wem		\Containers\SFX\Ice smash 2		672096
+

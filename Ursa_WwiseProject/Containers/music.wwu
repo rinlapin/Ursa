@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{AEFAED15-4246-4229-8C3C-15776455E8AC}" SchemaVersion="133">
 	<Containers>
-		<WorkUnit Name="music" ID="{AEFAED15-4246-4229-8C3C-15776455E8AC}" PersistMode="Standalone">
+		<WorkUnit Name="Music" ID="{AEFAED15-4246-4229-8C3C-15776455E8AC}" PersistMode="Standalone">
 			<ChildrenList>
 				<MusicSwitchContainer Name="Main_Menu" ID="{7EC6E172-7DDC-4E37-B249-7ACFB99A2D59}" ShortID="1042325039">
 					<ReferenceList>

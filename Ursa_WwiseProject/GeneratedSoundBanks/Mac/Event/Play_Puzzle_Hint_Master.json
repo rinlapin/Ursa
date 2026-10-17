@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3416524667",
+    "Type": "Event",
+    "GUID": "{CCB345BB-F1AB-4D90-A056-01304082880F}",
+    "Language": "SFX",
+    "Hash": "{C51FC832-15F1-88BC-6405-2FC8B7D66A31}",
+    "ObjectPath": "Play_Puzzle_Hint_Master",
+    "ShortName": "Play_Puzzle_Hint_Master",
+    "Path": "Event/Play_Puzzle_Hint_Master.bnk",
+    "Media": [
+     {
+      "Id": "928561989",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Puzzle Hint Master.wav",
+      "Path": "Media/928561989.wem",
+      "CachePath": "99/{99936BED-4FB5-EAF6-8CBD-18013813DD83}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3416524667",
+      "Name": "Play_Puzzle_Hint_Master",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Puzzle_Hint_Master",
+      "GUID": "{CCB345BB-F1AB-4D90-A056-01304082880F}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.7272916",
+      "DurationMax": "4.7272916",
+      "MediaRefs": [
+       {
+        "Id": "928561989"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{3A9F9C2F-163D-43CE-666C-8B37CDE74485}"
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3425158555",
+    "Type": "Event",
+    "GUID": "{20542CFD-2615-4572-9594-0A6CECE3AB42}",
+    "Language": "SFX",
+    "Hash": "{9A8D650C-AB43-5B59-A874-634D084F3AB0}",
+    "ObjectPath": "Play_Nav_Star_drone",
+    "ShortName": "Play_Nav_Star_drone",
+    "Path": "Event/Play_Nav_Star_drone.bnk",
+    "Media": [
+     {
+      "Id": "616856727",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Nav Star drone.wav",
+      "Path": "Media/616856727.wem",
+      "CachePath": "C9/{C9439C8B-8259-8DC8-A26C-A269456B4C2B}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3425158555",
+      "Name": "Play_Nav_Star_drone",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Nav_Star_drone",
+      "GUID": "{20542CFD-2615-4572-9594-0A6CECE3AB42}",
+      "DurationType": "OneShot",
+      "DurationMin": "10.909104",
+      "DurationMax": "10.909104",
+      "MediaRefs": [
+       {
+        "Id": "616856727"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{785DC589-9E2A-0CF0-99F3-FC1C3D2C6FD0}"
+ }
+}

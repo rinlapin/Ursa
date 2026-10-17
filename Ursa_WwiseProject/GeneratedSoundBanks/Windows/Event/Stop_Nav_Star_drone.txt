@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3266201885	Stop_Nav_Star_drone			\Default Work Unit\Stop_Nav_Star_drone	
+

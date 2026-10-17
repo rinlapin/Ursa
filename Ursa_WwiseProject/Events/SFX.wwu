@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{786440C7-9D93-46F8-AEDB-D00BA02253D5}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="SFX" ID="{786440C7-9D93-46F8-AEDB-D00BA02253D5}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Footsteps" ID="{E2116235-85E2-45D3-9250-FC549239F2AB}">
+					<ChildrenList>
+						<Action Name="" ID="{E5C4F463-63E2-469F-B039-ED43BCDBDC10}" ShortID="946337691">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FootstepsLogic" ID="{130864BB-FD87-4EA1-B302-B7BDDC643259}" WorkUnitID="{A04769BE-E401-45A5-9DE1-00E564A46690}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Footsteps" ID="{4644B79A-38F2-49D3-9558-E805843E7326}">
+					<ChildrenList>
+						<Action Name="" ID="{E623039E-87C9-4DFE-A7C2-4B88F9BCE481}" ShortID="360630884">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FootstepsLogic" ID="{130864BB-FD87-4EA1-B302-B7BDDC643259}" WorkUnitID="{A04769BE-E401-45A5-9DE1-00E564A46690}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ice_Smash" ID="{4B53D59C-8676-4C73-8F47-2362A921A040}">
+					<ChildrenList>
+						<Action Name="" ID="{71A28D7C-2860-4AFB-9C5E-72ADC03186A8}" ShortID="632785103">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ice smash 2" ID="{6B141418-77B8-40BC-9F44-821E4E45D5E2}" WorkUnitID="{A04769BE-E401-45A5-9DE1-00E564A46690}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

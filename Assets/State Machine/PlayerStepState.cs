@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerStepState : FiniteStateMachine, PlayerInputActions.IPlayerActions
 {
+        
         public ExitStatePlayer ExitState { get; protected set; }
         private PlayerInputActions _actions;
         
@@ -19,6 +20,14 @@ public class PlayerStepState : FiniteStateMachine, PlayerInputActions.IPlayerAct
 
         public void OnMove(InputAction.CallbackContext context)
         {
+                if (context.started)
+                {
+                        SoundManager.Instance.PlayEvent(SoundManager.Instance.playFootsteps);
+                }
+                else if (context.canceled)
+                {
+                        SoundManager.Instance.PlayEvent(SoundManager.Instance.stopFootsteps);
+                }
                 GameManager.Instance.walkInput = Vector2.ClampMagnitude(context.ReadValue<Vector2>(), 1);
         }
 

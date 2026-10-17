@@ -62,12 +62,7 @@ public class PuzzleStepState : FiniteStateMachine
 
         private void HandleRotateStateComplete()
         {
-                ChangeState(PuzzleIdleState);
-        }
-
-        private void HandleHintStateComplete()
-        {
-                if (PuzzleHintState.IsWin)
+                if (PuzzleRotateState.IsWin)
                 {
                         PuzzleWinState.Interactable = _interactable;
                         ChangeState(PuzzleWinState);
@@ -76,6 +71,11 @@ public class PuzzleStepState : FiniteStateMachine
                 {
                         ChangeState(PuzzleIdleState);
                 }
+        }
+
+        private void HandleHintStateComplete()
+        {
+                ChangeState(PuzzleIdleState);
         }
 
         private void HandleWinStateComplete()

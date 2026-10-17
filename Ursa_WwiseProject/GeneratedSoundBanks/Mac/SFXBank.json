@@ -1,0 +1,129 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3017475316",
+    "Type": "User",
+    "GUID": "{F67F68DB-8D92-4C9F-8A40-6B381FB435AD}",
+    "Language": "SFX",
+    "Hash": "{B41157CA-B558-601E-5F69-F136E4570BE6}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFXBank",
+    "ShortName": "SFXBank",
+    "Path": "SFXBank.bnk",
+    "Media": [
+     {
+      "Id": "173210552",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep 4.wav",
+      "CachePath": "3E/{3ED65CDE-4552-9FA5-C6FC-B88B70A5FB59}.wem"
+     },
+     {
+      "Id": "233166039",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep 3.wav",
+      "CachePath": "3B/{3BB7F757-63E7-5E65-41B8-CD103BE049D9}.wem"
+     },
+     {
+      "Id": "533878737",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep 1.wav",
+      "CachePath": "FF/{FF399011-18A8-A878-FD34-B44966090487}.wem"
+     },
+     {
+      "Id": "1025660783",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep 2.wav",
+      "CachePath": "C4/{C441EA9D-6DC2-44DD-4697-4E2E6B78CDFB}.wem"
+     },
+     {
+      "Id": "1062011690",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Ice smash 2.wav",
+      "CachePath": "C4/{C4282AF4-42E8-F966-AA47-814E64BADA14}.wem"
+     }
+    ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "1023732748",
+       "Name": "Silence",
+       "ObjectPath": "\\Containers\\SFX\\FootstepsLogic\\New Silence\\Silence",
+       "GUID": "{A82F0F9C-8470-4BD2-BE46-14213594DB9C}",
+       "LibName": "Wwise Silence",
+       "LibId": "6619138"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "3854155799",
+      "Name": "Play_Footsteps",
+      "ObjectPath": "\\Events\\SFX\\Play_Footsteps",
+      "GUID": "{E2116235-85E2-45D3-9250-FC549239F2AB}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "173210552"
+       },
+       {
+        "Id": "233166039"
+       },
+       {
+        "Id": "533878737"
+       },
+       {
+        "Id": "1025660783"
+       }
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "1023732748"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "2850134090",
+      "Name": "Play_Ice_Smash",
+      "ObjectPath": "\\Events\\SFX\\Play_Ice_Smash",
+      "GUID": "{4B53D59C-8676-4C73-8F47-2362A921A040}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.162225",
+      "DurationMax": "4.162225",
+      "MediaRefs": [
+       {
+        "Id": "1062011690"
+       }
+      ]
+     },
+     {
+      "Id": "2963349357",
+      "Name": "Stop_Footsteps",
+      "ObjectPath": "\\Events\\SFX\\Stop_Footsteps",
+      "GUID": "{4644B79A-38F2-49D3-9558-E805843E7326}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{49D742BB-701A-3CF9-9299-C789467FD719}"
+ }
+}

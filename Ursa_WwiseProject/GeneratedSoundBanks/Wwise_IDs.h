@@ -16,6 +16,15 @@ namespace AK
         static const AkUniqueID GAMEPLAY = 89505537U;
         static const AkUniqueID MAIN_MENU_MUSIC = 3399698792U;
         static const AkUniqueID OPENING_CUTSCENE = 1917576450U;
+        static const AkUniqueID PLAY_CONST_MOVE = 3094787361U;
+        static const AkUniqueID PLAY_CONST_REBIRTH = 4101259872U;
+        static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
+        static const AkUniqueID PLAY_ICE_SMASH = 2850134090U;
+        static const AkUniqueID PLAY_NAV_STAR_DRONE = 3425158555U;
+        static const AkUniqueID PLAY_PUZZLE_HINT_MASTER = 3416524667U;
+        static const AkUniqueID PLAY_PUZZLE_WIN_MASTER = 206505562U;
+        static const AkUniqueID STOP_FOOTSTEPS = 2963349357U;
+        static const AkUniqueID STOP_NAV_STAR_DRONE = 3266201885U;
     } // namespace EVENTS
 
     namespace STATES
@@ -65,7 +74,7 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SFXBANK = 3017475316U;
     } // namespace BANKS
 
     namespace BUSSES

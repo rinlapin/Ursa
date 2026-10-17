@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3266201885",
+    "Type": "Event",
+    "GUID": "{C395A759-1A08-4F35-8453-675D70049CA3}",
+    "Language": "SFX",
+    "Hash": "{C6AA6333-3071-77C1-03F1-A87177A6BDAD}",
+    "ObjectPath": "Stop_Nav_Star_drone",
+    "ShortName": "Stop_Nav_Star_drone",
+    "Path": "Event/Stop_Nav_Star_drone.bnk",
+    "Events": [
+     {
+      "Id": "3266201885",
+      "Name": "Stop_Nav_Star_drone",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_Nav_Star_drone",
+      "GUID": "{C395A759-1A08-4F35-8453-675D70049CA3}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{ACFBDB97-35BD-1BF9-DAA2-8680D77A894D}"
+ }
+}

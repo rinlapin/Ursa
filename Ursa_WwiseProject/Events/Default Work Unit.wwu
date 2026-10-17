@@ -1,6 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{88E5D46D-6BDC-4FF0-AFD4-ACB31ABDB825}" SchemaVersion="133">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{88E5D46D-6BDC-4FF0-AFD4-ACB31ABDB825}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{88E5D46D-6BDC-4FF0-AFD4-ACB31ABDB825}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Const_Move" ID="{4F75D216-00D4-40B6-9372-A1D20B76414C}">
+					<ChildrenList>
+						<Action Name="" ID="{11B6BB42-BD7D-4625-BF73-D43F1312B251}" ShortID="772554491">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ConstMove" ID="{753FCEB7-57C6-4784-B9B8-F08C8D612689}" WorkUnitID="{A04769BE-E401-45A5-9DE1-00E564A46690}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Nav_Star_drone" ID="{20542CFD-2615-4572-9594-0A6CECE3AB42}">
+					<ChildrenList>
+						<Action Name="" ID="{2014864C-AD71-4AE9-B9CD-E4708FED3A83}" ShortID="202013257">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Nav Star drone" ID="{13CD7AA4-216C-4530-91BF-8D112A9249D6}" WorkUnitID="{A04769BE-E401-45A5-9DE1-00E564A46690}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Nav_Star_drone" ID="{C395A759-1A08-4F35-8453-675D70049CA3}">
+					<ChildrenList>
+						<Action Name="" ID="{AD69B032-E0A0-447F-A777-0AB0F9361BB6}" ShortID="931006756">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Nav Star drone" ID="{13CD7AA4-216C-4530-91BF-8D112A9249D6}" WorkUnitID="{A04769BE-E401-45A5-9DE1-00E564A46690}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Puzzle_Hint_Master" ID="{CCB345BB-F1AB-4D90-A056-01304082880F}">
+					<ChildrenList>
+						<Action Name="" ID="{05144F3D-CA19-4C11-9628-BB63C4DFEEE8}" ShortID="946302956">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Puzzle Hint Master" ID="{E3E336A6-7540-40EA-A777-903336FA19D1}" WorkUnitID="{A04769BE-E401-45A5-9DE1-00E564A46690}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Puzzle_Win_Master" ID="{A93705C8-CC47-4D3B-81C7-1E6479E0BA29}">
+					<ChildrenList>
+						<Action Name="" ID="{F3024798-F3F2-418C-8274-DB81EC3B5AD8}" ShortID="195830261">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Puzzle Win Master" ID="{9A38B13E-F122-4D66-B606-3B78135110CB}" WorkUnitID="{A04769BE-E401-45A5-9DE1-00E564A46690}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Const_Rebirth" ID="{C4AB1304-0F71-40A6-8042-4CF9867744FC}">
+					<ChildrenList>
+						<Action Name="" ID="{A6A2CB5B-2B38-454F-888A-72B9FB6C88DE}" ShortID="897667509">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Const rebirth" ID="{F130395C-35B3-495D-9CC8-63183093B607}" WorkUnitID="{A04769BE-E401-45A5-9DE1-00E564A46690}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

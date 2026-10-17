@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3425158555	Play_Nav_Star_drone			\Default Work Unit\Play_Nav_Star_drone	
+

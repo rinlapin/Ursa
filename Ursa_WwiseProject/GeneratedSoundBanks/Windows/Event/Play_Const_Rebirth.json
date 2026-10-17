@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "4101259872",
+    "Type": "Event",
+    "GUID": "{C4AB1304-0F71-40A6-8042-4CF9867744FC}",
+    "Language": "SFX",
+    "Hash": "{0D0D5641-E34D-B763-6D8A-C6BF859BE5E0}",
+    "ObjectPath": "Play_Const_Rebirth",
+    "ShortName": "Play_Const_Rebirth",
+    "Path": "Event/Play_Const_Rebirth.bnk",
+    "Media": [
+     {
+      "Id": "694287092",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Const rebirth.wav",
+      "Path": "Media/694287092.wem",
+      "CachePath": "04/{04005A7A-DF73-10EF-635D-3BE74BA8B8C3}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "4101259872",
+      "Name": "Play_Const_Rebirth",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Const_Rebirth",
+      "GUID": "{C4AB1304-0F71-40A6-8042-4CF9867744FC}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.7272916",
+      "DurationMax": "4.7272916",
+      "MediaRefs": [
+       {
+        "Id": "694287092"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{29F5FBF6-0021-E702-5CD5-C7C4A724DDA5}"
+ }
+}
