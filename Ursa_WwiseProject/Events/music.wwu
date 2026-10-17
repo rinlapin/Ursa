@@ -14,7 +14,7 @@
 						<Action Name="" ID="{A4D0CF11-FD02-4BE9-B3E3-5ECC3B2416B9}" ShortID="413069230">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="main_menu_music" ID="{7EC6E172-7DDC-4E37-B249-7ACFB99A2D59}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
+									<ObjectRef Name="Main_Menu" ID="{7EC6E172-7DDC-4E37-B249-7ACFB99A2D59}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -49,7 +49,7 @@
 						<Action Name="" ID="{3C68E747-50B3-4747-8B0F-1066CFB66F95}" ShortID="317326821">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="gameplay" ID="{163921B0-D88B-4CE6-A106-DDD94770B78E}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
+									<ObjectRef Name="Gameplay" ID="{163921B0-D88B-4CE6-A106-DDD94770B78E}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

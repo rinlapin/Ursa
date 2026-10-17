@@ -3,7 +3,7 @@
 	<Containers>
 		<WorkUnit Name="music" ID="{AEFAED15-4246-4229-8C3C-15776455E8AC}" PersistMode="Standalone">
 			<ChildrenList>
-				<MusicSwitchContainer Name="main_menu_music" ID="{7EC6E172-7DDC-4E37-B249-7ACFB99A2D59}" ShortID="1042325039">
+				<MusicSwitchContainer Name="Main_Menu" ID="{7EC6E172-7DDC-4E37-B249-7ACFB99A2D59}" ShortID="1042325039">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
@@ -1209,7 +1209,7 @@
 						</ObjectList>
 					</ObjectLists>
 				</MusicSwitchContainer>
-				<MusicSwitchContainer Name="gameplay" ID="{163921B0-D88B-4CE6-A106-DDD94770B78E}" ShortID="406081988">
+				<MusicSwitchContainer Name="Gameplay" ID="{163921B0-D88B-4CE6-A106-DDD94770B78E}" ShortID="406081988">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
@@ -2756,7 +2756,7 @@
 						</ObjectList>
 					</ObjectLists>
 				</MusicSwitchContainer>
-				<MusicPlaylistContainer Name="opening_cutscene" ID="{49358DB4-99CE-49D9-881E-E86B96831142}" ShortID="550571363">
+				<MusicPlaylistContainer Name="Opening_Cutscene" ID="{49358DB4-99CE-49D9-881E-E86B96831142}" ShortID="550571363">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
