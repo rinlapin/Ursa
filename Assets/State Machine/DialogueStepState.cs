@@ -26,7 +26,7 @@ public class DialogueStepState : FiniteStateMachine
         {
                 _actions.Dialogue.Enable();
                 _interactable = GameManager.Instance.ClosestInteractable as SolvedInteractable;
-                _manager.SetDialogue(_interactable.DialogueLines);
+                _manager.SetDialogue(_interactable);
                 ChangeState(DialogueWriteState);
         }
 

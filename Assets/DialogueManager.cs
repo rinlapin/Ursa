@@ -9,7 +9,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialogueGroup;
     [SerializeField] private TextMeshProUGUI dialogue;
     [SerializeField] private float timeBetweenLetters = 0.1f;
-    private List<string> _currentDialogueLines = new();
+    private List<DialogueLine> _currentDialogueLines = new();
+    private SolvedInteractable _currentInteractable;
 
     public bool reachedEnd;
     public Action OnLineComplete;
@@ -24,14 +25,19 @@ public class DialogueManager : MonoBehaviour
         reachedEnd = false;
     }
     
-    public void Close() => SetDialogue(null);
-
-    public void SetDialogue(List<string> lines)
+    public void Close()
     {
+        ProcessOnDialogueComplete();
+        SetDialogue(null);
+    }
+
+    public void SetDialogue(SolvedInteractable interactable)
+    {
+        _currentInteractable = interactable;
         dialogue.text = "";
         _lineIndex = 0;
-        _currentDialogueLines = lines ?? new List<string>();
-        dialogueGroup.SetActive(lines != null);
+        _currentDialogueLines = _currentInteractable?.dialogueLines ?? new List<DialogueLine>();
+        dialogueGroup.SetActive(_currentDialogueLines != null);
     }
     
     public void NextLine()
@@ -39,14 +45,14 @@ public class DialogueManager : MonoBehaviour
         WriteLine(_currentDialogueLines[_lineIndex]);
     }
 
-    private void WriteLine(string line)
+    private void WriteLine(DialogueLine line)
     {
         dialogue.text = "";
         
         _typeWord = DOTween.Sequence();
-        for (int i = 0; i < line.Length; i++)
+        for (int i = 0; i < line.Text.Length; i++)
         {
-            var letter = line[i];
+            var letter = line.Text[i];
             _typeWord
                 .AppendCallback(() => dialogue.text += letter)
                 .AppendInterval(timeBetweenLetters);
@@ -64,9 +70,19 @@ public class DialogueManager : MonoBehaviour
     public void SkipAnimation()
     {
         _typeWord.Kill();
-        dialogue.text = _currentDialogueLines[_lineIndex];
+        dialogue.text = _currentDialogueLines[_lineIndex].Text;
         OnLineComplete?.Invoke();
         _lineIndex++;
         reachedEnd = _lineIndex >= _currentDialogueLines.Count;
+    }
+
+    public void ProcessAfterLineEvent()
+    {
+        
+    }
+
+    public void ProcessOnDialogueComplete()
+    {
+        _currentInteractable.OnDialogueComplete?.Invoke();
     }
 }

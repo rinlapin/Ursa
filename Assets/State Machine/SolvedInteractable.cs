@@ -1,8 +1,17 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SolvedInteractable : Interactable
 {
-        [field: SerializeField] public List<string> DialogueLines { get; protected set; }
+        public List<DialogueLine> dialogueLines;
+        public UnityEvent OnDialogueComplete;
+}
+
+[Serializable]
+public class DialogueLine
+{
+        public string Text;
+        public UnityEvent OnLineComplete;
 }

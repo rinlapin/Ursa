@@ -1137,77 +1137,6 @@
 							</ChildrenList>
 						</MusicPlaylistContainer>
 					</ChildrenList>
-					<StateInfo>
-						<StateGroupList>
-							<StateGroupInfo>
-								<StateGroupRef Name="main_menu" ID="{B8ECD915-9F1C-46F3-B33A-4819119B4F93}"/>
-								<StateGroupInfo Name="" ID="{D9C79A00-50B4-48C0-97D0-5BADAA61610B}" ShortID="651668939"/>
-							</StateGroupInfo>
-						</StateGroupList>
-						<CustomStateList>
-							<CustomState>
-								<StateRef Name="menu_exit" ID="{137177C3-C100-4641-8D23-B699BCDFAA1B}"/>
-								<CustomState Name="" ID="{BC0FB5A5-B3F4-4FE0-B430-C088D0AD4F43}" ShortID="604345311"/>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="menu_open" ID="{7DEF98D8-B8D9-4A2D-8D90-A8186EDBD617}"/>
-								<CustomState Name="" ID="{ABFDC038-EF6E-4EBD-B510-CF050E8DC5BC}" ShortID="503920448"/>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="None" ID="{BAC5ADDF-74F3-4E50-90FD-B5381D1DEF8D}"/>
-								<CustomState Name="" ID="{F8F9A97C-78C6-4D1B-A3D4-A26C09762172}" ShortID="709496239"/>
-							</CustomState>
-						</CustomStateList>
-					</StateInfo>
-					<ObjectLists>
-						<ObjectList Name="Arguments">
-							<PluginInnerObject Name="" ID="{4ED52267-47B3-42D4-91BB-55E72E2407CA}" PluginName="MusicArgumentsSlot" CompanyID="0" PluginID="89">
-								<ReferenceList>
-									<Reference Name="Argument">
-										<ObjectRef Name="main_menu" ID="{B8ECD915-9F1C-46F3-B33A-4819119B4F93}" WorkUnitID="{5AA124CD-3D1B-48F7-AA5F-48192D0BDF38}"/>
-									</Reference>
-								</ReferenceList>
-							</PluginInnerObject>
-						</ObjectList>
-						<ObjectList Name="Entries">
-							<MultiSwitchEntry Name="" ID="{05789BB5-7231-458D-B661-3072DB9EA8B8}">
-								<ReferenceList>
-									<Reference Name="AudioNode">
-										<ObjectRef Name="main_menu_exit" ID="{1E6CA819-A185-4B26-BE65-E473BB61B903}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
-									</Reference>
-								</ReferenceList>
-								<ObjectLists>
-									<ObjectList Name="EntryPath">
-										<PluginInnerObject Name="" ID="{6A0DD3AE-67BD-4CB7-BC82-881B1056BE76}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
-											<ReferenceList>
-												<Reference Name="EntryPathObject">
-													<ObjectRef Name="menu_exit" ID="{137177C3-C100-4641-8D23-B699BCDFAA1B}" WorkUnitID="{5AA124CD-3D1B-48F7-AA5F-48192D0BDF38}"/>
-												</Reference>
-											</ReferenceList>
-										</PluginInnerObject>
-									</ObjectList>
-								</ObjectLists>
-							</MultiSwitchEntry>
-							<MultiSwitchEntry Name="" ID="{10E0173D-F7CA-4698-816C-2BC25C4F5B4A}">
-								<ReferenceList>
-									<Reference Name="AudioNode">
-										<ObjectRef Name="main_menu_open" ID="{B1FB645B-58C3-4550-B198-01C492D3FF10}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
-									</Reference>
-								</ReferenceList>
-								<ObjectLists>
-									<ObjectList Name="EntryPath">
-										<PluginInnerObject Name="" ID="{B974B91D-7D6C-4487-9494-6562BC0339F5}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
-											<ReferenceList>
-												<Reference Name="EntryPathObject">
-													<ObjectRef Name="menu_open" ID="{7DEF98D8-B8D9-4A2D-8D90-A8186EDBD617}" WorkUnitID="{5AA124CD-3D1B-48F7-AA5F-48192D0BDF38}"/>
-												</Reference>
-											</ReferenceList>
-										</PluginInnerObject>
-									</ObjectList>
-								</ObjectLists>
-							</MultiSwitchEntry>
-						</ObjectList>
-					</ObjectLists>
 				</MusicSwitchContainer>
 				<MusicSwitchContainer Name="Gameplay" ID="{163921B0-D88B-4CE6-A106-DDD94770B78E}" ShortID="406081988">
 					<ReferenceList>
@@ -1490,14 +1419,8 @@
 												<Property Name="MusicTrackType" Type="int16" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
-												<Reference Name="DefaultSwitchOrState">
-													<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
-												</Reference>
-												<Reference Name="SwitchGroupOrStateGroup">
-													<ObjectRef Name="player_location" ID="{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
@@ -1569,11 +1492,7 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList>
-															<Reference Name="TrackSequenceSwitch">
-																<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-															</Reference>
-														</ReferenceList>
+														<ReferenceList/>
 													</MusicTrackSequence>
 													<MusicTrackSequence Name="" ID="{35296DC3-4628-4311-B0A3-D4B365AF8318}">
 														<ObjectLists>
@@ -1588,11 +1507,7 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList>
-															<Reference Name="TrackSequenceSwitch">
-																<ObjectRef Name="in_the_cave" ID="{F036E22E-DEB4-45F3-B167-9AFAEF80443F}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-															</Reference>
-														</ReferenceList>
+														<ReferenceList/>
 													</MusicTrackSequence>
 												</ObjectList>
 											</ObjectLists>
@@ -1602,14 +1517,8 @@
 												<Property Name="MusicTrackType" Type="int16" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
-												<Reference Name="DefaultSwitchOrState">
-													<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
-												</Reference>
-												<Reference Name="SwitchGroupOrStateGroup">
-													<ObjectRef Name="player_location" ID="{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
@@ -1670,11 +1579,7 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList>
-															<Reference Name="TrackSequenceSwitch">
-																<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-															</Reference>
-														</ReferenceList>
+														<ReferenceList/>
 													</MusicTrackSequence>
 													<MusicTrackSequence Name="" ID="{98CFEE96-D249-40C6-925F-B455B75B293E}">
 														<ObjectLists>
@@ -1689,11 +1594,7 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList>
-															<Reference Name="TrackSequenceSwitch">
-																<ObjectRef Name="in_the_cave" ID="{F036E22E-DEB4-45F3-B167-9AFAEF80443F}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-															</Reference>
-														</ReferenceList>
+														<ReferenceList/>
 													</MusicTrackSequence>
 												</ObjectList>
 											</ObjectLists>
@@ -1703,14 +1604,8 @@
 												<Property Name="MusicTrackType" Type="int16" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
-												<Reference Name="DefaultSwitchOrState">
-													<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
-												</Reference>
-												<Reference Name="SwitchGroupOrStateGroup">
-													<ObjectRef Name="player_location" ID="{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
@@ -1775,18 +1670,10 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList>
-															<Reference Name="TrackSequenceSwitch">
-																<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-															</Reference>
-														</ReferenceList>
+														<ReferenceList/>
 													</MusicTrackSequence>
 													<MusicTrackSequence Name="" ID="{30AC6749-8392-48E7-8ED7-33B21F1174BC}">
-														<ReferenceList>
-															<Reference Name="TrackSequenceSwitch">
-																<ObjectRef Name="in_the_cave" ID="{F036E22E-DEB4-45F3-B167-9AFAEF80443F}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-															</Reference>
-														</ReferenceList>
+														<ReferenceList/>
 													</MusicTrackSequence>
 												</ObjectList>
 											</ObjectLists>
@@ -1796,14 +1683,8 @@
 												<Property Name="MusicTrackType" Type="int16" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
-												<Reference Name="DefaultSwitchOrState">
-													<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
-												</Reference>
-												<Reference Name="SwitchGroupOrStateGroup">
-													<ObjectRef Name="player_location" ID="{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
@@ -1875,11 +1756,7 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList>
-															<Reference Name="TrackSequenceSwitch">
-																<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-															</Reference>
-														</ReferenceList>
+														<ReferenceList/>
 													</MusicTrackSequence>
 													<MusicTrackSequence Name="" ID="{8EE879E3-45A3-4134-AE2C-F1BCB58E9440}">
 														<ObjectLists>
@@ -1894,11 +1771,7 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList>
-															<Reference Name="TrackSequenceSwitch">
-																<ObjectRef Name="in_the_cave" ID="{F036E22E-DEB4-45F3-B167-9AFAEF80443F}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-															</Reference>
-														</ReferenceList>
+														<ReferenceList/>
 													</MusicTrackSequence>
 												</ObjectList>
 											</ObjectLists>
@@ -1908,14 +1781,8 @@
 												<Property Name="MusicTrackType" Type="int16" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
-												<Reference Name="DefaultSwitchOrState">
-													<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
-												</Reference>
-												<Reference Name="SwitchGroupOrStateGroup">
-													<ObjectRef Name="player_location" ID="{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
@@ -1980,18 +1847,10 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList>
-															<Reference Name="TrackSequenceSwitch">
-																<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-															</Reference>
-														</ReferenceList>
+														<ReferenceList/>
 													</MusicTrackSequence>
 													<MusicTrackSequence Name="" ID="{C15DCED7-9719-4F08-8A80-1F3D40AE8F31}">
-														<ReferenceList>
-															<Reference Name="TrackSequenceSwitch">
-																<ObjectRef Name="in_the_cave" ID="{F036E22E-DEB4-45F3-B167-9AFAEF80443F}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-															</Reference>
-														</ReferenceList>
+														<ReferenceList/>
 													</MusicTrackSequence>
 												</ObjectList>
 											</ObjectLists>
@@ -2001,14 +1860,8 @@
 												<Property Name="MusicTrackType" Type="int16" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
-												<Reference Name="DefaultSwitchOrState">
-													<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
-												</Reference>
-												<Reference Name="SwitchGroupOrStateGroup">
-													<ObjectRef Name="player_location" ID="{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
@@ -2080,11 +1933,7 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList>
-															<Reference Name="TrackSequenceSwitch">
-																<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-															</Reference>
-														</ReferenceList>
+														<ReferenceList/>
 													</MusicTrackSequence>
 													<MusicTrackSequence Name="" ID="{47B58688-45EC-4826-B88A-922888CD759E}">
 														<ObjectLists>
@@ -2099,11 +1948,7 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList>
-															<Reference Name="TrackSequenceSwitch">
-																<ObjectRef Name="in_the_cave" ID="{F036E22E-DEB4-45F3-B167-9AFAEF80443F}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-															</Reference>
-														</ReferenceList>
+														<ReferenceList/>
 													</MusicTrackSequence>
 												</ObjectList>
 											</ObjectLists>
@@ -2113,14 +1958,8 @@
 												<Property Name="MusicTrackType" Type="int16" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
-												<Reference Name="DefaultSwitchOrState">
-													<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
-												</Reference>
-												<Reference Name="SwitchGroupOrStateGroup">
-													<ObjectRef Name="player_location" ID="{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
@@ -2192,11 +2031,7 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList>
-															<Reference Name="TrackSequenceSwitch">
-																<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-															</Reference>
-														</ReferenceList>
+														<ReferenceList/>
 													</MusicTrackSequence>
 													<MusicTrackSequence Name="" ID="{94AC083A-2066-4413-8DA7-EFCE2A5B374F}">
 														<ObjectLists>
@@ -2211,11 +2046,7 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList>
-															<Reference Name="TrackSequenceSwitch">
-																<ObjectRef Name="in_the_cave" ID="{F036E22E-DEB4-45F3-B167-9AFAEF80443F}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-															</Reference>
-														</ReferenceList>
+														<ReferenceList/>
 													</MusicTrackSequence>
 												</ObjectList>
 											</ObjectLists>
@@ -2225,14 +2056,8 @@
 												<Property Name="MusicTrackType" Type="int16" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
-												<Reference Name="DefaultSwitchOrState">
-													<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
-												</Reference>
-												<Reference Name="SwitchGroupOrStateGroup">
-													<ObjectRef Name="player_location" ID="{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
@@ -2304,11 +2129,7 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList>
-															<Reference Name="TrackSequenceSwitch">
-																<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-															</Reference>
-														</ReferenceList>
+														<ReferenceList/>
 													</MusicTrackSequence>
 													<MusicTrackSequence Name="" ID="{576724E6-4BCF-4A9C-B43B-F56225925AA9}">
 														<ObjectLists>
@@ -2323,11 +2144,7 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList>
-															<Reference Name="TrackSequenceSwitch">
-																<ObjectRef Name="in_the_cave" ID="{F036E22E-DEB4-45F3-B167-9AFAEF80443F}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-															</Reference>
-														</ReferenceList>
+														<ReferenceList/>
 													</MusicTrackSequence>
 												</ObjectList>
 											</ObjectLists>
@@ -2337,14 +2154,8 @@
 												<Property Name="MusicTrackType" Type="int16" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
-												<Reference Name="DefaultSwitchOrState">
-													<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
-												</Reference>
-												<Reference Name="SwitchGroupOrStateGroup">
-													<ObjectRef Name="player_location" ID="{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
@@ -2409,18 +2220,10 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList>
-															<Reference Name="TrackSequenceSwitch">
-																<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-															</Reference>
-														</ReferenceList>
+														<ReferenceList/>
 													</MusicTrackSequence>
 													<MusicTrackSequence Name="" ID="{66266869-F9DE-4919-BD95-AE4DA869C5B6}">
-														<ReferenceList>
-															<Reference Name="TrackSequenceSwitch">
-																<ObjectRef Name="in_the_cave" ID="{F036E22E-DEB4-45F3-B167-9AFAEF80443F}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-															</Reference>
-														</ReferenceList>
+														<ReferenceList/>
 													</MusicTrackSequence>
 												</ObjectList>
 											</ObjectLists>
@@ -2430,14 +2233,8 @@
 												<Property Name="MusicTrackType" Type="int16" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
-												<Reference Name="DefaultSwitchOrState">
-													<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
-												</Reference>
-												<Reference Name="SwitchGroupOrStateGroup">
-													<ObjectRef Name="player_location" ID="{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
@@ -2502,18 +2299,10 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList>
-															<Reference Name="TrackSequenceSwitch">
-																<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-															</Reference>
-														</ReferenceList>
+														<ReferenceList/>
 													</MusicTrackSequence>
 													<MusicTrackSequence Name="" ID="{DEF7532B-956E-4293-96F6-B1A704E3EF56}">
-														<ReferenceList>
-															<Reference Name="TrackSequenceSwitch">
-																<ObjectRef Name="in_the_cave" ID="{F036E22E-DEB4-45F3-B167-9AFAEF80443F}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
-															</Reference>
-														</ReferenceList>
+														<ReferenceList/>
 													</MusicTrackSequence>
 												</ObjectList>
 											</ObjectLists>
@@ -2688,73 +2477,6 @@
 							</ChildrenList>
 						</MusicPlaylistContainer>
 					</ChildrenList>
-					<ObjectLists>
-						<ObjectList Name="Arguments">
-							<PluginInnerObject Name="" ID="{AE900B98-B073-4D1D-BC32-AFA502FC4977}" PluginName="MusicArgumentsSlot" CompanyID="0" PluginID="89">
-								<ReferenceList>
-									<Reference Name="Argument">
-										<ObjectRef Name="gameplay" ID="{B818D92D-CC48-41C3-8258-08577700AB63}" WorkUnitID="{5AA124CD-3D1B-48F7-AA5F-48192D0BDF38}"/>
-									</Reference>
-								</ReferenceList>
-							</PluginInnerObject>
-						</ObjectList>
-						<ObjectList Name="Entries">
-							<MultiSwitchEntry Name="" ID="{0AC1B830-2A93-49C9-9290-18B01B49AF2E}">
-								<ReferenceList>
-									<Reference Name="AudioNode">
-										<ObjectRef Name="puzzle_solving" ID="{F0D2FFF5-E9D4-457E-AF66-3D44A1A4D53A}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
-									</Reference>
-								</ReferenceList>
-								<ObjectLists>
-									<ObjectList Name="EntryPath">
-										<PluginInnerObject Name="" ID="{4B8C7217-75AC-4521-95AC-644801A46B16}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
-											<ReferenceList>
-												<Reference Name="EntryPathObject">
-													<ObjectRef Name="puzzle_solving" ID="{015DF498-5318-4539-9B94-A3007374CA63}" WorkUnitID="{5AA124CD-3D1B-48F7-AA5F-48192D0BDF38}"/>
-												</Reference>
-											</ReferenceList>
-										</PluginInnerObject>
-									</ObjectList>
-								</ObjectLists>
-							</MultiSwitchEntry>
-							<MultiSwitchEntry Name="" ID="{DAEFB345-E502-41B9-9ED3-BA1D9F4A821E}">
-								<ReferenceList>
-									<Reference Name="AudioNode">
-										<ObjectRef Name="talking_to_Aries" ID="{D6CE0FDD-9B19-4669-B565-FA4BCFC85D08}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
-									</Reference>
-								</ReferenceList>
-								<ObjectLists>
-									<ObjectList Name="EntryPath">
-										<PluginInnerObject Name="" ID="{7DED94DD-1507-4028-9D85-915665676815}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
-											<ReferenceList>
-												<Reference Name="EntryPathObject">
-													<ObjectRef Name="talking_to_Aries" ID="{63E1297B-5148-49E7-BFFC-ADA062542575}" WorkUnitID="{5AA124CD-3D1B-48F7-AA5F-48192D0BDF38}"/>
-												</Reference>
-											</ReferenceList>
-										</PluginInnerObject>
-									</ObjectList>
-								</ObjectLists>
-							</MultiSwitchEntry>
-							<MultiSwitchEntry Name="" ID="{52DA0335-4ADE-4202-BC52-92F540B81792}">
-								<ReferenceList>
-									<Reference Name="AudioNode">
-										<ObjectRef Name="wandering" ID="{5627289A-36B7-4018-BAA1-3BAF163F0F7A}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
-									</Reference>
-								</ReferenceList>
-								<ObjectLists>
-									<ObjectList Name="EntryPath">
-										<PluginInnerObject Name="" ID="{0B233D47-F06A-4C29-968C-D498C333CE35}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
-											<ReferenceList>
-												<Reference Name="EntryPathObject">
-													<ObjectRef Name="wandering" ID="{82E594DD-3C3E-4B15-8495-FF258B38D421}" WorkUnitID="{5AA124CD-3D1B-48F7-AA5F-48192D0BDF38}"/>
-												</Reference>
-											</ReferenceList>
-										</PluginInnerObject>
-									</ObjectList>
-								</ObjectLists>
-							</MultiSwitchEntry>
-						</ObjectList>
-					</ObjectLists>
 				</MusicSwitchContainer>
 				<MusicPlaylistContainer Name="Opening_Cutscene" ID="{49358DB4-99CE-49D9-881E-E86B96831142}" ShortID="550571363">
 					<ReferenceList>
