@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e89b03e9362df0e4093add807b401ee1, type: 3}
+  m_Name: 9749C148-53AC-4F68-B7BA-783F89428F35
+  m_EditorClassIdentifier: AK.Wwise.Unity.API.WwiseTypes::WwiseEventReference
+  objectName: Play_Wind_amb
+  id: 2232409101
+  guid: 9749C148-53AC-4F68-B7BA-783F89428F35
+  IsInUserDefinedSoundBank: 0

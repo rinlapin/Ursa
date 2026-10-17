@@ -23,6 +23,7 @@ namespace AK
         static const AkUniqueID PLAY_NAV_STAR_DRONE = 3425158555U;
         static const AkUniqueID PLAY_PUZZLE_HINT_MASTER = 3416524667U;
         static const AkUniqueID PLAY_PUZZLE_WIN_MASTER = 206505562U;
+        static const AkUniqueID PLAY_WIND_AMB = 2232409101U;
         static const AkUniqueID STOP_FOOTSTEPS = 2963349357U;
         static const AkUniqueID STOP_NAV_STAR_DRONE = 3266201885U;
     } // namespace EVENTS
