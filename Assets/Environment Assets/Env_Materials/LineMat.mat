@@ -8,42 +8,38 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: LineMat
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_Parent: {fileID: 2100000, guid: 5897e89aa7f0d4d4d9436f01ae551330, type: 2}
-  m_ModifiedSerializedProperties: 18
-  m_ValidKeywords:
+  m_Shader: {fileID: -6465566751694194690, guid: 58a3d2df4e1c122409dfd23149fcd8a7, type: 3}
+  m_Parent: {fileID: -876546973899608171, guid: 58a3d2df4e1c122409dfd23149fcd8a7, type: 3}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - _EMISSION
-  m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Opaque
+  stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _BaseMap:
-        m_Texture: {fileID: 0}
+    - _IceTexture:
+        m_Texture: {fileID: 2800000, guid: 8fbd4c8a95a71a14da92b015797faa13, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
+    - _Noise_Texture:
+        m_Texture: {fileID: 2800000, guid: ab9f2e2bc0dd1a14fac38cd1923bebb8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats:
-    - _Blend: 0
-    - _DstBlendAlpha: 0
-    - _SrcBlend: 1
-    - _SrcBlendAlpha: 1
-    - _Surface: 0
-    - _ZWrite: 1
+    m_Floats: []
     m_Colors:
-    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Base_Color_1: {r: 0.5801887, g: 0.8530186, b: 1, a: 1}
+    - _Base_Color_2: {r: 0.5330188, g: 0.7986667, b: 1, a: 1}
+    - _Fresnel_Color: {r: 0.45941624, g: 1.194957, b: 3.3584905, a: 1}
+    - _Glitter_Color: {r: 0, g: 0.9284823, b: 44.33469, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &941800444134142885
