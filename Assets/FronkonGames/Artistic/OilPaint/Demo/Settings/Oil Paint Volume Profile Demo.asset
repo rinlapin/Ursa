@@ -1,0 +1,872 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3379093954012479867
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a3fa5ea25a41041b03adf39cdb92d8, type: 3}
+  m_Name: KuwaharaBasicVolume
+  m_EditorClassIdentifier: 
+  active: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 1
+  passes:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 1
+    max: 4
+  radius:
+    m_OverrideState: 1
+    m_Value: 10
+    min: 1
+    max: 20
+  detail:
+    m_OverrideState: 1
+    m_Value: 0
+  detailStrength:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 1
+  embossStrength:
+    m_OverrideState: 1
+    m_Value: 5
+    min: 0
+    max: 20
+  embossAngle:
+    m_OverrideState: 1
+    m_Value: 0
+    min: 0
+    max: 360
+  waterColor:
+    m_OverrideState: 1
+    m_Value: 0
+    min: 0
+    max: 1
+  renderSize:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0.1
+    max: 1
+  processDepth:
+    m_OverrideState: 1
+    m_Value: 0
+  depthCurve:
+    m_OverrideState: 1
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.75
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0.25
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  depthPower:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0.01
+    max: 1
+  sampleSky:
+    m_OverrideState: 1
+    m_Value: 1
+  viewDepthCurve:
+    m_OverrideState: 1
+    m_Value: 0
+  brightness:
+    m_OverrideState: 1
+    m_Value: 0
+    min: -1
+    max: 1
+  contrast:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 10
+  gamma:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0.1
+    max: 10
+  hue:
+    m_OverrideState: 1
+    m_Value: 0
+    min: 0
+    max: 1
+  saturation:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 2
+  affectSceneView:
+    m_OverrideState: 1
+    m_Value: 0
+  useScaledTime:
+    m_OverrideState: 1
+    m_Value: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
+  m_Name: Oil Paint Volume Profile Demo
+  m_EditorClassIdentifier: 
+  components:
+  - {fileID: -3379093954012479867}
+  - {fileID: 4304228425622956291}
+  - {fileID: 1792945821632691229}
+  - {fileID: 5983363380400969620}
+  - {fileID: 7629679067133467820}
+  - {fileID: 471408853699785974}
+--- !u!114 &471408853699785974
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1da7a44f48ec342bf1cdf273d12f48, type: 3}
+  m_Name: TomitaTsujiVolume
+  m_EditorClassIdentifier: 
+  active: 0
+  intensity:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 1
+  passes:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 1
+    max: 4
+  radius:
+    m_OverrideState: 1
+    m_Value: 10
+    min: 1
+    max: 20
+  detail:
+    m_OverrideState: 1
+    m_Value: 0
+  detailStrength:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 1
+  embossStrength:
+    m_OverrideState: 1
+    m_Value: 5
+    min: 0
+    max: 20
+  embossAngle:
+    m_OverrideState: 1
+    m_Value: 0
+    min: 0
+    max: 360
+  waterColor:
+    m_OverrideState: 1
+    m_Value: 0
+    min: 0
+    max: 1
+  renderSize:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0.1
+    max: 1
+  processDepth:
+    m_OverrideState: 1
+    m_Value: 0
+  depthCurve:
+    m_OverrideState: 1
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.75
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0.25
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  depthPower:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0.01
+    max: 1
+  sampleSky:
+    m_OverrideState: 1
+    m_Value: 1
+  viewDepthCurve:
+    m_OverrideState: 1
+    m_Value: 0
+  brightness:
+    m_OverrideState: 1
+    m_Value: 0
+    min: -1
+    max: 1
+  contrast:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 10
+  gamma:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0.1
+    max: 10
+  hue:
+    m_OverrideState: 1
+    m_Value: 0
+    min: 0
+    max: 1
+  saturation:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 2
+  affectSceneView:
+    m_OverrideState: 1
+    m_Value: 0
+  useScaledTime:
+    m_OverrideState: 1
+    m_Value: 1
+--- !u!114 &1792945821632691229
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7437c16f0368ad54286a793dabedd8f6, type: 3}
+  m_Name: KuwaharaDirectionalVolume
+  m_EditorClassIdentifier: 
+  active: 0
+  intensity:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 1
+  passes:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 1
+    max: 4
+  radius:
+    m_OverrideState: 1
+    m_Value: 10
+    min: 1
+    max: 20
+  detail:
+    m_OverrideState: 1
+    m_Value: 1
+  detailStrength:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 1
+  embossStrength:
+    m_OverrideState: 1
+    m_Value: 5
+    min: 0
+    max: 20
+  embossAngle:
+    m_OverrideState: 1
+    m_Value: 0
+    min: 0
+    max: 360
+  waterColor:
+    m_OverrideState: 1
+    m_Value: 0.25
+    min: 0
+    max: 1
+  renderSize:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0.1
+    max: 1
+  processDepth:
+    m_OverrideState: 1
+    m_Value: 0
+  depthCurve:
+    m_OverrideState: 1
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.75
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0.25
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  depthPower:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0.01
+    max: 1
+  sampleSky:
+    m_OverrideState: 1
+    m_Value: 1
+  viewDepthCurve:
+    m_OverrideState: 1
+    m_Value: 0
+  brightness:
+    m_OverrideState: 1
+    m_Value: 0
+    min: -1
+    max: 1
+  contrast:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 10
+  gamma:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0.1
+    max: 10
+  hue:
+    m_OverrideState: 1
+    m_Value: 0
+    min: 0
+    max: 1
+  saturation:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 2
+  affectSceneView:
+    m_OverrideState: 1
+    m_Value: 0
+  useScaledTime:
+    m_OverrideState: 1
+    m_Value: 1
+--- !u!114 &4304228425622956291
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 079921cb6e0a7224bbd044d6afcd4778, type: 3}
+  m_Name: KuwaharaGeneralizedVolume
+  m_EditorClassIdentifier: 
+  active: 0
+  intensity:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 1
+  passes:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 1
+    max: 4
+  radius:
+    m_OverrideState: 1
+    m_Value: 10
+    min: 1
+    max: 20
+  sharpness:
+    m_OverrideState: 1
+    m_Value: 8
+    min: 0
+    max: 18
+  hardness:
+    m_OverrideState: 1
+    m_Value: 8
+    min: 1
+    max: 100
+  detail:
+    m_OverrideState: 1
+    m_Value: 1
+  detailStrength:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 1
+  embossStrength:
+    m_OverrideState: 1
+    m_Value: 5
+    min: 0
+    max: 20
+  embossAngle:
+    m_OverrideState: 1
+    m_Value: 0
+    min: 0
+    max: 360
+  waterColor:
+    m_OverrideState: 1
+    m_Value: 0.25
+    min: 0
+    max: 1
+  renderSize:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0.1
+    max: 1
+  processDepth:
+    m_OverrideState: 1
+    m_Value: 0
+  depthCurve:
+    m_OverrideState: 1
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.75
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0.25
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  depthPower:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0.01
+    max: 1
+  sampleSky:
+    m_OverrideState: 1
+    m_Value: 1
+  viewDepthCurve:
+    m_OverrideState: 1
+    m_Value: 0
+  brightness:
+    m_OverrideState: 1
+    m_Value: 0
+    min: -1
+    max: 1
+  contrast:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 10
+  gamma:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0.1
+    max: 10
+  hue:
+    m_OverrideState: 1
+    m_Value: 0
+    min: 0
+    max: 1
+  saturation:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 2
+  affectSceneView:
+    m_OverrideState: 1
+    m_Value: 0
+  useScaledTime:
+    m_OverrideState: 1
+    m_Value: 1
+--- !u!114 &5983363380400969620
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4ad908ac1a1b7d459ba84ce41aef8cb, type: 3}
+  m_Name: KuwaharaAnisotropicVolume
+  m_EditorClassIdentifier: 
+  active: 0
+  intensity:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 1
+  passes:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 1
+    max: 4
+  radius:
+    m_OverrideState: 1
+    m_Value: 10
+    min: 1
+    max: 20
+  blur:
+    m_OverrideState: 1
+    m_Value: 2
+    min: 1
+    max: 6
+  sharpness:
+    m_OverrideState: 1
+    m_Value: 8
+    min: 0
+    max: 18
+  hardness:
+    m_OverrideState: 1
+    m_Value: 8
+    min: 1
+    max: 100
+  alpha:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0.01
+    max: 2
+  zeroCrossing:
+    m_OverrideState: 1
+    m_Value: 0.58
+    min: 0.25
+    max: 2
+  detail:
+    m_OverrideState: 1
+    m_Value: 1
+  detailStrength:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 1
+  embossStrength:
+    m_OverrideState: 1
+    m_Value: 5
+    min: 0
+    max: 20
+  embossAngle:
+    m_OverrideState: 1
+    m_Value: 0
+    min: 0
+    max: 360
+  waterColor:
+    m_OverrideState: 1
+    m_Value: 0.25
+    min: 0
+    max: 1
+  renderSize:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0.1
+    max: 1
+  processDepth:
+    m_OverrideState: 1
+    m_Value: 0
+  depthCurve:
+    m_OverrideState: 1
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.75
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0.25
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  depthPower:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0.01
+    max: 1
+  sampleSky:
+    m_OverrideState: 1
+    m_Value: 1
+  viewDepthCurve:
+    m_OverrideState: 1
+    m_Value: 0
+  brightness:
+    m_OverrideState: 1
+    m_Value: 0
+    min: -1
+    max: 1
+  contrast:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 10
+  gamma:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0.1
+    max: 10
+  hue:
+    m_OverrideState: 1
+    m_Value: 0
+    min: 0
+    max: 1
+  saturation:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 2
+  affectSceneView:
+    m_OverrideState: 1
+    m_Value: 0
+  useScaledTime:
+    m_OverrideState: 1
+    m_Value: 1
+--- !u!114 &7629679067133467820
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c981fe4b965127d4a87cf20ef80becfb, type: 3}
+  m_Name: SymmetricNearestNeighborVolume
+  m_EditorClassIdentifier: 
+  active: 0
+  intensity:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 1
+  passes:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 1
+    max: 4
+  radius:
+    m_OverrideState: 1
+    m_Value: 10
+    min: 1
+    max: 20
+  detail:
+    m_OverrideState: 1
+    m_Value: 1
+  detailStrength:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 1
+  embossStrength:
+    m_OverrideState: 1
+    m_Value: 5
+    min: 0
+    max: 20
+  embossAngle:
+    m_OverrideState: 1
+    m_Value: 0
+    min: 0
+    max: 360
+  waterColor:
+    m_OverrideState: 1
+    m_Value: 0.25
+    min: 0
+    max: 1
+  renderSize:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0.1
+    max: 1
+  processDepth:
+    m_OverrideState: 1
+    m_Value: 0
+  depthCurve:
+    m_OverrideState: 1
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.75
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0.25
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  depthPower:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0.01
+    max: 1
+  sampleSky:
+    m_OverrideState: 1
+    m_Value: 1
+  viewDepthCurve:
+    m_OverrideState: 1
+    m_Value: 0
+  brightness:
+    m_OverrideState: 1
+    m_Value: 0
+    min: -1
+    max: 1
+  contrast:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 10
+  gamma:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0.1
+    max: 10
+  hue:
+    m_OverrideState: 1
+    m_Value: 0
+    min: 0
+    max: 1
+  saturation:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 2
+  affectSceneView:
+    m_OverrideState: 1
+    m_Value: 0
+  useScaledTime:
+    m_OverrideState: 1
+    m_Value: 1

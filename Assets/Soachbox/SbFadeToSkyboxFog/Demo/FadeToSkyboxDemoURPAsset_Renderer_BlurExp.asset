@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &-6068001708229748182
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -19,6 +19,8 @@ MonoBehaviour:
     m_IsSetSkyboxDistance: 0
     m_SkyboxDistance: 1000
     m_OverrideMaterial: {fileID: 0}
+    m_FogRenderTiming: 550
+    m_FogRenderTimingOffset: 0
     m_SkyboxBlendFactor: 1
     m_ColorFadeEndPoint: 1
     m_FadeToSkyboxStartPoint: 0.5
@@ -31,6 +33,7 @@ MonoBehaviour:
     m_VerticalFogDensity: 0.003
     m_IsUsePostProcess: 1
     m_IsUseSkyboxBlur: 1
+    m_BlurProcessLevel: 3
     m_BlurLevel: 5
     m_SkyboxClipFadeStartPoint: 0.7
     m_FogColor: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 1}
@@ -65,7 +68,6 @@ MonoBehaviour:
   m_RendererFeatures:
   - {fileID: -6068001708229748182}
   m_RendererFeatureMap: 2a9a80949820caab
-  m_UseNativeRenderPass: 0
   xrSystemData: {fileID: 0}
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   m_AssetVersion: 3
@@ -93,3 +95,4 @@ MonoBehaviour:
   m_DepthTextureFormat: 0
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 1
+  m_TileOnlyMode: 0
