@@ -164,7 +164,7 @@ Material:
     - _ReceiveShadows: 1
     - _Saturation: 0
     - _SlopeMax: 1
-    - _SlopeMin: -0.351
+    - _SlopeMin: -0.671
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _Source: 0

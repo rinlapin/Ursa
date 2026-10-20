@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d3053925eef4d554c82cf4236d3152a7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d3053925eef4d554c82cf4236d3152a7, type: 3}
       propertyPath: m_LocalScale.z
@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 938629756252155228, guid: b9f7426eaa0443e448111da8be28f3a1, type: 3}
     - target: {fileID: 919132149155446097, guid: d3053925eef4d554c82cf4236d3152a7, type: 3}
       propertyPath: m_Name
-      value: grass
+      value: grass 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
