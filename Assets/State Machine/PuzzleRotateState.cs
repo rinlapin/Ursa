@@ -49,15 +49,45 @@ public class PuzzleRotateState : GameState, PlayerInputActions.IPuzzleActions
 
     public void OnRotateZ(InputAction.CallbackContext context)
     {
-        if (!_canReadInput) return;
-        GameManager.Instance.puzzleInput = new Vector3(0, 0, context.ReadValue<float>());
+        return;
+        /*if (!_canReadInput) return;
+        GameManager.Instance.puzzleInput = new Vector3(0, 0, context.ReadValue<float>());*/
     }
 
     private void RotateBy(Vector3 input)
     {
         SoundManager.Instance.PlayEvent(SoundManager.Instance.playConstMove);
-        Quaternion targetRotation = Quaternion.Euler(_pivot.localRotation.eulerAngles + input * 30);
-        _pivot.DOLocalRotateQuaternion(targetRotation, 1f).OnComplete(CheckForInput);
+
+        if (input.x == 0)
+        {
+            RotateAroundY(input.y);
+        }
+        else if (input.y == 0)
+        {
+            RotateAroundZ(input.x);
+        }
+        
+        Quaternion targetRotation = Quaternion.Euler(_pivot.localRotation.eulerAngles);
+        
+        //  + input * 30
+        
+        //_pivot.DOLocalRotateQuaternion(targetRotation, 1f).OnComplete(CheckForInput);
+    }
+
+    private void RotateAroundZ(float x)
+    {
+        var angles = x * 30;
+        _pivot
+            .DORotateQuaternion(_pivot.rotation * Quaternion.AngleAxis(angles, Vector3.forward), 1)
+            .OnComplete(CheckForInput);
+    }
+
+    private void RotateAroundY(float y)
+    {
+        var angles = y * 30;
+        _pivot
+            .DOBlendableRotateBy(new Vector3(0, angles, 0), 1)
+            .OnComplete(CheckForInput);
     }
 
     private void CheckForInput()

@@ -54,13 +54,13 @@ public class PuzzleIdleState : GameState, PlayerInputActions.IPuzzleActions
 
         public void OnRotateZ(InputAction.CallbackContext context)
         {
-                GameManager.Instance.puzzleInput = new Vector3(0, 0, context.ReadValue<float>());
+                /*GameManager.Instance.puzzleInput = new Vector3(0, 0, context.ReadValue<float>());
                 if (context.ReadValue<float>() == 0)
                 {
                         return;
                 }
                 ExitState = ExitStatePuzzle.Rotating;
-                Complete();
+                Complete();*/
         }
 
         public override void Exit()
