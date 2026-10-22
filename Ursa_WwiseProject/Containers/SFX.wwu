@@ -5,9 +5,27 @@
 			<ChildrenList>
 				<RandomSequenceContainer Name="FootstepsLogic" ID="{130864BB-FD87-4EA1-B302-B7BDDC643259}" ShortID="289285901">
 					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{C88CFE58-3962-4EED-A18C-058D53C4391C}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-50"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-9</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -205,7 +223,7 @@
 							<ChildrenList>
 								<SourcePlugin Name="Silence" ID="{A82F0F9C-8470-4BD2-BE46-14213594DB9C}" ShortID="1023732748" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
 									<PropertyList>
-										<Property Name="Length" Type="Real32" Value="0.2"/>
+										<Property Name="Length" Type="Real32" Value="0.4"/>
 									</PropertyList>
 									<Language>SFX</Language>
 								</SourcePlugin>
