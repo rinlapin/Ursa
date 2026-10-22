@@ -16,6 +16,7 @@ namespace AK
         static const AkUniqueID GAMEPLAY = 89505537U;
         static const AkUniqueID MAIN_MENU_MUSIC = 3399698792U;
         static const AkUniqueID OPENING_CUTSCENE = 1917576450U;
+        static const AkUniqueID TO_BE_CONTINUED = 1170557302U;
     } // namespace EVENTS
 
     namespace STATES
@@ -61,12 +62,6 @@ namespace AK
         } // namespace PLAYER_LOCATION
 
     } // namespace SWITCHES
-
-    namespace BANKS
-    {
-        static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID MUSIC = 3991942870U;
-    } // namespace BANKS
 
     namespace BUSSES
     {
