@@ -28,12 +28,6 @@ namespace AK
         static const AkUniqueID STOP_NAV_STAR_DRONE = 3266201885U;
     } // namespace EVENTS
 
-    namespace BANKS
-    {
-        static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID SFXBANK = 3017475316U;
-    } // namespace BANKS
-
     namespace BUSSES
     {
         static const AkUniqueID MAIN_AUDIO_BUS = 2246998526U;

@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2850134090",
+    "Type": "Event",
+    "GUID": "{4B53D59C-8676-4C73-8F47-2362A921A040}",
+    "Language": "SFX",
+    "Hash": "{17819C47-5C94-B419-08F0-75602AE61704}",
+    "ObjectPath": "Play_Ice_Smash",
+    "ShortName": "Play_Ice_Smash",
+    "Path": "Event/Play_Ice_Smash.bnk",
+    "Media": [
+     {
+      "Id": "1062011690",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ice smash 2.wav",
+      "Path": "Media/1062011690.wem",
+      "CachePath": "C4/{C4282AF4-42E8-F966-AA47-814E64BADA14}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2850134090",
+      "Name": "Play_Ice_Smash",
+      "ObjectPath": "\\Events\\SFX\\Play_Ice_Smash",
+      "GUID": "{4B53D59C-8676-4C73-8F47-2362A921A040}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.162225",
+      "DurationMax": "4.162225",
+      "MediaRefs": [
+       {
+        "Id": "1062011690"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{2651CBA9-6E55-7B02-8BC8-005238C80E41}"
+ }
+}

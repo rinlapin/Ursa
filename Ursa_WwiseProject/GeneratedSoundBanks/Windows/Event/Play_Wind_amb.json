@@ -10,23 +10,37 @@
     "Type": "Event",
     "GUID": "{9749C148-53AC-4F68-B7BA-783F89428F35}",
     "Language": "SFX",
-    "Hash": "{3CD84CD5-E706-1D3E-374A-8B0E1A22A975}",
+    "Hash": "{B4E64EE9-233E-B93E-762C-899D5ABD39ED}",
     "ObjectPath": "Play_Wind_amb",
     "ShortName": "Play_Wind_amb",
     "Path": "Event/Play_Wind_amb.bnk",
+    "Media": [
+     {
+      "Id": "324456194",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wind amb.wav",
+      "Path": "Media/324456194.wem",
+      "CachePath": "FD/{FD7B48B6-6E5E-4380-F51B-D0051AE9F49E}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "2232409101",
       "Name": "Play_Wind_amb",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Wind_amb",
       "GUID": "{9749C148-53AC-4F68-B7BA-783F89428F35}",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "324456194"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{8AB20646-A916-170A-9944-164419400A3B}"
+  "FileHash": "{DFDA97B8-01FC-9311-903F-4994A7840325}"
  }
 }

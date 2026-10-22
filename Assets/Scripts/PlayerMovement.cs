@@ -42,8 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void ProcessMovement()
     {
-        var movement = _move * movementSpeed;
-        _rigidbody.AddForce(movement.normalized * 10f, ForceMode.Force);
+        _rigidbody.AddForce(_move.normalized * movementSpeed, ForceMode.Force);
     }
 
     public void ConvertInput()

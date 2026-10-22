@@ -29,14 +29,25 @@ public class DialogueManager : MonoBehaviour
     {
         ProcessOnDialogueComplete();
         SetDialogue(null);
+        dialogueGroup.SetActive(false);
     }
 
     public void SetDialogue(SolvedInteractable interactable)
     {
+        if (interactable == null)
+        {
+            _currentInteractable = null;
+            dialogue.text = "";
+            _lineIndex = 0;
+            _currentDialogueLines.Clear();
+            dialogueGroup.SetActive(false);
+            return;
+        }
+
         _currentInteractable = interactable;
         dialogue.text = "";
         _lineIndex = 0;
-        _currentDialogueLines = _currentInteractable?.dialogueLines ?? new List<DialogueLine>();
+        _currentDialogueLines = !_currentInteractable.hasTalked ? _currentInteractable.dialogueLines : new List<DialogueLine> { _currentInteractable.repeatedInteractionLine };
         dialogueGroup.SetActive(_currentDialogueLines != null);
     }
     
@@ -83,6 +94,7 @@ public class DialogueManager : MonoBehaviour
 
     public void ProcessOnDialogueComplete()
     {
-        _currentInteractable.OnDialogueComplete?.Invoke();
+        _currentInteractable?.OnInitialDialogueComplete?.Invoke();
+        _currentInteractable.hasTalked = true;
     }
 }

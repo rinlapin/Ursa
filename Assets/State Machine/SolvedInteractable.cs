@@ -6,7 +6,17 @@ using UnityEngine.Events;
 public class SolvedInteractable : Interactable
 {
         public List<DialogueLine> dialogueLines;
-        public UnityEvent OnDialogueComplete;
+        public DialogueLine repeatedInteractionLine;
+        public UnityEvent OnInitialDialogueComplete;
+        public bool hasTalked = false;
+
+    public void OnDisable()
+    {
+        if (GameManager.Instance.ClosestInteractable == this)
+        {
+            GameManager.Instance.ClosestInteractable = null;
+        }
+    }
 }
 
 [Serializable]

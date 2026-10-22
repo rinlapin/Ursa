@@ -1,59 +1,55 @@
 {
  "SoundBanksInfo": {
-  "Platform": "Mac",
-  "BasePlatform": "Mac",
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
   "SchemaVersion": "16",
   "SoundBankVersion": "172",
   "SoundBanks": [
    {
-    "Id": "3017475316",
-    "Type": "User",
-    "GUID": "{F67F68DB-8D92-4C9F-8A40-6B381FB435AD}",
+    "Id": "3854155799",
+    "Type": "Event",
+    "GUID": "{E2116235-85E2-45D3-9250-FC549239F2AB}",
     "Language": "SFX",
-    "Hash": "{B41157CA-B558-601E-5F69-F136E4570BE6}",
-    "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFXBank",
-    "ShortName": "SFXBank",
-    "Path": "SFXBank.bnk",
+    "Hash": "{38514508-037B-13E1-6951-40FC1EA3D41F}",
+    "ObjectPath": "Play_Footsteps",
+    "ShortName": "Play_Footsteps",
+    "Path": "Event/Play_Footsteps.bnk",
     "Media": [
      {
       "Id": "173210552",
       "Language": "SFX",
       "Streaming": "false",
-      "Location": "Memory",
+      "Location": "Loose",
       "ShortName": "Footstep 4.wav",
+      "Path": "Media/173210552.wem",
       "CachePath": "3E/{3ED65CDE-4552-9FA5-C6FC-B88B70A5FB59}.wem"
      },
      {
       "Id": "233166039",
       "Language": "SFX",
       "Streaming": "false",
-      "Location": "Memory",
+      "Location": "Loose",
       "ShortName": "Footstep 3.wav",
+      "Path": "Media/233166039.wem",
       "CachePath": "3B/{3BB7F757-63E7-5E65-41B8-CD103BE049D9}.wem"
      },
      {
       "Id": "533878737",
       "Language": "SFX",
       "Streaming": "false",
-      "Location": "Memory",
+      "Location": "Loose",
       "ShortName": "Footstep 1.wav",
+      "Path": "Media/533878737.wem",
       "CachePath": "FF/{FF399011-18A8-A878-FD34-B44966090487}.wem"
      },
      {
       "Id": "1025660783",
       "Language": "SFX",
       "Streaming": "false",
-      "Location": "Memory",
+      "Location": "Loose",
       "ShortName": "Footstep 2.wav",
+      "Path": "Media/1025660783.wem",
       "CachePath": "C4/{C441EA9D-6DC2-44DD-4697-4E2E6B78CDFB}.wem"
-     },
-     {
-      "Id": "1062011690",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Ice smash 2.wav",
-      "CachePath": "C4/{C4282AF4-42E8-F966-AA47-814E64BADA14}.wem"
      }
     ],
     "Plugins": {
@@ -96,34 +92,10 @@
         }
        ]
       }
-     },
-     {
-      "Id": "2850134090",
-      "Name": "Play_Ice_Smash",
-      "ObjectPath": "\\Events\\SFX\\Play_Ice_Smash",
-      "GUID": "{4B53D59C-8676-4C73-8F47-2362A921A040}",
-      "DurationType": "OneShot",
-      "DurationMin": "4.162225",
-      "DurationMax": "4.162225",
-      "MediaRefs": [
-       {
-        "Id": "1062011690"
-       }
-      ]
-     },
-     {
-      "Id": "2963349357",
-      "Name": "Stop_Footsteps",
-      "ObjectPath": "\\Events\\SFX\\Stop_Footsteps",
-      "GUID": "{4644B79A-38F2-49D3-9558-E805843E7326}",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
      }
     ]
    }
   ],
-  "FileHash": "{49D742BB-701A-3CF9-9299-C789467FD719}"
+  "FileHash": "{7AB33B77-967D-4DA8-694B-8756E0D64763}"
  }
 }

@@ -575,7 +575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 079921cb6e0a7224bbd044d6afcd4778, type: 3}
   m_Name: KuwaharaGeneralizedVolume
   m_EditorClassIdentifier: FronkonGames.Artistic.OilPaint::FronkonGames.Artistic.OilPaint.KuwaharaGeneralizedVolume
-  active: 1
+  active: 0
   intensity:
     m_OverrideState: 1
     m_Value: 0.416

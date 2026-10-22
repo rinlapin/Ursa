@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: Play_Footsteps
   id: 3854155799
   guid: E2116235-85E2-45D3-9250-FC549239F2AB
-  IsInUserDefinedSoundBank: 1
+  IsInUserDefinedSoundBank: 0

@@ -47,6 +47,7 @@ public class PlayerStepState : FiniteStateMachine, PlayerInputActions.IPlayerAct
         
         public override void Exit()
         {
+                ExitState = ExitStatePlayer.None;   
                 GameManager.Instance.walkInput = Vector2.zero;
                 _actions.Player.RemoveCallbacks(this);
                 _actions.Player.Disable();
@@ -55,6 +56,7 @@ public class PlayerStepState : FiniteStateMachine, PlayerInputActions.IPlayerAct
 
 public enum ExitStatePlayer
 {
+    None,
         Interaction,
         Pause
 }

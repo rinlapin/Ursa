@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3854155799	Play_Footsteps			\SFX\Play_Footsteps	
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	1023732748	Silence	Wwise Silence		\Containers\SFX\FootstepsLogic\New Silence\Silence	
+

@@ -62,6 +62,7 @@ public class PuzzleRotateState : GameState, PlayerInputActions.IPuzzleActions
 
     private void CheckForInput()
     {
+
         if (GameManager.Instance.puzzleInput == Vector3.zero)
         {
             IsWin = _pivot.localRotation.eulerAngles is { x: < 15 and > -15, y: < 15 and > -15, z: < 15 and > -15 };
@@ -71,6 +72,10 @@ public class PuzzleRotateState : GameState, PlayerInputActions.IPuzzleActions
                 _canReadInput = false;
                 SoundManager.Instance.PlayEvent(SoundManager.Instance.playWin);
                 _winBackground.DOFade(1, 0.5f).OnComplete(Complete);
+            }
+            else
+            {
+                Complete();
             }
         }
         else

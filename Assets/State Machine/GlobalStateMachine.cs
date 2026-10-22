@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class GlobalStateMachine : FiniteStateMachine
 {
+
         public PlayerStepState PlayerStepState { get; protected set; }
         public PuzzleStepState PuzzleStepState { get; protected set; }
         public DialogueStepState DialogueStepState { get; protected set; }
@@ -27,20 +28,20 @@ public class GlobalStateMachine : FiniteStateMachine
                 ChangeState(PlayerStepState);
         }
 
-        private void HandlePlayerComplete()
+    private void HandlePlayerComplete()
+    {
+        if (PlayerStepState.ExitState == ExitStatePlayer.Interaction)
         {
-                if (PlayerStepState.ExitState == ExitStatePlayer.Interaction)
-                {
-                        if (GameManager.Instance.ClosestInteractable.GetComponent<ForgottenInteractable>())
-                        {
-                                ChangeState(PuzzleStepState);
-                        }
-                        else if (GameManager.Instance.ClosestInteractable.GetComponent<SolvedInteractable>())
-                        {
-                                ChangeState(DialogueStepState);
-                        }
-                }
+            if (GameManager.Instance.ClosestInteractable.GetComponent<ForgottenInteractable>())
+            {
+                ChangeState(PuzzleStepState);
+            }
+            else if (GameManager.Instance.ClosestInteractable.GetComponent<SolvedInteractable>())
+            {
+                ChangeState(DialogueStepState);
+            }
         }
+    }
 
         private void HandlePuzzleComplete()
         {
@@ -49,6 +50,7 @@ public class GlobalStateMachine : FiniteStateMachine
 
         private void HandleDialogueComplete()
         {
+                
                 ChangeState(PlayerStepState);
         }
 }
