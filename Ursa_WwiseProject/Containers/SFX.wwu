@@ -383,7 +383,12 @@
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
-									<Modifier Name="" ID="{0BFF470C-9795-47B2-AA0B-A275D535AA9D}"/>
+									<Modifier Name="" ID="{0BFF470C-9795-47B2-AA0B-A275D535AA9D}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+										</PropertyList>
+									</Modifier>
 								</ModifierInfo>
 							</ModifierList>
 						</Property>
@@ -398,6 +403,14 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="Nav Star drone" ID="{4CCBCD55-9DEA-4383-ACA2-BEF5A436C380}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.67619"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="1.29374"/>
+								<Property Name="FadeOutShape" Type="int16" Value="2"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.99476"/>
+								<Property Name="TrimEnd" Type="Real64" Value="3.22577"/>
+							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>Nav Star drone.wav</AudioFile>
 							<MediaIDList>

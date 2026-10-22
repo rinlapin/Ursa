@@ -27,6 +27,7 @@ public class DialogueStepState : FiniteStateMachine
                 _actions.Dialogue.Enable();
                 _interactable = GameManager.Instance.ClosestInteractable as SolvedInteractable;
                 _manager.SetDialogue(_interactable);
+                MusicManager.instance.SetAries();
                 ChangeState(DialogueWriteState);
         }
 
@@ -39,6 +40,7 @@ public class DialogueStepState : FiniteStateMachine
         {
                 if (_manager.reachedEnd)
                 {
+                        MusicManager.instance.SetWander();
                         _manager.Close();
                         Complete();
                         return;

@@ -44,6 +44,13 @@ public class PlayerStepState : FiniteStateMachine, PlayerInputActions.IPlayerAct
                 if (!context.started) return;
                 PlayerMovement.Instance.Jump();
         }
+
+        public void OnHint(InputAction.CallbackContext context)
+        {
+                if (!context.started) return;
+                ExitState = ExitStatePlayer.Hint;
+                Complete();
+        }
         
         public override void Exit()
         {
@@ -58,5 +65,5 @@ public enum ExitStatePlayer
 {
     None,
         Interaction,
-        Pause
+        Hint
 }

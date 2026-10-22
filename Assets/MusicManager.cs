@@ -58,4 +58,19 @@ public class MusicManager : MonoBehaviour
     {
         exit.SetValue();
     }
+
+    public void SetSolving()
+    {
+        puzzle.SetValue();
+    }
+
+    public void SetAries()
+    {
+        aries.SetValue();
+    }
+
+    public void SetWander()
+    {
+        wander.SetValue();
+    }
 }

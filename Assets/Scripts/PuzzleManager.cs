@@ -38,6 +38,8 @@ public class PuzzleManager : MonoBehaviour
 
     public void SetupPuzzle(ForgottenInteractable newInteractable)
     {
+        MusicManager.instance.SetSolving();
+        
         WinBackground.alpha = 0;
 
         foreach (Star star in Pivot.GetComponentsInChildren<Star>())
@@ -86,6 +88,7 @@ public class PuzzleManager : MonoBehaviour
 
     public void Close()
     {
+        MusicManager.instance.SetWander();
         puzzleVisuals.SetActive(false);
     }
 }
