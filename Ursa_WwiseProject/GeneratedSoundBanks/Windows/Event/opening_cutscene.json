@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{A72A845D-D954-49F6-8A77-6B089BB5282B}",
     "Language": "SFX",
-    "Hash": "{86DA91E6-41ED-4799-A7DE-874D99A8630C}",
+    "Hash": "{AD887095-8971-ADF9-647E-90613D0EFDF1}",
     "ObjectPath": "opening_cutscene",
     "ShortName": "opening_cutscene",
     "Path": "Event/opening_cutscene.bnk",
@@ -18,7 +18,7 @@
      {
       "Id": "1917576450",
       "Name": "opening_cutscene",
-      "ObjectPath": "\\Events\\Music_01\\opening_cutscene",
+      "ObjectPath": "\\Events\\music\\opening_cutscene",
       "GUID": "{A72A845D-D954-49F6-8A77-6B089BB5282B}",
       "DurationType": "OneShot",
       "DurationMin": "1",
@@ -27,6 +27,6 @@
     ]
    }
   ],
-  "FileHash": "{9B7DEC8C-FA5F-F208-B026-47BF4476154E}"
+  "FileHash": "{0613A2B0-A9AA-256B-F15F-EBAA350E5132}"
  }
 }

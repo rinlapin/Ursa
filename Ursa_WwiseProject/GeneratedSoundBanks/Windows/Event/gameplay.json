@@ -10,21 +10,459 @@
     "Type": "Event",
     "GUID": "{77FAC69D-5F4A-4B81-98EB-F6F78010CCC9}",
     "Language": "SFX",
-    "Hash": "{7DE86297-5A01-615F-0E52-81FA2E1CF88C}",
+    "Hash": "{ABD2F688-5763-6282-75EE-DD041A463530}",
     "ObjectPath": "gameplay",
     "ShortName": "gameplay",
     "Path": "Event/gameplay.bnk",
+    "Media": [
+     {
+      "Id": "25785260",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Explore_Little_Ursa_Wandering_harp.wav",
+      "Path": "Media/25785260.wem",
+      "CachePath": "15/{15D32B66-F22E-2732-051B-81904DB0A34A}.wem"
+     },
+     {
+      "Id": "28999160",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Talking_To_Aries_untuned_perc.wav",
+      "Path": "Media/28999160.wem",
+      "CachePath": "15/{15C2DDB4-E69C-68C7-3890-4949F324280F}.wem"
+     },
+     {
+      "Id": "52731171",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Little_Ursa_Solving_Puzzles_untuned_perc.wav",
+      "Path": "Media/52731171.wem",
+      "CachePath": "3F/{3FE89C49-D312-6747-8371-F1FF2E4DD145}.wem"
+     },
+     {
+      "Id": "144511735",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Little_Ursa_Solving_Puzzles_synths.wav",
+      "Path": "Media/144511735.wem",
+      "CachePath": "A8/{A8508B29-D906-7486-527B-3DF828C64260}.wem"
+     },
+     {
+      "Id": "154520892",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Little_Ursa_Solving_Puzzles_tuned perc.wav",
+      "Path": "Media/154520892.wem",
+      "CachePath": "D1/{D1633060-981F-42D0-E64E-43E9521BF9E9}.wem"
+     },
+     {
+      "Id": "214126879",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Talking_To_Aries_MX.wav",
+      "Path": "Media/214126879.wem",
+      "CachePath": "11/{11F5A5CF-AF7F-0388-0FE5-7E95F0E9ABF6}.wem"
+     },
+     {
+      "Id": "256551214",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Explore_Little_Ursa_Wandering_MX.wav",
+      "Path": "Media/256551214.wem",
+      "CachePath": "C9/{C9722DCF-0F17-F8F3-6F8A-6E7BE3E6DA60}.wem"
+     },
+     {
+      "Id": "347817047",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Little_Ursa_Solving_Puzzles_piano.wav",
+      "Path": "Media/347817047.wem",
+      "CachePath": "F4/{F4EF80C5-6CC5-BA92-C5B3-7E25A441D548}.wem"
+     },
+     {
+      "Id": "381573968",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Talking_To_Aries_synths.wav",
+      "Path": "Media/381573968.wem",
+      "CachePath": "3F/{3FAF903F-73D6-3FA0-D71D-7FB9DE678053}.wem"
+     },
+     {
+      "Id": "445476605",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Explore_Little_Ursa_in_the_Cave_piano.wav",
+      "Path": "Media/445476605.wem",
+      "CachePath": "3A/{3A182D48-0F54-6CC4-0BA9-20EB27C5252C}.wem"
+     },
+     {
+      "Id": "445904002",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Explore_Little_Ursa_Wandering_piano.wav",
+      "Path": "Media/445904002.wem",
+      "CachePath": "D9/{D9226321-E6D5-79AF-336A-F16C62211F18}.wem"
+     },
+     {
+      "Id": "488453217",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Little_Ursa_Solving_Puzzles_harp.wav",
+      "Path": "Media/488453217.wem",
+      "CachePath": "B2/{B21EB030-9F99-117A-C9D5-D51FF29F667E}.wem"
+     },
+     {
+      "Id": "509525028",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Explore_Little_Ursa_in_the_Cave_MX.wav",
+      "Path": "Media/509525028.wem",
+      "CachePath": "F1/{F1C66218-AACF-B125-73C6-F7696057E19C}.wem"
+     },
+     {
+      "Id": "583094227",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Explore_Little_Ursa_Wandering_strings.wav",
+      "Path": "Media/583094227.wem",
+      "CachePath": "90/{90C523D6-F9B3-4AAD-20C3-773265586F40}.wem"
+     },
+     {
+      "Id": "592328090",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Explore_Little_Ursa_Wandering_perc_FX.wav",
+      "Path": "Media/592328090.wem",
+      "CachePath": "1D/{1D854A3D-BF55-F7A8-B499-A768FAAA71D9}.wem"
+     },
+     {
+      "Id": "596680153",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Talking_To_Aries_tuned_perc.wav",
+      "Path": "Media/596680153.wem",
+      "CachePath": "7D/{7DE6A4D2-1EC1-0103-20D3-CB3CA3A3CA0C}.wem"
+     },
+     {
+      "Id": "673815997",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Explore_Little_Ursa_Wandering_vox.wav",
+      "Path": "Media/673815997.wem",
+      "CachePath": "41/{4124DD5A-0CBC-101E-8EEE-24FE77F81272}.wem"
+     },
+     {
+      "Id": "700656085",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Explore_Little_Ursa_in_the_Cave_untuned_perc.wav",
+      "Path": "Media/700656085.wem",
+      "CachePath": "91/{91618C5B-D5F8-9535-AF00-0E61750A8F7C}.wem"
+     },
+     {
+      "Id": "737910915",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Explore_Little_Ursa_Wandering_synths.wav",
+      "Path": "Media/737910915.wem",
+      "CachePath": "6C/{6CFC03D2-5E1C-E785-FFB6-1EFA63C71099}.wem"
+     },
+     {
+      "Id": "781671716",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Explore_Little_Ursa_in_the_Cave_synths.wav",
+      "Path": "Media/781671716.wem",
+      "CachePath": "EF/{EF8C5C84-BD66-063D-D936-8A116A8E2ED3}.wem"
+     },
+     {
+      "Id": "798349558",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Talking_To_Aries_piano.wav",
+      "Path": "Media/798349558.wem",
+      "CachePath": "05/{05652194-A310-2CDD-BFB5-3A581215CE39}.wem"
+     },
+     {
+      "Id": "810605875",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Explore_Little_Ursa_Wandering_untuned_perc.wav",
+      "Path": "Media/810605875.wem",
+      "CachePath": "77/{777597B1-9A4D-2FD0-7297-BB2B94552813}.wem"
+     },
+     {
+      "Id": "852534284",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Explore_Little_Ursa_in_the_Cave_tuned_perc.wav",
+      "Path": "Media/852534284.wem",
+      "CachePath": "0B/{0B2DC879-9AEA-6EE2-4DBE-EF501482AB90}.wem"
+     },
+     {
+      "Id": "858356345",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Talking_To_Aries_bassoon.wav",
+      "Path": "Media/858356345.wem",
+      "CachePath": "6A/{6A3EC2C0-CF9A-CEB2-A27E-5E135EA4AA55}.wem"
+     },
+     {
+      "Id": "904133352",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Explore_Little_Ursa_Wandering_woodwinds.wav",
+      "Path": "Media/904133352.wem",
+      "CachePath": "D4/{D4AE206E-3CBB-1429-62DF-537585D98CA3}.wem"
+     },
+     {
+      "Id": "927118501",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Explore_Little_Ursa_Wandering_tuned_perc.wav",
+      "Path": "Media/927118501.wem",
+      "CachePath": "CF/{CFA527A2-5738-77A7-3C98-F05C41AD6744}.wem"
+     },
+     {
+      "Id": "952115653",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Talking_To_Aries_harp.wav",
+      "Path": "Media/952115653.wem",
+      "CachePath": "70/{707B6D09-51E0-DD66-F681-1E2F14A0B962}.wem"
+     },
+     {
+      "Id": "1057302175",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Explore_Little_Ursa_in_the_Cave_harp.wav",
+      "Path": "Media/1057302175.wem",
+      "CachePath": "3B/{3BF14328-E83C-1EDF-BF5D-DA4236EB043C}.wem"
+     },
+     {
+      "Id": "1069795523",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "URSA_MUS_Little_Ursa_Solving_Puzzles_MX.wav",
+      "Path": "Media/1069795523.wem",
+      "CachePath": "9F/{9F66663B-D79B-9C3F-FDE0-DADC91A1C131}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "89505537",
       "Name": "gameplay",
-      "ObjectPath": "\\Events\\Music_01\\gameplay",
+      "ObjectPath": "\\Events\\music\\gameplay",
       "GUID": "{77FAC69D-5F4A-4B81-98EB-F6F78010CCC9}",
-      "DurationType": "Infinite"
+      "DurationType": "Infinite",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "89505537",
+         "Id": "3258781332",
+         "GUID": "{015DF498-5318-4539-9B94-A3007374CA63}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "52731171"
+         },
+         {
+          "Id": "144511735"
+         },
+         {
+          "Id": "154520892"
+         },
+         {
+          "Id": "347817047"
+         },
+         {
+          "Id": "488453217"
+         },
+         {
+          "Id": "1069795523"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "89505537",
+         "Id": "4227414720",
+         "GUID": "{63E1297B-5148-49E7-BFFC-ADA062542575}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "28999160"
+         },
+         {
+          "Id": "214126879"
+         },
+         {
+          "Id": "381573968"
+         },
+         {
+          "Id": "596680153"
+         },
+         {
+          "Id": "798349558"
+         },
+         {
+          "Id": "858356345"
+         },
+         {
+          "Id": "952115653"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "89505537",
+         "Id": "342806866",
+         "GUID": "{82E594DD-3C3E-4B15-8495-FF258B38D421}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "25785260"
+         },
+         {
+          "Id": "256551214"
+         },
+         {
+          "Id": "445476605"
+         },
+         {
+          "Id": "445904002"
+         },
+         {
+          "Id": "509525028"
+         },
+         {
+          "Id": "583094227"
+         },
+         {
+          "Id": "592328090"
+         },
+         {
+          "Id": "673815997"
+         },
+         {
+          "Id": "700656085"
+         },
+         {
+          "Id": "737910915"
+         },
+         {
+          "Id": "781671716"
+         },
+         {
+          "Id": "810605875"
+         },
+         {
+          "Id": "852534284"
+         },
+         {
+          "Id": "904133352"
+         },
+         {
+          "Id": "927118501"
+         },
+         {
+          "Id": "1057302175"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "89505537",
+      "Name": "gameplay",
+      "ObjectPath": "\\States\\music\\gameplay",
+      "GUID": "{B818D92D-CC48-41C3-8258-08577700AB63}",
+      "States": [
+       {
+        "Id": "342806866",
+        "Name": "wandering",
+        "ObjectPath": "\\States\\music\\gameplay\\wandering",
+        "GUID": "{82E594DD-3C3E-4B15-8495-FF258B38D421}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\music\\gameplay\\None",
+        "GUID": "{CFD418D9-4BF7-457F-9736-52532C489F8F}"
+       },
+       {
+        "Id": "3258781332",
+        "Name": "puzzle_solving",
+        "ObjectPath": "\\States\\music\\gameplay\\puzzle_solving",
+        "GUID": "{015DF498-5318-4539-9B94-A3007374CA63}"
+       },
+       {
+        "Id": "4227414720",
+        "Name": "talking_to_Aries",
+        "ObjectPath": "\\States\\music\\gameplay\\talking_to_Aries",
+        "GUID": "{63E1297B-5148-49E7-BFFC-ADA062542575}"
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3238956108",
+      "Name": "player_location",
+      "ObjectPath": "\\Switches\\music\\player_location",
+      "GUID": "{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}",
+      "Switches": [
+       {
+        "Id": "438105790",
+        "Name": "outside",
+        "ObjectPath": "\\Switches\\music\\player_location\\outside",
+        "GUID": "{34E56A1E-27C1-470B-A93D-C990AD5785A2}"
+       },
+       {
+        "Id": "1403589664",
+        "Name": "in_the_cave",
+        "ObjectPath": "\\Switches\\music\\player_location\\in_the_cave",
+        "GUID": "{F036E22E-DEB4-45F3-B167-9AFAEF80443F}"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{176A8E11-36A8-3EA5-75B3-B2249824B871}"
+  "FileHash": "{6BB3E625-EBD0-29FA-8CE5-7D6A59E98452}"
  }
 }

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e706089a3b60dda428b5cd019e7b134b, type: 3}
+  m_Name: AB0FA251-66B5-4CDD-B765-6F0EEA1887A5
+  m_EditorClassIdentifier: AK.Wwise.Unity.API.WwiseTypes::WwiseSwitchGroupReference
+  objectName: player_location
+  id: 3238956108
+  guid: AB0FA251-66B5-4CDD-B765-6F0EEA1887A5
