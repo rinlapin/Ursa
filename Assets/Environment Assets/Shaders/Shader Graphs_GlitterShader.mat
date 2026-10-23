@@ -49,10 +49,10 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Base_Color_1: {r: 0.637657, g: 0, b: 1, a: 1}
-    - _Base_Color_2: {r: 0.30660376, g: 1, b: 0.9191591, a: 1}
-    - _Fresnel_Color: {r: 0.6116931, g: 0.7225899, b: 3.929664, a: 1}
-    - _Glitter_Color: {r: 0, g: 0.7409878, b: 7.453369, a: 1}
+    - _Base_Color_1: {r: 0, g: 0, b: 0, a: 1}
+    - _Base_Color_2: {r: 0, g: 0.10798186, b: 0.2264151, a: 1}
+    - _Fresnel_Color: {r: 0.24930389, g: 0.5142698, b: 5.872494, a: 1}
+    - _Glitter_Color: {r: 106.281136, g: 29.493208, b: 0, a: 1}
     - _Noise_Scale: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
