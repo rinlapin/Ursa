@@ -9,7 +9,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private float groundDrag, airDrag;
     [SerializeField] private bool isGrounded = false;
-    
+    [SerializeField] private bool isMoving = false;
+    [SerializeField] private Animator animator;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+
     private LayerMask _groundLayer;
     private Vector3 _move = Vector3.zero;
     private Rigidbody _rigidbody;
@@ -37,9 +40,27 @@ public class PlayerMovement : MonoBehaviour
         _rigidbody.linearDamping = isGrounded ? groundDrag : airDrag;
         
         ConvertInput();
+
+        isMoving = _rigidbody.linearVelocity.magnitude > 0.1f;
+        animator.SetBool("isMoving", isMoving);
+        animator.SetBool("isGrounded", isGrounded);
+
+        FlipSprite();
+
         ProcessMovement();
     }
 
+    private void FlipSprite()
+    {
+        if (_move.x > 0.01f)
+        {
+            spriteRenderer.flipX = false; // Face right
+        }
+        else if (_move.x < -0.01f)
+        {
+            spriteRenderer.flipX = true; // Face left
+        }
+    }
     private void ProcessMovement()
     {
         _rigidbody.AddForce(_move.normalized * movementSpeed, ForceMode.Force);

@@ -190,6 +190,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
+  - Text: 
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581562527038671622}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: rebirth
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: rebirth
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: DialogueStart
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: idle
+            m_BoolArgument: 1
+          m_CallState: 2
   - Text: 'Aries: Whoa! I''m back!'
     OnLineComplete:
       m_PersistentCalls:
@@ -198,7 +250,7 @@ MonoBehaviour:
     OnLineComplete:
       m_PersistentCalls:
         m_Calls: []
-  - Text: 'Aries: Did you... Help me?'
+  - Text: 'Aries: Did you... help me?'
     OnLineComplete:
       m_PersistentCalls:
         m_Calls: []
@@ -206,7 +258,7 @@ MonoBehaviour:
     OnLineComplete:
       m_PersistentCalls:
         m_Calls: []
-  - Text: 'Aries: But you''re so small... and tiny?'
+  - Text: 'Aries: Really? Oh, thanks, little one!'
     OnLineComplete:
       m_PersistentCalls:
         m_Calls: []
@@ -214,11 +266,294 @@ MonoBehaviour:
     OnLineComplete:
       m_PersistentCalls:
         m_Calls: []
-  repeatedInteractionLine:
-    Text: 
+  - Text: 'Aries: Wait! Don''t tell me... You''re one of them bear guides, huh?'
     OnLineComplete:
       m_PersistentCalls:
         m_Calls: []
+  - Text: 'Little Ursa: I''m supposed to be, but... I''m a bit lost...'
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls: []
+  - Text: 'Aries: How can a guide be lost?'
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls: []
+  - Text: 'Little Ursa: You said it yourself, I''m only little...'
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls: []
+  - Text: 'Aries: You were big enough to help me, weren''t you?'
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581562527038671622}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: ariesstomp
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Text: 'Little Ursa: I guess...'
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581562527038671622}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: ariesstomp
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Text: 'Aries: Anyways, where are you going?'
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls: []
+  - Text: 'Little Ursa: I''m looking for my mum - Ursa. Have you seen her?'
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls: []
+  - Text: 'Aries: Oh, Ursa! Yeah, totally! I think she went...'
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7275490392508823999}
+          m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_MethodName: set_flipX
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - Text: 'Aries: Actually I don''t know.'
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7275490392508823999}
+          m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_MethodName: set_flipX
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Text: 'Aries: But she''s not in this cave, that''s for sure. So try looking out
+      there!'
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: lookatrock
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Text: 'Little Ursa: Uh...'
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls: []
+  - Text: 'Aries: What, you can''t smash that rock?'
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls: []
+  - Text: 'Little Ursa: I''m only little!'
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls: []
+  - Text: 'Aries: Little-shmittle!'
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581562527038671622}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: ariesstomp
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Text: 'Aries: I told you, it doesn''t matter! You''re a guide bear, you must
+      be stronger than you think!'
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581562527038671622}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: ariesstomp
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Text: 'Little Ursa: ...'
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: ursarun
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: rockrun
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Text: 'Aries: Told ya!'
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls: []
+  - Text: 'Little Ursa: I didn''t know I could do that...'
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: walkback
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Text: 'Aries: And you never will if you don''t try. That''s what being strong
+      is about!'
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581562527038671622}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: ariesstomp
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Text: 'Little Ursa: I''d better go. Thank you.'
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls: []
+  - Text: 'Aries: Good luck, Little Ursa!'
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581562527038671622}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: ariesstomp
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: ariesstomp
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: ariesstomp
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: ariesstomp
+            m_BoolArgument: 1
+          m_CallState: 2
+  repeatedInteractionLine:
+    Text: 'Aries: Heeey, back already? Wait, where''s your mum?'
+    OnLineComplete:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   OnInitialDialogueComplete:
     m_PersistentCalls:
       m_Calls: []

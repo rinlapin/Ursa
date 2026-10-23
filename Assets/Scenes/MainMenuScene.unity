@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6950aac82e5d5494ab8f17e65bed8431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuScript
-  gameSceneName: BearDenTutorial
+  gameSceneName: MainGame
   creditsText: {fileID: 1106431593}
 --- !u!1 &254533492
 GameObject:
