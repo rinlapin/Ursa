@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{AEFAED15-4246-4229-8C3C-15776455E8AC}" SchemaVersion="133">
 	<Containers>
-		<WorkUnit Name="Music" ID="{AEFAED15-4246-4229-8C3C-15776455E8AC}" PersistMode="Standalone">
+		<WorkUnit Name="music" ID="{AEFAED15-4246-4229-8C3C-15776455E8AC}" PersistMode="Standalone">
 			<ChildrenList>
-				<MusicSwitchContainer Name="Main_Menu" ID="{7EC6E172-7DDC-4E37-B249-7ACFB99A2D59}" ShortID="1042325039">
+				<MusicSwitchContainer Name="main_menu_music" ID="{7EC6E172-7DDC-4E37-B249-7ACFB99A2D59}" ShortID="1042325039">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
@@ -1137,8 +1144,79 @@
 							</ChildrenList>
 						</MusicPlaylistContainer>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="main_menu" ID="{B8ECD915-9F1C-46F3-B33A-4819119B4F93}"/>
+								<StateGroupInfo Name="" ID="{D9C79A00-50B4-48C0-97D0-5BADAA61610B}" ShortID="651668939"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="menu_exit" ID="{137177C3-C100-4641-8D23-B699BCDFAA1B}"/>
+								<CustomState Name="" ID="{BC0FB5A5-B3F4-4FE0-B430-C088D0AD4F43}" ShortID="604345311"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="menu_open" ID="{7DEF98D8-B8D9-4A2D-8D90-A8186EDBD617}"/>
+								<CustomState Name="" ID="{ABFDC038-EF6E-4EBD-B510-CF050E8DC5BC}" ShortID="503920448"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="None" ID="{BAC5ADDF-74F3-4E50-90FD-B5381D1DEF8D}"/>
+								<CustomState Name="" ID="{F8F9A97C-78C6-4D1B-A3D4-A26C09762172}" ShortID="709496239"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<ObjectLists>
+						<ObjectList Name="Arguments">
+							<PluginInnerObject Name="" ID="{4ED52267-47B3-42D4-91BB-55E72E2407CA}" PluginName="MusicArgumentsSlot" CompanyID="0" PluginID="89">
+								<ReferenceList>
+									<Reference Name="Argument">
+										<ObjectRef Name="main_menu" ID="{B8ECD915-9F1C-46F3-B33A-4819119B4F93}" WorkUnitID="{5AA124CD-3D1B-48F7-AA5F-48192D0BDF38}"/>
+									</Reference>
+								</ReferenceList>
+							</PluginInnerObject>
+						</ObjectList>
+						<ObjectList Name="Entries">
+							<MultiSwitchEntry Name="" ID="{05789BB5-7231-458D-B661-3072DB9EA8B8}">
+								<ReferenceList>
+									<Reference Name="AudioNode">
+										<ObjectRef Name="main_menu_exit" ID="{1E6CA819-A185-4B26-BE65-E473BB61B903}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
+									</Reference>
+								</ReferenceList>
+								<ObjectLists>
+									<ObjectList Name="EntryPath">
+										<PluginInnerObject Name="" ID="{6A0DD3AE-67BD-4CB7-BC82-881B1056BE76}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
+											<ReferenceList>
+												<Reference Name="EntryPathObject">
+													<ObjectRef Name="menu_exit" ID="{137177C3-C100-4641-8D23-B699BCDFAA1B}" WorkUnitID="{5AA124CD-3D1B-48F7-AA5F-48192D0BDF38}"/>
+												</Reference>
+											</ReferenceList>
+										</PluginInnerObject>
+									</ObjectList>
+								</ObjectLists>
+							</MultiSwitchEntry>
+							<MultiSwitchEntry Name="" ID="{10E0173D-F7CA-4698-816C-2BC25C4F5B4A}">
+								<ReferenceList>
+									<Reference Name="AudioNode">
+										<ObjectRef Name="main_menu_open" ID="{B1FB645B-58C3-4550-B198-01C492D3FF10}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
+									</Reference>
+								</ReferenceList>
+								<ObjectLists>
+									<ObjectList Name="EntryPath">
+										<PluginInnerObject Name="" ID="{B974B91D-7D6C-4487-9494-6562BC0339F5}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
+											<ReferenceList>
+												<Reference Name="EntryPathObject">
+													<ObjectRef Name="menu_open" ID="{7DEF98D8-B8D9-4A2D-8D90-A8186EDBD617}" WorkUnitID="{5AA124CD-3D1B-48F7-AA5F-48192D0BDF38}"/>
+												</Reference>
+											</ReferenceList>
+										</PluginInnerObject>
+									</ObjectList>
+								</ObjectLists>
+							</MultiSwitchEntry>
+						</ObjectList>
+					</ObjectLists>
 				</MusicSwitchContainer>
-				<MusicSwitchContainer Name="Gameplay" ID="{163921B0-D88B-4CE6-A106-DDD94770B78E}" ShortID="406081988">
+				<MusicSwitchContainer Name="gameplay" ID="{163921B0-D88B-4CE6-A106-DDD94770B78E}" ShortID="406081988">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
@@ -1419,8 +1497,14 @@
 												<Property Name="MusicTrackType" Type="int16" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="DefaultSwitchOrState">
+													<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="player_location" ID="{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
@@ -1492,7 +1576,11 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList/>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+															</Reference>
+														</ReferenceList>
 													</MusicTrackSequence>
 													<MusicTrackSequence Name="" ID="{35296DC3-4628-4311-B0A3-D4B365AF8318}">
 														<ObjectLists>
@@ -1507,7 +1595,11 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList/>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="in_the_cave" ID="{F036E22E-DEB4-45F3-B167-9AFAEF80443F}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+															</Reference>
+														</ReferenceList>
 													</MusicTrackSequence>
 												</ObjectList>
 											</ObjectLists>
@@ -1517,8 +1609,14 @@
 												<Property Name="MusicTrackType" Type="int16" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="DefaultSwitchOrState">
+													<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="player_location" ID="{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
@@ -1579,7 +1677,11 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList/>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+															</Reference>
+														</ReferenceList>
 													</MusicTrackSequence>
 													<MusicTrackSequence Name="" ID="{98CFEE96-D249-40C6-925F-B455B75B293E}">
 														<ObjectLists>
@@ -1594,7 +1696,11 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList/>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="in_the_cave" ID="{F036E22E-DEB4-45F3-B167-9AFAEF80443F}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+															</Reference>
+														</ReferenceList>
 													</MusicTrackSequence>
 												</ObjectList>
 											</ObjectLists>
@@ -1604,8 +1710,14 @@
 												<Property Name="MusicTrackType" Type="int16" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="DefaultSwitchOrState">
+													<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="player_location" ID="{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
@@ -1670,10 +1782,18 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList/>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+															</Reference>
+														</ReferenceList>
 													</MusicTrackSequence>
 													<MusicTrackSequence Name="" ID="{30AC6749-8392-48E7-8ED7-33B21F1174BC}">
-														<ReferenceList/>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="in_the_cave" ID="{F036E22E-DEB4-45F3-B167-9AFAEF80443F}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+															</Reference>
+														</ReferenceList>
 													</MusicTrackSequence>
 												</ObjectList>
 											</ObjectLists>
@@ -1683,8 +1803,14 @@
 												<Property Name="MusicTrackType" Type="int16" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="DefaultSwitchOrState">
+													<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="player_location" ID="{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
@@ -1756,7 +1882,11 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList/>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+															</Reference>
+														</ReferenceList>
 													</MusicTrackSequence>
 													<MusicTrackSequence Name="" ID="{8EE879E3-45A3-4134-AE2C-F1BCB58E9440}">
 														<ObjectLists>
@@ -1771,7 +1901,11 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList/>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="in_the_cave" ID="{F036E22E-DEB4-45F3-B167-9AFAEF80443F}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+															</Reference>
+														</ReferenceList>
 													</MusicTrackSequence>
 												</ObjectList>
 											</ObjectLists>
@@ -1781,8 +1915,14 @@
 												<Property Name="MusicTrackType" Type="int16" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="DefaultSwitchOrState">
+													<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="player_location" ID="{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
@@ -1847,10 +1987,18 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList/>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+															</Reference>
+														</ReferenceList>
 													</MusicTrackSequence>
 													<MusicTrackSequence Name="" ID="{C15DCED7-9719-4F08-8A80-1F3D40AE8F31}">
-														<ReferenceList/>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="in_the_cave" ID="{F036E22E-DEB4-45F3-B167-9AFAEF80443F}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+															</Reference>
+														</ReferenceList>
 													</MusicTrackSequence>
 												</ObjectList>
 											</ObjectLists>
@@ -1860,8 +2008,14 @@
 												<Property Name="MusicTrackType" Type="int16" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="DefaultSwitchOrState">
+													<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="player_location" ID="{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
@@ -1933,7 +2087,11 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList/>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+															</Reference>
+														</ReferenceList>
 													</MusicTrackSequence>
 													<MusicTrackSequence Name="" ID="{47B58688-45EC-4826-B88A-922888CD759E}">
 														<ObjectLists>
@@ -1948,7 +2106,11 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList/>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="in_the_cave" ID="{F036E22E-DEB4-45F3-B167-9AFAEF80443F}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+															</Reference>
+														</ReferenceList>
 													</MusicTrackSequence>
 												</ObjectList>
 											</ObjectLists>
@@ -1958,8 +2120,14 @@
 												<Property Name="MusicTrackType" Type="int16" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="DefaultSwitchOrState">
+													<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="player_location" ID="{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
@@ -2031,7 +2199,11 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList/>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+															</Reference>
+														</ReferenceList>
 													</MusicTrackSequence>
 													<MusicTrackSequence Name="" ID="{94AC083A-2066-4413-8DA7-EFCE2A5B374F}">
 														<ObjectLists>
@@ -2046,7 +2218,11 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList/>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="in_the_cave" ID="{F036E22E-DEB4-45F3-B167-9AFAEF80443F}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+															</Reference>
+														</ReferenceList>
 													</MusicTrackSequence>
 												</ObjectList>
 											</ObjectLists>
@@ -2056,8 +2232,14 @@
 												<Property Name="MusicTrackType" Type="int16" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="DefaultSwitchOrState">
+													<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="player_location" ID="{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
@@ -2129,7 +2311,11 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList/>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+															</Reference>
+														</ReferenceList>
 													</MusicTrackSequence>
 													<MusicTrackSequence Name="" ID="{576724E6-4BCF-4A9C-B43B-F56225925AA9}">
 														<ObjectLists>
@@ -2144,7 +2330,11 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList/>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="in_the_cave" ID="{F036E22E-DEB4-45F3-B167-9AFAEF80443F}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+															</Reference>
+														</ReferenceList>
 													</MusicTrackSequence>
 												</ObjectList>
 											</ObjectLists>
@@ -2154,8 +2344,14 @@
 												<Property Name="MusicTrackType" Type="int16" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="DefaultSwitchOrState">
+													<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="player_location" ID="{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
@@ -2220,10 +2416,18 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList/>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+															</Reference>
+														</ReferenceList>
 													</MusicTrackSequence>
 													<MusicTrackSequence Name="" ID="{66266869-F9DE-4919-BD95-AE4DA869C5B6}">
-														<ReferenceList/>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="in_the_cave" ID="{F036E22E-DEB4-45F3-B167-9AFAEF80443F}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+															</Reference>
+														</ReferenceList>
 													</MusicTrackSequence>
 												</ObjectList>
 											</ObjectLists>
@@ -2233,8 +2437,14 @@
 												<Property Name="MusicTrackType" Type="int16" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="DefaultSwitchOrState">
+													<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="player_location" ID="{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
@@ -2299,10 +2509,18 @@
 																</MusicClip>
 															</ObjectList>
 														</ObjectLists>
-														<ReferenceList/>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+															</Reference>
+														</ReferenceList>
 													</MusicTrackSequence>
 													<MusicTrackSequence Name="" ID="{DEF7532B-956E-4293-96F6-B1A704E3EF56}">
-														<ReferenceList/>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="in_the_cave" ID="{F036E22E-DEB4-45F3-B167-9AFAEF80443F}" WorkUnitID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}"/>
+															</Reference>
+														</ReferenceList>
 													</MusicTrackSequence>
 												</ObjectList>
 											</ObjectLists>
@@ -2329,6 +2547,11 @@
 						<MusicPlaylistContainer Name="puzzle_solving" ID="{F0D2FFF5-E9D4-457E-AF66-3D44A1A4D53A}" ShortID="530553805">
 							<PropertyList>
 								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2379,6 +2602,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<MusicSegment Name="puzzle_solving" ID="{0106270D-06E8-43BF-8ED0-743BCC6D76EC}" ShortID="173050710">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="57882.3541666667"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
@@ -2387,13 +2613,279 @@
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="URSA_MUS_Little_Ursa_Solving_Puzzles_harp" ID="{9545AF61-E209-4B75-AF3B-45E5178A6577}" ShortID="345394910">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{2B6B1E43-3C6B-4C56-B1DE-401D8FCFA86F}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_Little_Ursa_Solving_Puzzles_harp" ID="{C46A0201-CC01-4030-95BA-FE60DED3890B}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_Little_Ursa_Solving_Puzzles_harp.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="488453217"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{B144EE73-093D-494C-847F-6759E8FE3879}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_Little_Ursa_Solving_Puzzles_harp" ID="{B21CD728-670D-4192-A962-8BAB93A38039}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="57882.3541666667"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_Little_Ursa_Solving_Puzzles_harp" ID="{C46A0201-CC01-4030-95BA-FE60DED3890B}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_Little_Ursa_Solving_Puzzles_MX" ID="{E761B034-323B-4FED-94DB-68F3A2854155}" ShortID="667427041">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{8CD0FBA0-074C-40BD-8C73-A70C2BEEF797}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_Little_Ursa_Solving_Puzzles_MX" ID="{9C75914A-8A85-44A0-9ECF-352B01BC17B1}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_Little_Ursa_Solving_Puzzles_MX.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1069795523"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{4873C025-355D-41A4-853E-669E7C690AEB}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_Little_Ursa_Solving_Puzzles_MX" ID="{ABFA8C88-DB30-4B39-97A6-4ED93823D375}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="57882.3541666667"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_Little_Ursa_Solving_Puzzles_MX" ID="{9C75914A-8A85-44A0-9ECF-352B01BC17B1}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_Little_Ursa_Solving_Puzzles_piano" ID="{FED83A06-0320-4C23-B211-CD82674A36A1}" ShortID="171879026">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{30C60148-109F-4E27-8FC1-FA3B12DE825B}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_Little_Ursa_Solving_Puzzles_piano" ID="{8822A293-26E7-403F-9C82-6C456D981DD0}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_Little_Ursa_Solving_Puzzles_piano.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="347817047"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{89B6E049-0E2E-45D3-AF2D-B87860C16A8B}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_Little_Ursa_Solving_Puzzles_piano" ID="{6F6105F7-F589-4494-AB74-F87EB84D321F}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="57882.3541666667"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_Little_Ursa_Solving_Puzzles_piano" ID="{8822A293-26E7-403F-9C82-6C456D981DD0}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_Little_Ursa_Solving_Puzzles_synths" ID="{4E56C538-AC78-48E1-B977-58DF7CE9E7E4}" ShortID="574589775">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{E8F253AB-46D9-45AB-82D7-885BF0ACC954}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_Little_Ursa_Solving_Puzzles_synths" ID="{2FF50794-40EC-43E1-AB16-E894D691B045}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_Little_Ursa_Solving_Puzzles_synths.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="144511735"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{570897A6-4892-4B37-BB71-647514BEC06C}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_Little_Ursa_Solving_Puzzles_synths" ID="{62E503C1-6331-4A5B-ABA5-59A4E7E367B9}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="57882.3541666667"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_Little_Ursa_Solving_Puzzles_synths" ID="{2FF50794-40EC-43E1-AB16-E894D691B045}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_Little_Ursa_Solving_Puzzles_tuned perc" ID="{922D160B-4896-4DF4-8175-027651ABEA70}" ShortID="398607929">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{D130D479-2C36-4135-8558-1B70817B3A04}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_Little_Ursa_Solving_Puzzles_tuned perc" ID="{CF45BC85-7C6F-432F-B11B-01B55311111E}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_Little_Ursa_Solving_Puzzles_tuned perc.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="154520892"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{D3DB66B8-C9BA-4D77-AE76-97F268431AE9}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_Little_Ursa_Solving_Puzzles_tuned perc" ID="{E72AB722-A1FC-4B1B-AAD5-13AB29CF2231}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="57882.3541666667"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_Little_Ursa_Solving_Puzzles_tuned perc" ID="{CF45BC85-7C6F-432F-B11B-01B55311111E}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_Little_Ursa_Solving_Puzzles_untuned_perc" ID="{BBE7F195-76BC-4EAA-92AA-9864D528525A}" ShortID="715536471">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{F7C9A68D-BCF4-4758-BBC4-FDFAA4F708AD}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_Little_Ursa_Solving_Puzzles_untuned_perc" ID="{73D511A5-D43C-41BF-90DC-3C9DCFE0211C}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_Little_Ursa_Solving_Puzzles_untuned_perc.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="52731171"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{FCFC1FAE-4544-4462-B18B-0529676F4C97}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_Little_Ursa_Solving_Puzzles_untuned_perc" ID="{CA55D1B4-AD51-48BD-99C2-C7082417EC8F}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="57882.3541666667"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_Little_Ursa_Solving_Puzzles_untuned_perc" ID="{73D511A5-D43C-41BF-90DC-3C9DCFE0211C}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="Cues">
 											<MusicCue Name="Entry Cue" ID="{FF307432-AF6A-496F-B978-5334F30BF18B}"/>
 											<MusicCue Name="Exit Cue" ID="{E3A8028A-BF6D-495F-933F-A7CB1210B301}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="1000"/>
+													<Property Name="TimeMs" Type="Real64" Value="57875.0632958388"/>
 												</PropertyList>
 											</MusicCue>
 										</ObjectList>
@@ -2404,6 +2896,11 @@
 						<MusicPlaylistContainer Name="talking_to_Aries" ID="{D6CE0FDD-9B19-4669-B565-FA4BCFC85D08}" ShortID="208527697">
 							<PropertyList>
 								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2454,6 +2951,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<MusicSegment Name="talking_to_Aries" ID="{20501E76-95B6-4BC5-B14F-0F7D1CBF5E55}" ShortID="1063599491">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="62287.9213736219"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
@@ -2462,13 +2962,323 @@
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="URSA_MUS_Talking_To_Aries_bassoon" ID="{9B8AF953-094E-4256-AC29-7F57FBAE8DA0}" ShortID="370433227">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{358A20DB-6EF8-4998-A8A4-D490435AC2C6}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_Talking_To_Aries_bassoon" ID="{C1F09EBA-C9ED-43E7-867E-D18C6A168BF6}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_Talking_To_Aries_bassoon.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="858356345"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{0E28674A-43AC-477D-B1CD-0641287EA944}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_Talking_To_Aries_bassoon" ID="{15908C44-0ED4-48E9-B9EE-9D58E193FDCE}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="60000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_Talking_To_Aries_bassoon" ID="{C1F09EBA-C9ED-43E7-867E-D18C6A168BF6}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_Talking_To_Aries_harp" ID="{3F4825FE-FD00-4ACE-A475-32181F861FF6}" ShortID="96347769">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{18F97897-FA20-4E18-B39A-AC1192E243F2}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_Talking_To_Aries_harp" ID="{9A58B4A7-95C9-4BDB-8CDE-21B235244972}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_Talking_To_Aries_harp.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="952115653"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{43E9C143-70F4-43D6-8890-C0A3DD142282}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_Talking_To_Aries_harp" ID="{0C672F1C-D5A5-44AC-97B2-152AA1929411}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="60000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_Talking_To_Aries_harp" ID="{9A58B4A7-95C9-4BDB-8CDE-21B235244972}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_Talking_To_Aries_MX" ID="{93692148-B2EE-452B-9697-CDEDFF254723}" ShortID="301915428">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{8523E41C-80C2-4F55-8ADB-E02972778533}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_Talking_To_Aries_MX" ID="{1E04A39B-8C8D-456D-A175-C6801D5CC24D}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_Talking_To_Aries_MX.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="214126879"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{25FCB075-871B-4FA2-9618-CE343B9A38DF}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_Talking_To_Aries_MX" ID="{2EB93821-0AC2-455B-8FF2-5D9FDD542B1E}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="60000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_Talking_To_Aries_MX" ID="{1E04A39B-8C8D-456D-A175-C6801D5CC24D}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_Talking_To_Aries_piano" ID="{F54D6AF6-2CF7-4D78-87FF-FCDBC540C0E4}" ShortID="220806289">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{366DA0D7-BEF8-45F4-9300-4F31A3DD09D6}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_Talking_To_Aries_piano" ID="{C5A0FC87-6DBA-4B06-A6E8-AC03DD8B2DB2}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_Talking_To_Aries_piano.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="798349558"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{E15BBFC0-38D2-4DA8-B42F-5EB9DDCBE7F2}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_Talking_To_Aries_piano" ID="{6E02BF9F-03E9-4CC1-9A49-717F7D6F2B86}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="60000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_Talking_To_Aries_piano" ID="{C5A0FC87-6DBA-4B06-A6E8-AC03DD8B2DB2}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_Talking_To_Aries_synths" ID="{9C03F561-2A23-4365-9EFB-8B5D2FBD289A}" ShortID="579437066">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{C66CE5CA-8E37-4854-8B49-3166038A15F3}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_Talking_To_Aries_synths" ID="{336DCD4B-C821-4DF0-91B4-81CA8D504298}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_Talking_To_Aries_synths.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="381573968"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{A8ABC224-DA96-4DFB-90AE-4B4AD66D7B41}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_Talking_To_Aries_synths" ID="{0C4566D6-A2A6-40F4-AAA9-753E1B0453C3}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="60000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_Talking_To_Aries_synths" ID="{336DCD4B-C821-4DF0-91B4-81CA8D504298}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_Talking_To_Aries_tuned_perc" ID="{2ADF8250-1595-40DF-9B64-42DA1BA59478}" ShortID="319522062">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{29563BF3-B007-486F-BD68-8E027A7B2EDC}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_Talking_To_Aries_tuned_perc" ID="{C4158213-AFFA-4D1D-BBA2-BE7745ABDC58}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_Talking_To_Aries_tuned_perc.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="596680153"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{EBAE4214-8676-4CDE-8BF5-C6580A59E6F9}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_Talking_To_Aries_tuned_perc" ID="{A559B8F4-EC37-423B-A420-EFA3A91BD016}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="60000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_Talking_To_Aries_tuned_perc" ID="{C4158213-AFFA-4D1D-BBA2-BE7745ABDC58}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="URSA_MUS_Talking_To_Aries_untuned_perc" ID="{E8D09E86-1B4D-40C0-AA00-B494E9A769A4}" ShortID="502445903">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{399694EC-ABAB-4A9C-94A6-C04B0539C64F}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="URSA_MUS_Talking_To_Aries_untuned_perc" ID="{D0CD3A1C-C3E4-439B-A31A-0459104CE5C8}">
+													<Language>SFX</Language>
+													<AudioFile>URSA_MUS_Talking_To_Aries_untuned_perc.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="28999160"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{05804940-B636-473B-9D86-EE29F9D0680E}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="URSA_MUS_Talking_To_Aries_untuned_perc" ID="{4820D3C0-B467-4AF1-9F0F-C4EC1BDB699B}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="60000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="URSA_MUS_Talking_To_Aries_untuned_perc" ID="{D0CD3A1C-C3E4-439B-A31A-0459104CE5C8}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="Cues">
 											<MusicCue Name="Entry Cue" ID="{AB74A262-0C52-4D04-B134-6414B9394FD1}"/>
 											<MusicCue Name="Exit Cue" ID="{D7206E48-2345-4D0E-AAC7-197105E7C4E7}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="1000"/>
+													<Property Name="TimeMs" Type="Real64" Value="59656.8748619939"/>
 												</PropertyList>
 											</MusicCue>
 										</ObjectList>
@@ -2477,8 +3287,82 @@
 							</ChildrenList>
 						</MusicPlaylistContainer>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Arguments">
+							<PluginInnerObject Name="" ID="{AE900B98-B073-4D1D-BC32-AFA502FC4977}" PluginName="MusicArgumentsSlot" CompanyID="0" PluginID="89">
+								<ReferenceList>
+									<Reference Name="Argument">
+										<ObjectRef Name="gameplay" ID="{B818D92D-CC48-41C3-8258-08577700AB63}" WorkUnitID="{5AA124CD-3D1B-48F7-AA5F-48192D0BDF38}"/>
+									</Reference>
+								</ReferenceList>
+							</PluginInnerObject>
+						</ObjectList>
+						<ObjectList Name="Entries">
+							<MultiSwitchEntry Name="" ID="{0AC1B830-2A93-49C9-9290-18B01B49AF2E}">
+								<ReferenceList>
+									<Reference Name="AudioNode">
+										<ObjectRef Name="puzzle_solving" ID="{F0D2FFF5-E9D4-457E-AF66-3D44A1A4D53A}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
+									</Reference>
+								</ReferenceList>
+								<ObjectLists>
+									<ObjectList Name="EntryPath">
+										<PluginInnerObject Name="" ID="{4B8C7217-75AC-4521-95AC-644801A46B16}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
+											<ReferenceList>
+												<Reference Name="EntryPathObject">
+													<ObjectRef Name="puzzle_solving" ID="{015DF498-5318-4539-9B94-A3007374CA63}" WorkUnitID="{5AA124CD-3D1B-48F7-AA5F-48192D0BDF38}"/>
+												</Reference>
+											</ReferenceList>
+										</PluginInnerObject>
+									</ObjectList>
+								</ObjectLists>
+							</MultiSwitchEntry>
+							<MultiSwitchEntry Name="" ID="{DAEFB345-E502-41B9-9ED3-BA1D9F4A821E}">
+								<ReferenceList>
+									<Reference Name="AudioNode">
+										<ObjectRef Name="talking_to_Aries" ID="{D6CE0FDD-9B19-4669-B565-FA4BCFC85D08}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
+									</Reference>
+								</ReferenceList>
+								<ObjectLists>
+									<ObjectList Name="EntryPath">
+										<PluginInnerObject Name="" ID="{7DED94DD-1507-4028-9D85-915665676815}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
+											<ReferenceList>
+												<Reference Name="EntryPathObject">
+													<ObjectRef Name="talking_to_Aries" ID="{63E1297B-5148-49E7-BFFC-ADA062542575}" WorkUnitID="{5AA124CD-3D1B-48F7-AA5F-48192D0BDF38}"/>
+												</Reference>
+											</ReferenceList>
+										</PluginInnerObject>
+									</ObjectList>
+								</ObjectLists>
+							</MultiSwitchEntry>
+							<MultiSwitchEntry Name="" ID="{52DA0335-4ADE-4202-BC52-92F540B81792}">
+								<ReferenceList>
+									<Reference Name="AudioNode">
+										<ObjectRef Name="wandering" ID="{5627289A-36B7-4018-BAA1-3BAF163F0F7A}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
+									</Reference>
+								</ReferenceList>
+								<ObjectLists>
+									<ObjectList Name="EntryPath">
+										<PluginInnerObject Name="" ID="{0B233D47-F06A-4C29-968C-D498C333CE35}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
+											<ReferenceList>
+												<Reference Name="EntryPathObject">
+													<ObjectRef Name="wandering" ID="{82E594DD-3C3E-4B15-8495-FF258B38D421}" WorkUnitID="{5AA124CD-3D1B-48F7-AA5F-48192D0BDF38}"/>
+												</Reference>
+											</ReferenceList>
+										</PluginInnerObject>
+									</ObjectList>
+								</ObjectLists>
+							</MultiSwitchEntry>
+						</ObjectList>
+					</ObjectLists>
 				</MusicSwitchContainer>
-				<MusicPlaylistContainer Name="Opening_Cutscene" ID="{49358DB4-99CE-49D9-881E-E86B96831142}" ShortID="550571363">
+				<MusicPlaylistContainer Name="opening_cutscene" ID="{49358DB4-99CE-49D9-881E-E86B96831142}" ShortID="550571363">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
@@ -2537,6 +3421,410 @@
 										<PropertyList>
 											<Property Name="CueType" Type="int16" Value="1"/>
 											<Property Name="TimeMs" Type="Real64" Value="1000"/>
+										</PropertyList>
+									</MusicCue>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+				</MusicPlaylistContainer>
+				<MusicPlaylistContainer Name="to_be_continued" ID="{E3133FCC-1F02-4A07-8DDB-906F228293A3}" ShortID="44883296">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+						</Reference>
+						<Reference Name="PlaylistRoot">
+							<Custom>
+								<MusicPlaylistItem Name="" ID="{027A1C18-03C2-42B0-85C9-636B378F6B21}" ShortID="615346590">
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{A6694B14-C371-4D09-8CA4-75436E300B9B}" ShortID="576356239">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Segment">
+													<ObjectRef Name="URSA_MUS_BackEnd_To_Be_Continued_dulcimer" ID="{0E1A0C26-7BE2-4305-A3F5-E113EA343581}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Custom>
+						</Reference>
+						<Reference Name="TransitionRoot">
+							<Custom>
+								<MusicTransition Name="Root" ID="{B90E49EB-5DAC-41D6-85AF-F22156247D2B}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{DFF9007E-EE9D-4555-B4DC-21F0B979C48A}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</Custom>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="URSA_MUS_BackEnd_To_Be_Continued_dulcimer" ID="{0E1A0C26-7BE2-4305-A3F5-E113EA343581}" ShortID="456179608">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="20666.6666666667"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="URSA_MUS_BackEnd_To_Be_Continued_dulcimer" ID="{E8B6B2A5-46DF-4967-8B31-70D76376B174}" ShortID="712894019">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{6EC4E119-5918-438A-95BF-A22B831EC080}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="URSA_MUS_BackEnd_To_Be_Continued_dulcimer" ID="{716E5F9A-5600-4082-8AC8-2D1BA3E267D4}">
+											<Language>SFX</Language>
+											<AudioFile>URSA_MUS_BackEnd_To_Be_Continued_dulcimer.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="9148033"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{4BCF8708-5CD3-4572-A162-0F3A08F5A207}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="URSA_MUS_BackEnd_To_Be_Continued_dulcimer" ID="{BF74E3F7-F903-4927-89C0-D6FA2C028D45}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="20666.6666666667"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="URSA_MUS_BackEnd_To_Be_Continued_dulcimer" ID="{716E5F9A-5600-4082-8AC8-2D1BA3E267D4}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="URSA_MUS_BackEnd_To_Be_Continued_MX" ID="{BC3771FC-6BA9-4CAD-9135-07B783A0BC50}" ShortID="167166602">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{DC205A28-109B-45ED-A8EA-680BE9E0A2B4}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="URSA_MUS_BackEnd_To_Be_Continued_MX" ID="{B22FC70C-EC75-45F5-93BF-8277E2078B5B}">
+											<Language>SFX</Language>
+											<AudioFile>URSA_MUS_BackEnd_To_Be_Continued_MX.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="28008728"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{081A1BD1-F463-4EF6-B1CB-E2F5DCE06A7C}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="URSA_MUS_BackEnd_To_Be_Continued_MX" ID="{432235DE-6997-4ED6-A5A8-00BA5CF0A39C}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="20666.6666666667"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="URSA_MUS_BackEnd_To_Be_Continued_MX" ID="{B22FC70C-EC75-45F5-93BF-8277E2078B5B}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="URSA_MUS_BackEnd_To_Be_Continued_piano" ID="{CEAF86B0-1CE1-4337-9974-BCD25D5B418C}" ShortID="760420580">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{5CB58B6E-BA72-4BA0-A40C-6A7F0E5014D9}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="URSA_MUS_BackEnd_To_Be_Continued_piano" ID="{D1DB5B04-E979-4738-B75D-6E0B8F8C474A}">
+											<Language>SFX</Language>
+											<AudioFile>URSA_MUS_BackEnd_To_Be_Continued_piano.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="938598787"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{E79A0FA0-9A14-4523-9CAB-25B13B972F6F}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="URSA_MUS_BackEnd_To_Be_Continued_piano" ID="{BF6BEFED-37A3-43B4-A28A-5DA16DE25E47}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="20666.6666666667"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="URSA_MUS_BackEnd_To_Be_Continued_piano" ID="{D1DB5B04-E979-4738-B75D-6E0B8F8C474A}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="URSA_MUS_BackEnd_To_Be_Continued_strings" ID="{764943DD-F420-4935-8A28-16E85DAD02B7}" ShortID="12244845">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{9B3B1430-2A51-4A80-AF29-7BC3C51094BB}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="URSA_MUS_BackEnd_To_Be_Continued_strings" ID="{65B31093-6F73-4617-BA76-928CCA586337}">
+											<Language>SFX</Language>
+											<AudioFile>URSA_MUS_BackEnd_To_Be_Continued_strings.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1053814198"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{F6ED58C4-D52A-4235-9B69-F0795C16804E}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="URSA_MUS_BackEnd_To_Be_Continued_strings" ID="{08DB4F9B-5723-44DF-AE2E-915382F6BC82}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="20666.6666666667"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="URSA_MUS_BackEnd_To_Be_Continued_strings" ID="{65B31093-6F73-4617-BA76-928CCA586337}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="URSA_MUS_BackEnd_To_Be_Continued_synths" ID="{0FAF8347-EAD7-40CC-A6D5-F6FD4486B012}" ShortID="855904802">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{10B89B12-C08A-459C-93B2-B8C346BA39F7}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="URSA_MUS_BackEnd_To_Be_Continued_synths" ID="{445EC5EF-7479-4939-813C-8E63F5CE8230}">
+											<Language>SFX</Language>
+											<AudioFile>URSA_MUS_BackEnd_To_Be_Continued_synths.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="283361548"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{CBFD73A8-85FA-404B-8251-3B7EEFC6776A}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="URSA_MUS_BackEnd_To_Be_Continued_synths" ID="{AF20EC41-022D-4EFD-B663-6CA317BCF492}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="20666.6666666667"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="URSA_MUS_BackEnd_To_Be_Continued_synths" ID="{445EC5EF-7479-4939-813C-8E63F5CE8230}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="URSA_MUS_BackEnd_To_Be_Continued_tuned_perc" ID="{9659B3E6-60B9-48F2-A951-6724A1B8F24F}" ShortID="39091355">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{C34C0D6D-D794-49A1-8557-DAF83390B5AA}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="URSA_MUS_BackEnd_To_Be_Continued_tuned_perc" ID="{E1BF34F9-057A-4549-B537-2C6CDA297C91}">
+											<Language>SFX</Language>
+											<AudioFile>URSA_MUS_BackEnd_To_Be_Continued_tuned_perc.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="892195979"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{8E13E42D-1FEB-4205-B2D1-37ED12F4640F}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="URSA_MUS_BackEnd_To_Be_Continued_tuned_perc" ID="{8CF57023-ACBA-4157-B8E5-F7140AE95F2C}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="20666.6666666667"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="URSA_MUS_BackEnd_To_Be_Continued_tuned_perc" ID="{E1BF34F9-057A-4549-B537-2C6CDA297C91}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="URSA_MUS_BackEnd_To_Be_Continued_untuned_perc" ID="{CDD5694C-2640-42FB-8E2D-E86FC7F99B10}" ShortID="231823724">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A873D590-A538-425B-A96D-EA4AA59D9E8B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D3120FE6-49F0-4430-8838-A016174FA8A4}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{00FA2976-8A20-4191-8AC3-D13144FC4CED}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="URSA_MUS_BackEnd_To_Be_Continued_untuned_perc" ID="{520D74B7-3491-4E63-93CB-582E0FA23036}">
+											<Language>SFX</Language>
+											<AudioFile>URSA_MUS_BackEnd_To_Be_Continued_untuned_perc.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="244449742"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{73112D8C-D2E8-4729-9C47-E9D2FD0635C9}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="URSA_MUS_BackEnd_To_Be_Continued_untuned_perc" ID="{C90EF9BB-90AC-491B-8CDD-C0F383DC830D}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="20666.6666666667"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="URSA_MUS_BackEnd_To_Be_Continued_untuned_perc" ID="{520D74B7-3491-4E63-93CB-582E0FA23036}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<MusicCue Name="Entry Cue" ID="{D2A68929-89EC-4A80-A4D4-741D62A28143}"/>
+									<MusicCue Name="Exit Cue" ID="{1AB80587-94DA-4E88-AF20-1CCB18BAC69A}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="20666.6666666667"/>
 										</PropertyList>
 									</MusicCue>
 								</ObjectList>

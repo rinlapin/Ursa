@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{6B06E175-C183-4D2A-972E-62AE52EC9172}" SchemaVersion="133">
 	<Events>
-		<WorkUnit Name="Music_01" ID="{6B06E175-C183-4D2A-972E-62AE52EC9172}" PersistMode="Standalone">
+		<WorkUnit Name="music" ID="{6B06E175-C183-4D2A-972E-62AE52EC9172}" PersistMode="Standalone">
 			<ChildrenList>
 				<Event Name="main_menu_music" ID="{F24463BF-07A2-4CB9-B0AA-7771C231CB01}">
 					<ChildrenList>
@@ -14,7 +14,7 @@
 						<Action Name="" ID="{A4D0CF11-FD02-4BE9-B3E3-5ECC3B2416B9}" ShortID="413069230">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Main_Menu" ID="{7EC6E172-7DDC-4E37-B249-7ACFB99A2D59}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
+									<ObjectRef Name="main_menu_music" ID="{7EC6E172-7DDC-4E37-B249-7ACFB99A2D59}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -49,7 +49,24 @@
 						<Action Name="" ID="{3C68E747-50B3-4747-8B0F-1066CFB66F95}" ShortID="317326821">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Gameplay" ID="{163921B0-D88B-4CE6-A106-DDD94770B78E}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
+									<ObjectRef Name="gameplay" ID="{163921B0-D88B-4CE6-A106-DDD94770B78E}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="to_be_continued" ID="{E3F4F51C-9152-4A82-AE0E-247EC9A4813A}">
+					<ChildrenList>
+						<Action Name="" ID="{1942533E-018F-4206-B280-CBC4C1478228}" ShortID="318355358">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{AA184CF0-F153-4AEA-BC09-E63D455B72B5}" ShortID="1029056010">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="to_be_continued" ID="{E3133FCC-1F02-4A07-8DDB-906F228293A3}" WorkUnitID="{AEFAED15-4246-4229-8C3C-15776455E8AC}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

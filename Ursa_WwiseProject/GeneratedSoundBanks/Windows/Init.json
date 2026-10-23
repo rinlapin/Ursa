@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{FAB2F972-57A1-176F-4F09-05455A133AEA}",
+    "Hash": "{DC177FA9-1455-58DA-B5D6-0D49CC5E14E7}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -41,9 +41,91 @@
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus",
       "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
      }
+    ],
+    "StateGroups": [
+     {
+      "Id": "89505537",
+      "Name": "gameplay",
+      "ObjectPath": "\\States\\music\\gameplay",
+      "GUID": "{B818D92D-CC48-41C3-8258-08577700AB63}",
+      "States": [
+       {
+        "Id": "342806866",
+        "Name": "wandering",
+        "ObjectPath": "\\States\\music\\gameplay\\wandering",
+        "GUID": "{82E594DD-3C3E-4B15-8495-FF258B38D421}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\music\\gameplay\\None",
+        "GUID": "{CFD418D9-4BF7-457F-9736-52532C489F8F}"
+       },
+       {
+        "Id": "3258781332",
+        "Name": "puzzle_solving",
+        "ObjectPath": "\\States\\music\\gameplay\\puzzle_solving",
+        "GUID": "{015DF498-5318-4539-9B94-A3007374CA63}"
+       },
+       {
+        "Id": "4227414720",
+        "Name": "talking_to_Aries",
+        "ObjectPath": "\\States\\music\\gameplay\\talking_to_Aries",
+        "GUID": "{63E1297B-5148-49E7-BFFC-ADA062542575}"
+       }
+      ]
+     },
+     {
+      "Id": "2005704188",
+      "Name": "main_menu",
+      "ObjectPath": "\\States\\music\\main_menu",
+      "GUID": "{B8ECD915-9F1C-46F3-B33A-4819119B4F93}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\music\\main_menu\\None",
+        "GUID": "{BAC5ADDF-74F3-4E50-90FD-B5381D1DEF8D}"
+       },
+       {
+        "Id": "1287511387",
+        "Name": "menu_open",
+        "ObjectPath": "\\States\\music\\main_menu\\menu_open",
+        "GUID": "{7DEF98D8-B8D9-4A2D-8D90-A8186EDBD617}"
+       },
+       {
+        "Id": "3663878895",
+        "Name": "menu_exit",
+        "ObjectPath": "\\States\\music\\main_menu\\menu_exit",
+        "GUID": "{137177C3-C100-4641-8D23-B699BCDFAA1B}"
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3238956108",
+      "Name": "player_location",
+      "ObjectPath": "\\Switches\\music\\player_location",
+      "GUID": "{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}",
+      "Switches": [
+       {
+        "Id": "438105790",
+        "Name": "outside",
+        "ObjectPath": "\\Switches\\music\\player_location\\outside",
+        "GUID": "{34E56A1E-27C1-470B-A93D-C990AD5785A2}"
+       },
+       {
+        "Id": "1403589664",
+        "Name": "in_the_cave",
+        "ObjectPath": "\\Switches\\music\\player_location\\in_the_cave",
+        "GUID": "{F036E22E-DEB4-45F3-B167-9AFAEF80443F}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{C49625D1-1465-4FC2-2C1A-5A0B7F219EB5}"
+  "FileHash": "{C3F38E32-28EC-2CC1-2E05-1DAF4B314350}"
  }
 }

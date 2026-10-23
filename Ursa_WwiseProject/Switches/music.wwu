@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}" SchemaVersion="133">
+	<Switches>
+		<WorkUnit Name="music" ID="{C208F7B4-FE39-4974-A61E-EE41E95B9F91}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="player_location" ID="{AB0FA251-66B5-4CDD-B765-6F0EEA1887A5}">
+					<ChildrenList>
+						<Switch Name="outside" ID="{34E56A1E-27C1-470B-A93D-C990AD5785A2}"/>
+						<Switch Name="in_the_cave" ID="{F036E22E-DEB4-45F3-B167-9AFAEF80443F}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

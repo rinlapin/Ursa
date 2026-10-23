@@ -7,6 +7,8 @@ public class GlobalStateMachine : FiniteStateMachine
         public PuzzleStepState PuzzleStepState { get; protected set; }
         public DialogueStepState DialogueStepState { get; protected set; }
         
+        public HintStepState HintStepState { get; protected set; }
+        
         public GlobalStateMachine(PlayerInputActions actions, PuzzleManager puzzleManager, DialogueManager dialogueManager) : base()
         {
                 PlayerStepState = new PlayerStepState(actions)
@@ -20,6 +22,10 @@ public class GlobalStateMachine : FiniteStateMachine
                 DialogueStepState = new DialogueStepState(actions, dialogueManager)
                 {
                         OnComplete = HandleDialogueComplete
+                };
+                HintStepState = new HintStepState()
+                {
+                        OnComplete = HandleHintStepComplete
                 };
         }
         
@@ -41,6 +47,10 @@ public class GlobalStateMachine : FiniteStateMachine
                 ChangeState(DialogueStepState);
             }
         }
+        else if (PlayerStepState.ExitState == ExitStatePlayer.Hint)
+        {
+                ChangeState(HintStepState);
+        }
     }
 
         private void HandlePuzzleComplete()
@@ -51,6 +61,11 @@ public class GlobalStateMachine : FiniteStateMachine
         private void HandleDialogueComplete()
         {
                 
+                ChangeState(PlayerStepState);
+        }
+
+        private void HandleHintStepComplete()
+        {
                 ChangeState(PlayerStepState);
         }
 }

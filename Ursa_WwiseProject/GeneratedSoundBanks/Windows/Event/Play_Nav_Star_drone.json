@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{20542CFD-2615-4572-9594-0A6CECE3AB42}",
     "Language": "SFX",
-    "Hash": "{9A8D650C-AB43-5B59-A874-634D084F3AB0}",
+    "Hash": "{1A9FF274-7F65-7F35-642C-C2E67EAB70E8}",
     "ObjectPath": "Play_Nav_Star_drone",
     "ShortName": "Play_Nav_Star_drone",
     "Path": "Event/Play_Nav_Star_drone.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Nav Star drone.wav",
       "Path": "Media/616856727.wem",
-      "CachePath": "C9/{C9439C8B-8259-8DC8-A26C-A269456B4C2B}.wem"
+      "CachePath": "54/{543C852B-BC81-04A3-5222-6C69985D8B51}.wem"
      }
     ],
     "Events": [
@@ -32,8 +32,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Nav_Star_drone",
       "GUID": "{20542CFD-2615-4572-9594-0A6CECE3AB42}",
       "DurationType": "OneShot",
-      "DurationMin": "10.909104",
-      "DurationMax": "10.909104",
+      "DurationMin": "2.1674974",
+      "DurationMax": "2.23101",
       "MediaRefs": [
        {
         "Id": "616856727"
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{785DC589-9E2A-0CF0-99F3-FC1C3D2C6FD0}"
+  "FileHash": "{7843962E-1DE5-FC03-47FB-138F4C346606}"
  }
 }
