@@ -29,29 +29,30 @@ public class MusicManager : MonoBehaviour
     private void SetMusic(Scene scene, LoadSceneMode mode)
     {
         AK.Wwise.Event newMusicEvent = null;
-        
+
         switch (scene.name)
         {
             case "MainMenuScene":
                 open.SetValue();
-                newMusicEvent = mainMenu;
+                mainMenu.Post(gameObject);
                 break;
             case "BearDenTutorial":
+                SetWander();
                 inCave.SetValue(gameObject);
-                newMusicEvent = gameplay;
+                gameplay.Post(gameObject);
                 break;
             case "MainGame":
+                SetWander();
                 outside.SetValue(gameObject);
+                gameplay.Post(gameObject);
                 break;
             case "tbc_scene":
-                newMusicEvent = toBeContinued;
+                toBeContinued.Post(gameObject);
                 break;
             default:
-                newMusicEvent = openingCutscene;
+                openingCutscene.Post(gameObject);
                 break;
         }
-
-        newMusicEvent?.Post(gameObject);
     }
 
     public void OnMenuExitPress()

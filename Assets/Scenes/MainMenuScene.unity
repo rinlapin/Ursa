@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6950aac82e5d5494ab8f17e65bed8431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuScript
-  gameSceneName: MainGame
+  gameSceneName: BearDenTutorial
   creditsText: {fileID: 1106431593}
 --- !u!1 &254533492
 GameObject:
@@ -289,8 +289,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Credits
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1390db0af1a244a4daa5f6cb920a6c80, type: 2}
-  m_sharedMaterial: {fileID: -5668673704768641725, guid: 1390db0af1a244a4daa5f6cb920a6c80, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1ad44ce0fbff2d84292e38ebcc776473, type: 2}
+  m_sharedMaterial: {fileID: 3844956070509247887, guid: 1ad44ce0fbff2d84292e38ebcc776473, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -314,8 +314,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.3
-  m_fontSizeBase: 39.3
+  m_fontSize: 42.1
+  m_fontSizeBase: 42.1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 4096
   m_textAlignment: 65535
-  m_characterSpacing: 0.27
+  m_characterSpacing: -0.26
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -367,6 +367,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 298591893}
   m_CullTransparentMesh: 1
+--- !u!1 &511499317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 511499318}
+  - component: {fileID: 511499320}
+  - component: {fileID: 511499319}
+  m_Layer: 5
+  m_Name: CreditsBG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &511499318
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511499317}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4.174398, y: 10.021966, z: 1.4154}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1106431594}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 264, y: -296}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &511499319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511499317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.7490196, g: 0.91927797, b: 1, a: 0.08627451}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 0.04
+--- !u!222 &511499320
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511499317}
+  m_CullTransparentMesh: 1
 --- !u!1 &783523375
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,7 +478,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 49, y: 8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &783523377
@@ -421,7 +496,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 1350
-    m_Top: 350
+    m_Top: 419
     m_Bottom: 0
   m_ChildAlignment: 4
   m_StartCorner: 0
@@ -536,14 +611,15 @@ RectTransform:
   m_GameObject: {fileID: 1106431593}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7755249, y: 0.7755249, z: 0.7755249}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 511499318}
   m_Father: {fileID: 182756140}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0}
+  m_AnchoredPosition: {x: 15, y: 33}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1106431595
@@ -566,19 +642,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Game by - Rin Lapin
+  m_text: 'Game, Story and Visuals - Rin Lapin
 
-    Main Developer - Denis Sapuntsov
+    Technical Developer - Denis Sapuntsov
 
     Composer
     - Becca Kocabas
 
-    Sound Design - Harvey, Jude, Charlie
+    Sound Design - Harvey Penfold, Jude, Charlie Lancaster
 
-    Story and Art
-    by - Rin Lapin
+    Project
+    Manager - Saga Guldbrand
 
-    Screenwriting - Caitilin, Liv'
+    Concept Art - Naomi (Jihae) Park
+
+    Screenwriting
+    - Caitilin Jacobsen, Liv Fugger'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1ad44ce0fbff2d84292e38ebcc776473, type: 2}
   m_sharedMaterial: {fileID: 3844956070509247887, guid: 1ad44ce0fbff2d84292e38ebcc776473, type: 2}
@@ -605,8 +684,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 53
-  m_fontSizeBase: 53
+  m_fontSize: 53.8
+  m_fontSizeBase: 53.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -644,7 +723,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -218.3617, y: 24.404785, z: -784.45276, w: -400.48032}
+  m_margin: {x: -218.3617, y: 24.404785, z: -784.45276, w: -574.05786}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -717,8 +796,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1390db0af1a244a4daa5f6cb920a6c80, type: 2}
-  m_sharedMaterial: {fileID: -5668673704768641725, guid: 1390db0af1a244a4daa5f6cb920a6c80, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1ad44ce0fbff2d84292e38ebcc776473, type: 2}
+  m_sharedMaterial: {fileID: 3844956070509247887, guid: 1ad44ce0fbff2d84292e38ebcc776473, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -742,8 +821,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.3
-  m_fontSizeBase: 39.3
+  m_fontSize: 42.1
+  m_fontSizeBase: 42.1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -752,7 +831,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 4096
   m_textAlignment: 65535
-  m_characterSpacing: 0.27
+  m_characterSpacing: -0.26
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -822,14 +901,14 @@ RectTransform:
   m_GameObject: {fileID: 1402297750}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 13.154342, y: 5.144553, z: 1.521472}
+  m_LocalScale: {x: 13.463298, y: 4.861376, z: 1.3546818}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 182756140}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 284, y: 259}
+  m_AnchoredPosition: {x: 193, y: 280}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1402297752
@@ -1000,7 +1079,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.7137255}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1145,7 +1224,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.7137255}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1699,8 +1778,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Start Game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1390db0af1a244a4daa5f6cb920a6c80, type: 2}
-  m_sharedMaterial: {fileID: -5668673704768641725, guid: 1390db0af1a244a4daa5f6cb920a6c80, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1ad44ce0fbff2d84292e38ebcc776473, type: 2}
+  m_sharedMaterial: {fileID: 3844956070509247887, guid: 1ad44ce0fbff2d84292e38ebcc776473, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1724,8 +1803,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.3
-  m_fontSizeBase: 39.3
+  m_fontSize: 42.1
+  m_fontSizeBase: 42.1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1734,7 +1813,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 4096
   m_textAlignment: 65535
-  m_characterSpacing: 0.27
+  m_characterSpacing: -0.26
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -1838,7 +1917,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.7137255}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}

@@ -82,7 +82,7 @@ public class PuzzleManager : MonoBehaviour
         lineRenderer.SetAllDirty();
         lineRenderer.points = connections.ToArray();
         
-        Pivot.rotation = Quaternion.Euler(Random.Range(-6, 6) * 60, Random.Range(-6, 6) * 60, Random.Range(-6, 6) * 60);
+        Pivot.rotation = Quaternion.Euler(0, Random.Range(-6, 6) * 60, Random.Range(-6, 6) * 60);
         
         puzzleVisuals.SetActive(true);
     }

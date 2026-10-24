@@ -24,7 +24,7 @@ public class DialogueManager : MonoBehaviour
         dialogueGroup.SetActive(false);
         reachedEnd = false;
     }
-    
+
     public void Close()
     {
         ProcessOnDialogueComplete();
@@ -50,7 +50,7 @@ public class DialogueManager : MonoBehaviour
         _currentDialogueLines = !_currentInteractable.hasTalked ? _currentInteractable.dialogueLines : new List<DialogueLine> { _currentInteractable.repeatedInteractionLine };
         dialogueGroup.SetActive(_currentDialogueLines != null);
     }
-    
+
     public void NextLine()
     {
         WriteLine(_currentDialogueLines[_lineIndex]);
@@ -59,7 +59,7 @@ public class DialogueManager : MonoBehaviour
     private void WriteLine(DialogueLine line)
     {
         dialogue.text = "";
-        
+
         _typeWord = DOTween.Sequence();
         for (int i = 0; i < line.Text.Length; i++)
         {
@@ -72,6 +72,7 @@ public class DialogueManager : MonoBehaviour
         _typeWord.OnComplete(() =>
         {
             OnLineComplete?.Invoke();
+            line.OnLineComplete?.Invoke();
             _lineIndex++;
             reachedEnd = _lineIndex >= _currentDialogueLines.Count;
         });
@@ -82,6 +83,7 @@ public class DialogueManager : MonoBehaviour
     {
         _typeWord.Kill();
         dialogue.text = _currentDialogueLines[_lineIndex].Text;
+        _currentDialogueLines[_lineIndex].OnLineComplete?.Invoke();
         OnLineComplete?.Invoke();
         _lineIndex++;
         reachedEnd = _lineIndex >= _currentDialogueLines.Count;
@@ -89,7 +91,7 @@ public class DialogueManager : MonoBehaviour
 
     public void ProcessAfterLineEvent()
     {
-        
+
     }
 
     public void ProcessOnDialogueComplete()
