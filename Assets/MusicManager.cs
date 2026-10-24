@@ -1,4 +1,4 @@
-using System;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +7,7 @@ public class MusicManager : MonoBehaviour
     public static MusicManager instance;
 
     public AK.Wwise.Event gameplay, openingCutscene, mainMenu, toBeContinued;
+    public AK.Wwise.Event stopMusic;
 
     [SerializeField] private AK.Wwise.Switch inCave, outside;
     [SerializeField] private AK.Wwise.State puzzle, aries, wander, exit, open;
@@ -16,19 +17,29 @@ public class MusicManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
-        else if (instance != this)
+        else
         {
             Destroy(gameObject);
+            return;
         }
-        DontDestroyOnLoad(gameObject);
 
         SceneManager.sceneLoaded += SetMusic;
     }
 
+    private void OnDestroy()
+    {
+        if (instance == this)
+        {
+            SceneManager.sceneLoaded -= SetMusic;
+        }
+    }
+
     private void SetMusic(Scene scene, LoadSceneMode mode)
     {
-        AK.Wwise.Event newMusicEvent = null;
+        // Stop the previous music before starting the new music.
+        stopMusic.Post(gameObject);
 
         switch (scene.name)
         {
@@ -36,19 +47,23 @@ public class MusicManager : MonoBehaviour
                 open.SetValue();
                 mainMenu.Post(gameObject);
                 break;
+
             case "BearDenTutorial":
                 SetWander();
                 inCave.SetValue(gameObject);
                 gameplay.Post(gameObject);
                 break;
+
             case "MainGame":
                 SetWander();
                 outside.SetValue(gameObject);
                 gameplay.Post(gameObject);
                 break;
+
             case "tbc_scene":
                 toBeContinued.Post(gameObject);
                 break;
+
             default:
                 openingCutscene.Post(gameObject);
                 break;

@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Break : MonoBehaviour
 {
     public GameObject fractured;
     public float breakForce;
+    public bool timeToBreak = false;
 
-    private void OnCollisionEnter(Collision collision)
+    private void Update()
     {
-        BreakTheThing();
+        if (timeToBreak == true)
+        {
+            BreakTheThing();
+        }
     }
 
     public void BreakTheThing()
