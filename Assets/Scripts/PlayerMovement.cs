@@ -63,7 +63,12 @@ public class PlayerMovement : MonoBehaviour
     }
     private void ProcessMovement()
     {
-        _rigidbody.AddForce(_move.normalized * movementSpeed, ForceMode.Force);
+        _rigidbody.AddForce(_move.normalized * movementSpeed * Time.deltaTime * 1000f, ForceMode.Force);
+
+        if (_move == Vector3.zero && isGrounded == true)
+        {
+            _rigidbody.linearVelocity = Vector3.zero;   
+        }
     }
 
     public void ConvertInput()
